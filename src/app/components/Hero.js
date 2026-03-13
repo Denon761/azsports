@@ -36,7 +36,7 @@ const Hero = () => {
               Master the <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500">
                 Perfect Strike.
-              </span>
+              </span> 
             </h1>
 
             {/* Description */}
