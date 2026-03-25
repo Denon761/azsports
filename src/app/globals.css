@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* ========== GLOBAL LIGHT THEME BODY STYLES ========== */
+body {
+  background-color: #FAFAFA;
+  color: #1F2937;
+}
+
 /* ========== FONT FACES ========== */
 @font-face {
   font-family: 'Athletics';

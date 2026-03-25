@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${urbanist.variable} antialiased font-sans`}
+        className={`${urbanist.variable} antialiased font-sans bg-gray-50 text-gray-900`}
       >
         <RootProvider>
           <Header/>

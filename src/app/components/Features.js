@@ -27,7 +27,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="bg-zinc-950 py-16 md:py-24 relative overflow-hidden font-sans">
+    <section className="bg-gray-50 py-16 md:py-24 relative overflow-hidden font-sans">
       
       {/* --- AMBIENT BACKGROUND EFFECTS (Matches PromoBanner) --- */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/5 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
@@ -42,14 +42,14 @@ const Features = () => {
             Premium Engineering
           </div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight tracking-tight animate-fade-in-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight animate-fade-in-up">
             Why most boards don't play{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500">
               like they look
             </span>
           </h2>
           
-          <p className="text-base md:text-lg text-zinc-400 animate-fade-in-up delay-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 animate-fade-in-up delay-200 max-w-2xl mx-auto leading-relaxed">
             Cheap particle board and uneven surfacing kill the game. 
             Az SPORTS boards are engineered differently for champions.
           </p>
@@ -63,7 +63,7 @@ const Features = () => {
             return (
                <div
                 key={index}
-                className="group flex flex-col items-center text-center p-8 rounded-[2rem] bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-900/80 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]"
+                className="group flex flex-col items-center text-center p-8 rounded-[2rem] bg-white border border-gray-200 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]"
               >
                 {/* Icon Container with Glow Effect */}
                 <div
@@ -73,11 +73,11 @@ const Features = () => {
                 </div>
 
                 {/* Text Content */}
-                <h3 className="font-bold text-zinc-100 text-xl mb-3 group-hover:text-white transition-colors duration-300">
+                <h3 className="font-bold text-gray-900 text-xl mb-3 group-hover:text-amber-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
 
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>

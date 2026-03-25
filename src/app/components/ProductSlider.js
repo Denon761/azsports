@@ -143,7 +143,7 @@ const ProductCard = ({ product }) => {
             
             <button 
               onClick={handleAddToCart}
-              className="bg-zinc-950 text-white flex-1 max-w-[130px] sm:max-w-none h-12 md:h-14 rounded-xl flex items-center justify-center gap-2 font-semibold text-sm hover:bg-amber-500 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group/btn"
+              className="bg-gray-900 text-white flex-1 max-w-[130px] sm:max-w-none h-12 md:h-14 rounded-xl flex items-center justify-center gap-2 font-semibold text-sm hover:bg-amber-500 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group/btn"
             >
               Add to Cart 
               <ShoppingCart className="w-4 h-4 opacity-70 group-hover/btn:opacity-100 group-hover/btn:translate-x-1 transition-all" />

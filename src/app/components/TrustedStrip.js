@@ -21,7 +21,7 @@ const TrustedStrip = () => {
       <div className="max-w-7xl mx-auto px-4 text-center relative z-0">
         
         {/* Subheading */}
-        <p className="text-[10px] md:text-xs font-black tracking-[0.25em] text-zinc-400 uppercase mb-8">
+        <p className="text-[10px] md:text-xs font-black tracking-[0.25em] text-gray-500 uppercase mb-8">
           Equipping Professional Clubs & Tournaments Globally
         </p>
         

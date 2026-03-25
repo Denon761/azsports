@@ -10,7 +10,7 @@ export default function PromoBanner() {
         Uses deep zinc/carbon colors with a subtle glowing border effect.
         overflow-hidden keeps the ambient glowing orbs contained.
       */}
-      <div className="relative bg-zinc-950 rounded-[2rem] md:rounded-[2.5rem] border border-zinc-800 shadow-2xl overflow-hidden group">
+      <div className="relative bg-white rounded-[2rem] md:rounded-[2.5rem] border border-gray-200 shadow-xl overflow-hidden group">
         
         {/* --- AMBIENT BACKGROUND EFFECTS --- */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[100px] mix-blend-screen pointer-events-none group-hover:bg-amber-500/15 transition-all duration-700"></div>
@@ -27,11 +27,11 @@ export default function PromoBanner() {
             </div>
             
             {/* Headline with High-Contrast Gradient */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 leading-tight tracking-tight">
               Get <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500">20% Off</span> Your First Order
             </h2>
             
-            <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-lg">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-lg">
               Experience championship-level rebound and smooth glides. Join thousands of satisfied professionals and upgrade your carrom gear today.
             </p>
           </div>
@@ -49,8 +49,8 @@ export default function PromoBanner() {
               <ArrowRight className="w-5 h-5 ml-1" />
             </Link>
 
-            <span className="text-[11px] text-zinc-500 font-medium text-center md:text-left w-full">
-              Use code <strong className="text-zinc-300">PROPLAYER20</strong> at checkout
+            <span className="text-[11px] text-gray-500 font-medium text-center md:text-left w-full">
+              Use code <strong className="text-gray-700">PROPLAYER20</strong> at checkout
             </span>
 
           </div>

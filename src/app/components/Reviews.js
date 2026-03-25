@@ -10,7 +10,7 @@ export default function Reviews() {
   ];
 
   return (
-    <section className="bg-zinc-950 py-16 md:py-24 relative overflow-hidden font-sans">
+    <section className="bg-gray-50 py-16 md:py-24 relative overflow-hidden font-sans">
       
       {/* --- AMBIENT BACKGROUND EFFECTS --- */}
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-orange-600/5 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
@@ -26,11 +26,11 @@ export default function Reviews() {
             Testimonials
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
             What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500">Champions</span> Say
           </h2>
           
-          <p className="text-base md:text-lg text-zinc-400 max-w-xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
             Trusted by professional athletes and carrom clubs worldwide.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <div 
               key={index} 
-              className="group flex flex-col p-8 rounded-[2rem] bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-900/80 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]"
+              className="group flex flex-col p-8 rounded-[2rem] bg-white border border-gray-200 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]"
             >
               
               {/* Star Rating */}
@@ -48,7 +48,7 @@ export default function Reviews() {
                 {[...Array(5)].map((_, i) => (
                   <Star 
                     key={i} 
-                    className={`w-4 h-4 md:w-5 md:h-5 ${i < review.rating ? 'text-amber-500' : 'text-zinc-700'}`} 
+                    className={`w-4 h-4 md:w-5 md:h-5 ${i < review.rating ? 'text-amber-500' : 'text-gray-300'}`} 
                     fill={i < review.rating ? 'currentColor' : 'none'}
                     strokeWidth={i < review.rating ? 0 : 2}
                   />
@@ -56,21 +56,21 @@ export default function Reviews() {
               </div>
 
               {/* Review Text */}
-              <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-8 flex-grow">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8 flex-grow">
                 "{review.text}"
               </p>
 
               {/* Reviewer Info */}
-              <div className="flex items-center gap-4 mt-auto pt-6 border-t border-zinc-800/50 group-hover:border-amber-500/20 transition-colors duration-500">
+              <div className="flex items-center gap-4 mt-auto pt-6 border-t border-gray-200 group-hover:border-amber-500/20 transition-colors duration-500">
                 
                 {/* Initial Avatar */}
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 flex items-center justify-center font-bold text-amber-500 shadow-inner">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300 flex items-center justify-center font-bold text-amber-600 shadow-inner">
                   {review.name.charAt(0)}
                 </div>
                 
                 <div>
-                  <p className="font-bold text-zinc-100 text-sm">{review.name}</p>
-                  <p className="text-xs text-zinc-500 font-medium uppercase tracking-wider mt-0.5">{review.role}</p>
+                  <p className="font-bold text-gray-900 text-sm">{review.name}</p>
+                  <p className="text-xs text-gray-500 font-medium uppercase tracking-wider mt-0.5">{review.role}</p>
                 </div>
 
               </div>
