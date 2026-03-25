@@ -97,7 +97,7 @@ const Header = () => {
                 src={logo} 
                 alt="Az Sports" 
                 fill
-                className="object-contain invert brightness-0 filter"
+                className="object-contain"
               />
             </div>
           </Link>
@@ -154,7 +154,7 @@ const Header = () => {
                 src={logo} 
                 alt="Az Sports" 
                 fill
-                className="object-contain invert brightness-0 filter"
+                className="object-contain"
               />
             </div>
           </Link>

@@ -70,7 +70,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-2 pr-0 md:pr-8">
             <Link href="/" className="inline-block mb-4">
               <h2 className="text-2xl md:text-3xl font-black tracking-tight text-gray-900 group">
-                AZ <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600 group-hover:from-amber-400 group-hover:to-orange-500 transition-all duration-300">SPORTS</span>
+                AZ <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 group-hover:from-amber-500 group-hover:to-orange-500 transition-all duration-300">SPORTS</span>
               </h2>
             </Link>
             

@@ -76,7 +76,7 @@ const Hero = () => {
           </div>
 
           {/* RIGHT COLUMN - VISUAL SHOWCASE */}
-          <div className="relative w-full h-[350px] lg:h-[600px] flex items-center justify-center group mt-8 lg:mt-0">
+          <div className="relative w-full h-[350px] lg:h-[600px] flex items-center justify-center group mt-8 lg:mt-0 hidden lg:flex">
             
             {/* Ambient shadow specifically for the board to ground it */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-amber-500/20 blur-[100px] rounded-full mix-blend-screen transition-opacity duration-700 opacity-50 group-hover:opacity-80"></div>
