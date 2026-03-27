@@ -28,7 +28,7 @@ export default function PromoBanner() {
             
             {/* Headline with High-Contrast Gradient */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 leading-tight tracking-tight">
-              Get <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500">20% Off</span> Your First Order
+              Get <span className="text-[#D3B157]">20% Off</span> Your First Order
             </h2>
             
             <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-lg">
@@ -42,7 +42,7 @@ export default function PromoBanner() {
             {/* Primary CTA (Using Link since 'Shop the Sale' should route the user) */}
             <Link 
               href="/shop"
-              className="w-full md:w-auto bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 md:px-10 py-4 rounded-xl font-bold md:text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all duration-300 transform hover:-translate-y-1"
+              className="w-full md:w-auto bg-[#D3B157] text-white px-8 md:px-10 py-4 rounded-xl font-bold md:text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(211,177,87,0.4)] transition-all duration-300 transform hover:-translate-y-1"
             >
               <Tag className="w-5 h-5" />
               Claim Offer

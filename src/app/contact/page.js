@@ -28,7 +28,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black font-sans">
+    <div className="min-h-screen bg-gray-50 font-sans">
       {/* Hero Section - Matching Home Page Style */}
       <section className="relative w-full py-20 lg:py-28 overflow-hidden">
         {/* Background Effects */}
@@ -37,10 +37,10 @@ export default function ContactPage() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <MessageCircle className="w-16 h-16 text-amber-500 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight">
             Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500">Us</span>
           </h1>
-          <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
             We'd love to hear from you! Get in touch with our team.
           </p>
         </div>
@@ -51,39 +51,39 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
-            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 md:p-10">
-              <h2 className="text-xl md:text-2xl font-black text-white mb-6">Send us a Message</h2>
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-sm">
+              <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6">Send us a Message</h2>
               
               {submitted ? (
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-zinc-400 text-sm">Thank you for contacting us. We'll get back to you shortly.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                  <p className="text-gray-600 text-sm">Thank you for contacting us. We'll get back to you shortly.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-bold text-zinc-300 mb-2">Name *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Name *</label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-xl focus:outline-none focus:border-amber-500 text-white placeholder-zinc-500"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-amber-500 text-gray-900 placeholder-gray-400"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-zinc-300 mb-2">Email *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Email *</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-xl focus:outline-none focus:border-amber-500 text-white placeholder-zinc-500"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-amber-500 text-gray-900 placeholder-gray-400"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -91,24 +91,24 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-bold text-zinc-300 mb-2">Phone</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Phone</label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-xl focus:outline-none focus:border-amber-500 text-white placeholder-zinc-500"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-amber-500 text-gray-900 placeholder-gray-400"
                         placeholder="+92 300 1234567"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-zinc-300 mb-2">Subject *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Subject *</label>
                       <select
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-xl focus:outline-none focus:border-amber-500 text-white"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-amber-500 text-gray-900"
                       >
                         <option value="">Select a subject</option>
                         <option value="order">Order Inquiry</option>
@@ -122,14 +122,14 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-zinc-300 mb-2">Message *</label>
+                    <label className="block text-sm font-bold text-gray-700 mb-2">Message *</label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
                       rows="5"
-                      className="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-xl focus:outline-none focus:border-amber-500 text-white placeholder-zinc-500 resize-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-amber-500 text-gray-900 placeholder-gray-400 resize-none"
                       placeholder="How can we help you?"
                     />
                   </div>
@@ -148,17 +148,17 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-6">
               {/* Contact Methods */}
-              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-                <h2 className="text-xl md:text-2xl font-black text-white mb-6">Get in Touch</h2>
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+                <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6">Get in Touch</h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center shrink-0 border border-amber-500/30">
                       <Mail className="w-6 h-6 text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white">Email Us</h3>
-                      <p className="text-zinc-400">support@azsports.com</p>
-                      <p className="text-zinc-500 text-xs">We reply within 24 hours</p>
+                      <h3 className="font-bold text-gray-900">Email Us</h3>
+                      <p className="text-gray-600">support@azsports.com</p>
+                      <p className="text-gray-500 text-xs">We reply within 24 hours</p>
                     </div>
                   </div>
 
@@ -167,9 +167,9 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white">Call Us</h3>
-                      <p className="text-zinc-400">+92 42 111 222 333</p>
-                      <p className="text-zinc-500 text-xs">Mon-Sat: 9am - 8pm PKT</p>
+                      <h3 className="font-bold text-gray-900">Call Us</h3>
+                      <p className="text-gray-600">+92 42 111 222 333</p>
+                      <p className="text-gray-500 text-xs">Mon-Sat: 9am - 8pm PKT</p>
                     </div>
                   </div>
 
@@ -178,9 +178,9 @@ export default function ContactPage() {
                       <MessageCircle className="w-6 h-6 text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white">WhatsApp</h3>
-                      <p className="text-zinc-400">+92 300 1234567</p>
-                      <p className="text-zinc-500 text-xs">Quick responses during business hours</p>
+                      <h3 className="font-bold text-gray-900">WhatsApp</h3>
+                      <p className="text-gray-600">+92 300 1234567</p>
+                      <p className="text-gray-500 text-xs">Quick responses during business hours</p>
                     </div>
                   </div>
 
@@ -189,28 +189,28 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white">Visit Us</h3>
-                      <p className="text-zinc-400">123 Mall Road</p>
-                      <p className="text-zinc-400">Lahore, Pakistan</p>
+                      <h3 className="font-bold text-gray-900">Visit Us</h3>
+                      <p className="text-gray-600">123 Mall Road</p>
+                      <p className="text-gray-600">Lahore, Pakistan</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Business Hours */}
-              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-                <h2 className="text-xl md:text-2xl font-black text-white mb-6 flex items-center gap-2">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+                <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center gap-2">
                   <Clock className="w-6 h-6 text-amber-500" />
                   Business Hours
                 </h2>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-zinc-400">Monday - Saturday</span>
-                    <span className="font-bold text-white">9:00 AM - 8:00 PM</span>
+                    <span className="text-gray-600">Monday - Saturday</span>
+                    <span className="font-bold text-gray-900">9:00 AM - 8:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-zinc-400">Sunday</span>
-                    <span className="font-bold text-white">12:00 PM - 5:00 PM</span>
+                    <span className="text-gray-600">Sunday</span>
+                    <span className="font-bold text-gray-900">12:00 PM - 5:00 PM</span>
                   </div>
                 </div>
               </div>

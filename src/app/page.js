@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <TrustedStrip/>
+      {/* <TrustedStrip/> */}
      
       <ProductSlider />
 
@@ -27,7 +27,7 @@ export default function Home() {
       <Faqs />
 
       {/* Final Call to Action before the footer */}
-      <CtaBanner />
+      {/* <CtaBanner /> */}
 
     </main>
   );

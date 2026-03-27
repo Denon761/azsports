@@ -31,10 +31,10 @@ const footerLinks = [
   {
     title: "Support",
     items: [
-      { label: "Track Order", href: "/track-order" },
+      // { label: "Track Order", href: "/track-order" },
       { label: "Shipping & Returns", href: "/shipping" },
       { label: "Bulk / Club Orders", href: "/contact" },
-      { label: "FAQs", href: "/contact" },
+      // { label: "FAQs", href: "/contact" },
     ]
   },
   {
@@ -70,7 +70,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-2 pr-0 md:pr-8">
             <Link href="/" className="inline-block mb-4">
               <h2 className="text-2xl md:text-3xl font-black tracking-tight text-gray-900 group">
-                AZ <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 group-hover:from-amber-500 group-hover:to-orange-500 transition-all duration-300">SPORTS</span>
+                AZ <span className="text-[#D3B157] group-hover:text-[#C4A24A] transition-all duration-300">SPORTS</span>
               </h2>
             </Link>
             
@@ -135,7 +135,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-600 text-sm md:text-base max-w-md mx-auto lg:mx-0">
               Get exclusive tips, tournament updates &{' '}
-              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 font-bold">10% off</strong>{' '}
+              <strong className="text-[#D3B157] font-bold">10% off</strong>{' '}
               your first striker.
             </p>
           </div>
@@ -149,7 +149,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap transform hover:-translate-y-0.5"
+              className="bg-[#D3B157] text-white font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(211,177,87,0.4)] transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap transform hover:-translate-y-0.5"
             >
               Subscribe <ArrowRight className="w-4 h-4" />
             </button>

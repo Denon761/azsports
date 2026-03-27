@@ -7,7 +7,7 @@ import {
 import { useSelector } from 'react-redux';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpeg';
 import Image001 from '../assets/products/001.png';
 import Image002 from '../assets/products/002.png';
 import Image003 from '../assets/products/003.png';
@@ -92,7 +92,7 @@ const Header = () => {
 
           {/* Center Brand Logo */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 group">
-            <div className="relative h-10 w-28 md:h-12 md:w-32">
+            <div className="relative h-12 w-32 md:h-16 md:w-32">
               <Image 
                 src={logo} 
                 alt="Az Sports" 
@@ -119,14 +119,14 @@ const Header = () => {
             <Link href="/cart" className="text-gray-500 relative hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100">
               <ShoppingBag className="w-[22px] h-[22px]" />
               {cartItems > 0 && (
-                <span className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-gradient-to-r from-amber-500 to-orange-600 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shadow-[0_0_10px_rgba(245,158,11,0.5)]">
+                <span className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-[#D3B157] text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shadow-[0_0_10px_rgba(211,177,87,0.5)]">
                   {cartItems}
                 </span>
               )}
             </Link>
 
             {/* Checkout Button */}
-            <Link href="/checkout" className="hidden md:flex bg-gradient-to-r from-amber-500 to-orange-600 text-white px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm tracking-wide hover:shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all duration-300 transform hover:-translate-y-0.5 ml-2">
+            <Link href="/checkout" className="hidden md:flex bg-[#D3B157] text-white px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm tracking-wide hover:shadow-[0_0_15px_rgba(211,177,87,0.4)] transition-all duration-300 transform hover:-translate-y-0.5 ml-2">
               CHECKOUT
             </Link>
           </div>

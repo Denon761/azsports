@@ -5,8 +5,8 @@
 
 // Color palette
 const colors = {
-  primary: '#0B0D38',
-  primaryLight: '#1A1F4F',
+  primary: '#1E3A5F',
+  primaryLight: '#2D4A6F',
   secondary: '#98713E',
   secondaryLight: '#D8C099',
   accent: '#22C55E',

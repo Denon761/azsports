@@ -65,42 +65,42 @@ const shippingData = [
 
 export default function ShippingPolicyPage() {
   return (
-    <div className="bg-black min-h-screen font-sans">
+    <div className="bg-gray-50 min-h-screen font-sans">
       {/* Hero Section */}
       <section className="relative w-full py-20 lg:py-28 overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight">
             Shipping <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500">Policy</span>
           </h1>
-          <p className="text-zinc-400 text-base md:text-lg">
+          <p className="text-gray-600 text-base md:text-lg">
             Details on domestic shipping within Pakistan and worldwide export handling.
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-16 lg:py-20 bg-zinc-950">
+      <section className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 md:p-10 space-y-8">
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 space-y-8 shadow-sm">
             {shippingData.map((section, index) => (
               <div key={index} className="space-y-4">
                 {section.title && (
-                  <h2 className="text-xl md:text-2xl font-black text-white border-b border-zinc-800 pb-2">
+                  <h2 className="text-xl md:text-2xl font-black text-gray-900 border-b border-gray-200 pb-2">
                     {section.title}
                   </h2>
                 )}
                 
                 {section.content && section.content.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="text-zinc-400 text-sm md:text-base leading-relaxed">
+                  <p key={pIdx} className="text-gray-600 text-sm md:text-base leading-relaxed">
                     {paragraph}
                   </p>
                 ))}
 
                 {section.list && section.list.length > 0 && (
-                  <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-zinc-400 mt-4">
+                  <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-600 mt-4">
                     {section.list.map((item, lIdx) => (
                       <li key={lIdx}>{item}</li>
                     ))}
@@ -108,7 +108,7 @@ export default function ShippingPolicyPage() {
                 )}
                 
                 {section.note && (
-                  <p className="text-xs text-zinc-500 italic mt-2">{section.note}</p>
+                  <p className="text-xs text-gray-500 italic mt-2">{section.note}</p>
                 )}
               </div>
             ))}

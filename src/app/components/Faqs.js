@@ -28,7 +28,7 @@ export default function Faqs() {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight tracking-tight">
-            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500">Questions</span>
+            Frequently Asked <span className="text-[#D3B157]">Questions</span>
           </h2>
           
           <p className="text-base md:text-lg text-gray-600">
