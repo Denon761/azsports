@@ -71,8 +71,8 @@ export async function POST(request) {
     const transporter = createTransporter();
 
     // Email configuration
-    const emailFrom = process.env.EMAIL_FROM || 'AZ Sports <support@azsports.com>';
-    const adminEmail = process.env.ADMIN_EMAIL || 'support@azsports.com';
+    const emailFrom = process.env.EMAIL_FROM || 'AZ Sports <info@azsports.pk>';
+    const adminEmail = process.env.ADMIN_EMAIL || 'info@azsports.pk';
 
     // Send confirmation email to customer
     await transporter.sendMail({
