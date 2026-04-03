@@ -63,7 +63,7 @@ export default function MaintenancePage() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-[#241b14] to-[#3d2e22] rounded-2xl p-8">
               <h2 className="text-xl md:text-2xl font-black text-white mb-4">Need Help?</h2>
               <p className="text-white/80 mb-4">
                 If your board needs professional maintenance or repairs, contact our support team.

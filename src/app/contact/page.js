@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <MessageCircle className="w-16 h-16 text-amber-500 mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight">
-            Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500">Us</span>
+            Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d2e22] via-[#4a3b2d] to-[#5a4a3a]">Us</span>
           </h1>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
             We'd love to hear from you! Get in touch with our team.
@@ -136,7 +136,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-4 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all flex items-center justify-center gap-2"
                   >
                     <Send className="w-5 h-5" />
                     Send Message

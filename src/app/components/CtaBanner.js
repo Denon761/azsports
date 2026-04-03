@@ -24,7 +24,7 @@ export default function CtaBanner() {
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
-              Ready to <span className="text-[#D3B157]">Elevate Your Game?</span>
+              Ready to <span className="text-[#241b14]">Elevate Your Game?</span>
             </h2>
             
             {/* Subtext */}
@@ -38,7 +38,7 @@ export default function CtaBanner() {
               {/* Primary CTA Button */}
               <Link 
                 href="/shop"
-                className="w-full sm:w-auto bg-[#D3B157] text-white px-8 md:px-10 py-4 rounded-xl font-bold md:text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(211,177,87,0.4)] transition-all duration-300 transform hover:-translate-y-1"
+                className="w-full sm:w-auto bg-[#241b14] text-white px-8 md:px-10 py-4 rounded-xl font-bold md:text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(36,27,20,0.4)] transition-all duration-300 transform hover:-translate-y-1"
               >
                 Shop Collection
                 <ArrowRight className="w-5 h-5 ml-1" />

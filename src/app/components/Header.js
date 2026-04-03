@@ -2,48 +2,20 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  Menu, X, User, ShoppingBag, MessageCircle, ChevronDown, Zap
+  Menu, X, User, ShoppingBag, MessageCircle, ChevronDown
 } from 'lucide-react';
 import { useSelector } from 'react-redux';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../assets/logo.jpeg';
-import Image001 from '../assets/products/001.png';
-import Image002 from '../assets/products/002.png';
-import Image003 from '../assets/products/003.png';
 
 // --- DATA ARRAYS (CARROM THEME) ---
 const primaryLinks = [
   { name: 'Shop All', href: '/shop' },
-  { name: 'Carrom Boards', href: '/shop' },
-  { name: 'Accessories', href: '/shop' },
-];
-
-const bestSellers = [
-  {
-    id: 1,
-    name: 'Champion GEN-Z',
-    tag: 'Tournament Grade',
-    desc: 'Official match board with waterproof ply and lightning fast surface.',
-    image: Image003, 
-    href: '/shop/champion-series'
-  },
-  {
-    id: 2,
-    name: 'Ivory Pro Striker',
-    tag: 'Pro Series',
-    desc: 'Perfectly balanced 15g striker for ultimate control and rebound.',
-    image: Image001,
-    href: '/shop/rookie-gen-1'
-  },
-  {
-    id: 3,
-    name: 'Disco Boric Powder',
-    tag: 'Essential',
-    desc: 'Specialized powder for smooth gliding and board protection.',
-    image: Image002,
-    href: '/shop/club-pro'
-  }
+  { name: 'Regular Series', href: '/shop?type=Regular Series', query: 'type=Regular Series' },
+  { name: 'Country Edition', href: '/shop?type=Country Edition', query: 'type=Country Edition' },
+  { name: 'Special Edition', href: '/shop?type=Special Edition', query: 'type=Special Edition' },
+  { name: 'Accessories', href: '/shop?category=accessories', query: 'category=accessories' },
 ];
 
 const utilityLinks = [
@@ -62,7 +34,6 @@ const utilityLinks = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  // Note: Assuming your Redux setup is working as provided
   const cartItems = useSelector(state => state.cart?.totalItems || 0);
 
   useEffect(() => {
@@ -119,14 +90,14 @@ const Header = () => {
             <Link href="/cart" className="text-gray-500 relative hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100">
               <ShoppingBag className="w-[22px] h-[22px]" />
               {cartItems > 0 && (
-                <span className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-[#D3B157] text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shadow-[0_0_10px_rgba(211,177,87,0.5)]">
+                <span className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-[#241b14] text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shadow-[0_0_10px_rgba(211,177,87,0.5)]">
                   {cartItems}
                 </span>
               )}
             </Link>
 
             {/* Checkout Button */}
-            <Link href="/checkout" className="hidden md:flex bg-[#D3B157] text-white px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm tracking-wide hover:shadow-[0_0_15px_rgba(211,177,87,0.4)] transition-all duration-300 transform hover:-translate-y-0.5 ml-2">
+            <Link href="/checkout" className="hidden md:flex bg-[#241b14] text-white px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm tracking-wide hover:shadow-[0_0_15px_rgba(211,177,87,0.4)] transition-all duration-300 transform hover:-translate-y-0.5 ml-2">
               CHECKOUT
             </Link>
           </div>
@@ -182,45 +153,7 @@ const Header = () => {
 
           <hr className="border-gray-200 mx-6" />
 
-          {/* 2. TRENDING GEAR (Best Sellers) */}
-          <div className="px-6 py-8">
-            <div className="flex items-center gap-2 mb-6">
-              <Zap className="w-4 h-4 text-amber-500" />
-              <h3 className="text-gray-900 font-bold uppercase tracking-widest text-xs">Trending Gear</h3>
-            </div>
-            
-            <div className="space-y-6">
-              {bestSellers.map((product) => (
-                <Link 
-                  key={product.id} 
-                  href={product.href} 
-                  onClick={() => setIsMenuOpen(false)} 
-                  className="flex gap-4 group cursor-pointer p-3 -mx-3 rounded-2xl hover:bg-gray-50 border border-transparent hover:border-gray-200 transition-all duration-300"
-                >
-                  {/* Product Image Box */}
-                  <div className="w-20 h-24 bg-gray-100 rounded-xl shrink-0 overflow-hidden border border-gray-200 group-hover:border-amber-500/50 transition-colors relative">
-                    <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity z-0"></div>
-                    <Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500 relative z-10"/>
-                  </div>
-                  
-                  {/* Product Details */}
-                  <div className="flex-1 flex flex-col justify-center">
-                    <div className="flex flex-col items-start justify-between w-full mb-1 gap-1.5">
-                      <span className="bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
-                        {product.tag}
-                      </span>
-                      <h4 className="font-bold text-base text-gray-900 group-hover:text-amber-600 transition-colors">{product.name}</h4>
-                    </div>
-                    <p className="text-xs text-gray-500 leading-relaxed line-clamp-2 pr-2">{product.desc}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <hr className="border-gray-200 mx-6" />
-
-          {/* 3. UTILITY LINKS */}
+          {/* 2. UTILITY LINKS */}
           <div className="flex flex-col py-6">
             {utilityLinks.map((link) => (
               <Link 

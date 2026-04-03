@@ -1,23 +1,19 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Check, Layers, Ruler, ShoppingCart, Star, Shield, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { Layers, Ruler, ShoppingCart, Star, Shield, ArrowRight } from 'lucide-react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice'; 
-import { products, standProduct } from '../data/products';
+import { products } from '../data/products';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const ProductCard = ({ product }) => {
-  const [addStand, setAddStand] = useState(false);
   const dispatch = useDispatch();
-  
-  const standPrice = standProduct?.price || 6500;
-  const totalPrice = addStand ? product.price + standPrice : product.price;
 
   const handleAddToCart = (e) => {
     e.preventDefault();
-    dispatch(addToCart({ product, quantity: 1, addStand }));
+    dispatch(addToCart({ product, quantity: 1 }));
   };
 
   return (
@@ -46,7 +42,7 @@ const ProductCard = ({ product }) => {
       {/* CONTENT BODY */}
       <div className="flex-1 flex flex-col p-3 md:p-6 bg-white">
         
-        {/* Header Row (Rating) - Hidden on very small screens to save space if needed */}
+        {/* Header Row (Rating) */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-1">
             <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
@@ -64,7 +60,7 @@ const ProductCard = ({ product }) => {
           </h3>
         </Link>
         
-        {/* Specs Tags - Simplified for mobile */}
+        {/* Specs Tags */}
         <div className="flex flex-wrap items-center gap-1 md:gap-2 mb-4">
           <div className="flex items-center gap-1 bg-zinc-100 px-1.5 py-0.5 md:px-2.5 md:py-1 rounded-md text-[9px] md:text-xs font-medium text-zinc-600">
             <Ruler className="w-3 h-3 text-zinc-500" />
@@ -78,36 +74,12 @@ const ProductCard = ({ product }) => {
 
         <div className="flex-grow"></div>
 
-        {/* Add-on Toggle - Made more compact for mobile grid */}
-        <button 
-          type="button"
-          onClick={() => setAddStand(!addStand)}
-          className={`w-full flex items-center justify-between p-2 md:p-3 mb-3 md:mb-5 rounded-xl border transition-all duration-300 text-left ${
-              addStand ? 'bg-amber-50 border-amber-500' : 'bg-white border-zinc-200'
-          }`}
-        >
-          <div className="flex items-center gap-2 md:gap-3 overflow-hidden">
-            <div className={`w-4 h-4 md:w-5 md:h-5 rounded-full border flex items-center justify-center shrink-0 ${
-                addStand ? 'bg-amber-500 border-amber-500' : 'border-zinc-300'
-            }`}>
-              <Check className={`w-2.5 h-2.5 md:w-3 md:h-3 text-white ${addStand ? 'opacity-100' : 'opacity-0'}`} />
-            </div>
-            <div className="flex flex-col truncate">
-              <span className="text-[10px] md:text-[13px] font-bold truncate">Stand</span>
-              <span className="text-[9px] md:text-[11px] text-zinc-500">+Rs {standPrice}</span>
-            </div>
-          </div>
-          <div className="relative w-7 h-7 md:w-10 md:h-10 rounded-lg overflow-hidden bg-white border border-zinc-100 shrink-0">
-            <Image src={standProduct?.image} alt="Stand" fill className="object-cover" />
-          </div>
-        </button>
-
         {/* Price and Button */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-3 border-t border-zinc-100 gap-2">
           <div className="flex flex-col">
-            <span className="text-[8px] md:text-[10px] font-bold uppercase text-zinc-400">Total</span>
+            <span className="text-[8px] md:text-[10px] font-bold uppercase text-zinc-400">Price</span>
             <div className="text-sm md:text-xl font-black text-zinc-900">
-              Rs {totalPrice.toLocaleString()}
+              Rs {(product.sizes ? product.sizes[0].price : product.price).toLocaleString()}
             </div>
           </div>
           

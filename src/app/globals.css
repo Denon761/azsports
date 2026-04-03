@@ -107,13 +107,13 @@ body {
 @theme {
   --font-sans: var(--font-urbanist), ui-sans-serif, system-ui, sans-serif;
   
-  --color-primary: #1E3A5F;
-  --color-primary-light: #2D4A6F;
-  --color-primary-dark: #0F2A4F;
-  --color-secondary: #98713E;
-  --color-secondary-light: #D8C099;
-  --color-accent: #E6F4D8;
-  --color-accent-dark: #22C55E;
+  --color-primary: #241b14;
+  --color-primary-light: #3d2e22;
+  --color-primary-dark: #150f0a;
+  --color-secondary: #c9a227;
+  --color-secondary-light: #e8d08a;
+  --color-accent: #f5e6c8;
+  --color-accent-dark: #a3831e;
   --color-border: #E5E7EB;
   --color-text-light: #6B7280;
   --color-background: #FAFAFA;

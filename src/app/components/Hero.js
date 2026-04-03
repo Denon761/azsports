@@ -34,7 +34,7 @@ const Hero = () => {
             {/* Huge Premium Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6">
               Master the <br />
-              <span className="text-[#D3B157]">
+              <span className="text-[#241b14]">
                 Perfect Strike.
               </span> 
             </h1>
@@ -61,7 +61,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
               <Link 
                 href="/shop" 
-                className="bg-[#D3B157] text-white px-7 py-3 md:py-3.5 rounded-lg text-sm md:text-base font-semibold hover:shadow-[0_0_20px_rgba(211,177,87,0.35)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-0.5"
+                className="bg-[#241b14] text-white px-7 py-3 md:py-3.5 rounded-lg text-sm md:text-base font-semibold hover:shadow-[0_0_20px_rgba(36,27,20,0.35)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-0.5"
               >
                 Shop Pro Boards <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </Link>

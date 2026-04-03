@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import ImageStand from '../assets/products/stand.png';
 
 const initialState = {
   items: [],
@@ -12,81 +11,80 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const { product, quantity = 1, addStand = false } = action.payload;
+      const { product, quantity = 1, size = null } = action.payload;
       
-      // Create unique identifier including stand option
-      const itemKey = `${product.id}-${addStand}`;
+      const itemKey = size ? `${product.id}-${size}` : product.id;
       
       const existingItem = state.items.find(
-        item => item.id === product.id && item.addStand === addStand
+        item => (size ? `${item.id}-${item.size}` : item.id) === itemKey
       );
 
       if (existingItem) {
         existingItem.quantity += quantity;
       } else {
+        const sizeData = size && product.sizes 
+          ? product.sizes.find(s => s.size === size) 
+          : null;
+        
         state.items.push({
           id: product.id,
           name: product.name,
-          price: product.price,
-          image: product.image,
+          price: sizeData ? sizeData.price : product.price,
+          image: product.image?.src || product.image || null,
           description: product.description || '',
           features: product.features || [],
-          specs: product.specs || {},
+          specs: sizeData ? sizeData.specs : product.specs || {},
           tag: product.tag || '',
+          type: product.type || '',
+          seriesNumber: product.seriesNumber || '',
+          country: product.country || '',
+          color: product.color || '',
+          size: size || null,
           quantity,
-          addStand,
-          standPrice: addStand ? 45 : 0,
-          standProduct: addStand ? {
-            id: 'stand-01',
-            name: 'Foldable Metal Stand',
-            price: 45,
-            image: '/assets/products/stand.png'
-          } : null
         });
       }
 
-      // Recalculate totals
       state.totalItems = state.items.reduce((sum, item) => sum + item.quantity, 0);
       state.totalPrice = state.items.reduce(
-        (sum, item) => sum + (item.price + (item.standPrice || 0)) * item.quantity,
+        (sum, item) => sum + item.price * item.quantity,
         0
       );
     },
 
     removeFromCart: (state, action) => {
-      const { id, addStand } = action.payload;
+      const { id, size } = action.payload;
+      const itemKey = size ? `${id}-${size}` : id;
       state.items = state.items.filter(
-        item => !(item.id === id && item.addStand === addStand)
+        item => (size ? `${item.id}-${item.size}` : item.id) !== itemKey
       );
 
-      // Recalculate totals
       state.totalItems = state.items.reduce((sum, item) => sum + item.quantity, 0);
       state.totalPrice = state.items.reduce(
-        (sum, item) => sum + (item.price + (item.standPrice || 0)) * item.quantity,
+        (sum, item) => sum + item.price * item.quantity,
         0
       );
     },
 
     updateQuantity: (state, action) => {
-      const { id, addStand, quantity } = action.payload;
+      const { id, size, quantity } = action.payload;
+      const itemKey = size ? `${id}-${size}` : id;
       const item = state.items.find(
-        item => item.id === id && item.addStand === addStand
+        item => (size ? `${item.id}-${item.size}` : item.id) === itemKey
       );
 
       if (item) {
         if (quantity <= 0) {
           state.items = state.items.filter(
-            item => !(item.id === id && item.addStand === addStand)
+            i => (size ? `${i.id}-${i.size}` : i.id) !== itemKey
           );
         } else {
           item.quantity = quantity;
         }
       }
 
-      // Recalculate totals
       state.totalItems = state.items.reduce((sum, item) => sum + item.quantity, 0);
       state.totalPrice = state.items.reduce(
-        (sum, item) => sum + (item.price + (item.standPrice || 0)) * item.quantity,
+        (sum, item) => sum + item.price * item.quantity,
         0
       );
     },

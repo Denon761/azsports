@@ -1,7 +1,16 @@
 // src/data/products.js
-import Image001 from '../assets/products/001.png';
-import Image002 from '../assets/products/002.png';
-import Image003 from '../assets/products/003.png';
+import Image001 from '../assets/products/001.jpeg';
+import Image002 from '../assets/products/002.jpeg';
+import Image003 from '../assets/products/003.jpeg';
+import Image004 from '../assets/products/004.jpeg';
+import ImageUSA from '../assets/products/usa.jpeg';
+import ImageCanada from '../assets/products/canada.jpeg';
+import ImagePK from '../assets/products/pk.jpeg';
+import ImageAfgan from '../assets/products/afgan.jpeg';
+import ImageRed from '../assets/products/red.jpeg';
+import ImageBlue from '../assets/products/blue.jpeg';
+import ImageWhite from '../assets/products/white.jpeg';
+import ImageBlack from '../assets/products/black.jpeg';
 import ImageStand from '../assets/products/stand.png';
 
 export const standProduct = {
@@ -55,7 +64,7 @@ export const accessories = [
     name: 'Pro Striker Set',
     tag: 'Pro Series',
     price: 3500,
-    image: Image001,
+    image: Image004,
     description: 'Professional grade strikers for ultimate control and power.',
     category: 'accessories',
     features: [
@@ -93,16 +102,24 @@ export const accessories = [
 ];
 
 export const products = [
+  // Regular Series
   {
     id: 1,
     slug: 'rookie-gen-1',
     name: 'Rookie Gen-1',
     tag: 'Beginner',
-    price: 12990,
+    type: 'Regular Series',
+    seriesNumber: '001',
     image: Image001,
     description: 'Perfect for beginners and casual players. Lightweight design with smooth matte finish.',
     category: 'boards',
     inStock: true,
+    sizes: [
+      { size: '24"', price: 9990, specs: { size: '24" x 24"', ply: '4mm Standard', frame: '1" Softwood', weight: '5kg', boardThickness: '10mm' } },
+      { size: '32"', price: 12990, specs: { size: '29" x 29"', ply: '4mm Standard', frame: '1.5" Softwood', weight: '8kg', boardThickness: '12mm' } },
+      { size: '36"', price: 15990, specs: { size: '32" x 32"', ply: '6mm Standard', frame: '1.5" Softwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '42"', price: 19990, specs: { size: '36" x 36"', ply: '8mm Standard', frame: '2" Softwood', weight: '14kg', boardThickness: '16mm' } },
+    ],
     features: [
       'Lightweight design - easy to carry',
       'Rounded corners for safety',
@@ -111,15 +128,6 @@ export const products = [
       'Beginner-friendly rebound',
       '1-year warranty included'
     ],
-    specs: {
-      size: '29" x 29"',
-      ply: '4mm Standard',
-      frame: '1.5" Softwood',
-      surface: 'Smooth Matte',
-      rebound: 'Standard',
-      weight: '8kg',
-      boardThickness: '12mm'
-    },
     included: [
       '1 Rookie Gen-1 Board',
       '19 Carrom Men (Black & White)',
@@ -133,11 +141,18 @@ export const products = [
     slug: 'club-pro',
     name: 'Club Pro',
     tag: 'Intermediate',
-    price: 21990,
+    type: 'Regular Series',
+    seriesNumber: '002',
     image: Image002,
     description: 'Designed for intermediate players who want to take their game to the next level.',
     category: 'boards',
     inStock: true,
+    sizes: [
+      { size: '24"', price: 12990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 17990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '36"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
+      { size: '42"', price: 27990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
+    ],
     features: [
       'Water-resistant construction',
       'Reinforced backing for durability',
@@ -146,15 +161,6 @@ export const products = [
       'Polished satin finish',
       '2-year warranty included'
     ],
-    specs: {
-      size: '32" x 32"',
-      ply: '8mm Water-Resistant',
-      frame: '2" Hardwood',
-      surface: 'Polished Satin',
-      rebound: 'High',
-      weight: '12kg',
-      boardThickness: '16mm'
-    },
     included: [
       '1 Club Pro Board',
       '19 Carrom Men (Black & White)',
@@ -169,11 +175,18 @@ export const products = [
     slug: 'champion-series',
     name: 'Champion Series',
     tag: 'Tournament Grade',
-    price: 34990,
+    type: 'Regular Series',
+    seriesNumber: '003',
     image: Image003,
     description: 'Professional tournament-grade board used by champions worldwide.',
     category: 'boards',
     inStock: true,
+    sizes: [
+      { size: '24"', price: 22990, specs: { size: '24" x 24"', ply: '12mm English Birch', frame: '2" Kikar Wood', weight: '10kg', boardThickness: '16mm' } },
+      { size: '32"', price: 29990, specs: { size: '32" x 32"', ply: '14mm English Birch', frame: '2.5" Kikar Wood', weight: '15kg', boardThickness: '20mm' } },
+      { size: '36"', price: 34990, specs: { size: '35" x 35"', ply: '16mm English Birch', frame: '3" Kikar Wood', weight: '18kg', boardThickness: '22mm' } },
+      { size: '42"', price: 42990, specs: { size: '42" x 42"', ply: '18mm English Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
+    ],
     features: [
       'Federation approved specifications',
       'Zero vibration technology',
@@ -182,15 +195,6 @@ export const products = [
       'Professional 5x rebound',
       '5-year warranty included'
     ],
-    specs: {
-      size: '35" x 35"',
-      ply: '16mm English Birch',
-      frame: '3" Kikar Wood',
-      surface: 'Glass-like Glaze',
-      rebound: 'Professional (5x)',
-      weight: '18kg',
-      boardThickness: '22mm'
-    },
     included: [
       '1 Champion Series Board',
       '19 Premium Carrom Men',
@@ -199,6 +203,308 @@ export const products = [
       'Deluxe Board Cover',
       'Premium Carrying Case',
       'Official Rule Book'
+    ]
+  },
+  {
+    id: 4,
+    slug: 'pro-elite',
+    name: 'Pro Elite',
+    tag: 'Professional',
+    type: 'Regular Series',
+    seriesNumber: '004',
+    image: Image004,
+    description: 'Elite professional board for serious competitive players seeking maximum performance.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 29990, specs: { size: '24" x 24"', ply: '14mm Premium Birch', frame: '2.5" Teak Wood', weight: '12kg', boardThickness: '18mm' } },
+      { size: '32"', price: 34990, specs: { size: '32" x 32"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '16kg', boardThickness: '20mm' } },
+      { size: '36"', price: 39990, specs: { size: '36" x 36"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '18kg', boardThickness: '22mm' } },
+      { size: '42"', price: 45990, specs: { size: '42" x 42"', ply: '18mm Premium Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
+    ],
+    features: [
+      'Premium engineered wood construction',
+      'Ultra-smooth playing surface',
+      'Enhanced sound quality',
+      'Superior rebound control',
+      'Professional tournament specifications',
+      '5-year warranty included'
+    ],
+    included: [
+      '1 Pro Elite Board',
+      '19 Premium Carrom Men',
+      '1 Queen (Red)',
+      '2 Pro Strikers',
+      'Deluxe Board Cover',
+      'Premium Carrying Case',
+      'Official Rule Book',
+      'Professional Coin Set'
+    ]
+  },
+  // Country Edition
+  {
+    id: 5,
+    slug: 'usa-edition',
+    name: 'USA Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'USA',
+    image: ImageUSA,
+    description: 'Special USA edition board featuring iconic American design with premium quality construction.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'USA themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with patriotic accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 USA Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 6,
+    slug: 'canada-edition',
+    name: 'Canada Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'Canada',
+    image: ImageCanada,
+    description: 'Special Canada edition board featuring iconic maple leaf design with premium quality.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Canada themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with maple leaf accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Canada Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 7,
+    slug: 'pakistan-edition',
+    name: 'Pakistan Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'Pakistan',
+    image: ImagePK,
+    description: 'Special Pakistan edition board featuring iconic crescent and star design with premium quality.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Pakistan themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with patriotic accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Pakistan Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 8,
+    slug: 'afghanistan-edition',
+    name: 'Afghanistan Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'Afghanistan',
+    image: ImageAfgan,
+    description: 'Special Afghanistan edition board featuring iconic national design with premium quality.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Afghanistan themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with patriotic accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Afghanistan Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  // Special Edition - Colors
+  {
+    id: 9,
+    slug: 'red-special-edition',
+    name: 'Red Special Edition',
+    tag: 'Special Edition',
+    type: 'Special Edition',
+    color: 'Red',
+    image: ImageRed,
+    description: 'Vibrant red special edition board with premium finish and bold design statement.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
+      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
+      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
+    ],
+    features: [
+      'Bold red premium finish',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Metallic shine finish',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Red Special Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 10,
+    slug: 'blue-special-edition',
+    name: 'Blue Special Edition',
+    tag: 'Special Edition',
+    type: 'Special Edition',
+    color: 'Blue',
+    image: ImageBlue,
+    description: 'Elegant blue special edition board with premium finish and sophisticated design.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
+      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
+      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
+    ],
+    features: [
+      'Elegant blue premium finish',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Metallic shine finish',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Blue Special Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 11,
+    slug: 'white-special-edition',
+    name: 'White Special Edition',
+    tag: 'Special Edition',
+    type: 'Special Edition',
+    color: 'White',
+    image: ImageWhite,
+    description: 'Clean white special edition board with premium finish and minimalist elegance.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
+      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
+      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
+    ],
+    features: [
+      'Clean white premium finish',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Pearlescent shine finish',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 White Special Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 12,
+    slug: 'black-special-edition',
+    name: 'Black Special Edition',
+    tag: 'Special Edition',
+    type: 'Special Edition',
+    color: 'Black',
+    image: ImageBlack,
+    description: 'Sleek black special edition board with premium matte finish and modern design.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
+      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
+      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
+    ],
+    features: [
+      'Sleek black matte finish',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Premium matte coating',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Black Special Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
     ]
   }
 ];

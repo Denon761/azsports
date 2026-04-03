@@ -1,26 +1,52 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, updateQuantity } from '../store/cartSlice';
+import { removeFromCart, updateQuantity, addToCart } from '../store/cartSlice';
 import Link from 'next/link';
 import { 
   Trash2, Minus, Plus, ArrowLeft, ShoppingBag, 
-  Check, Package, Shield, Truck, Zap 
+  Check, Package, Shield, Truck, PlusCircle
 } from 'lucide-react';
+import Image from 'next/image';
+import standProductImage from '../assets/products/stand.png';
+
+const standProduct = {
+  id: 'stand-01',
+  name: 'Foldable Metal Stand',
+  price: 6500,
+  description: 'Premium foldable metal stand for easy storage and gameplay at the perfect height.',
+};
 
 const CartPage = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart.items);
   const totalPrice = useSelector(state => state.cart.totalPrice);
+  const [standAdded, setStandAdded] = useState(false);
 
-  const handleRemove = (id, addStand) => {
-    dispatch(removeFromCart({ id, addStand }));
+  const handleRemove = (id, size) => {
+    dispatch(removeFromCart({ id, size }));
   };
 
-  const handleQuantityChange = (id, addStand, newQuantity) => {
-    dispatch(updateQuantity({ id, addStand, quantity: newQuantity }));
+  const handleQuantityChange = (id, size, newQuantity) => {
+    dispatch(updateQuantity({ id, size, quantity: newQuantity }));
   };
+
+  const handleAddStand = () => {
+    dispatch(addToCart({ 
+      product: {
+        id: 'stand-01',
+        name: standProduct.name,
+        price: standProduct.price,
+        image: standProductImage,
+        description: standProduct.description,
+      }, 
+      quantity: 1 
+    }));
+    setStandAdded(true);
+  };
+
+  const hasStand = cartItems.some(item => item.id === 'stand-01');
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans pb-24">
@@ -74,7 +100,7 @@ const CartPage = () => {
                 <div className="bg-white border border-slate-200 rounded-[2rem] overflow-hidden shadow-sm">
                   {cartItems.map((item, index) => (
                     <div 
-                      key={`${item.id}-${item.addStand}`}
+                      key={`${item.id}-${item.size || 'default'}`}
                       className={`p-6 md:p-8 flex flex-col sm:flex-row gap-6 ${index !== cartItems.length - 1 ? 'border-b border-slate-100' : ''}`}
                     >
                       {/* Product Image */}
@@ -95,14 +121,13 @@ const CartPage = () => {
                             <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-1">{item.name}</h3>
                             {item.tag && (
                               <div className="inline-flex items-center gap-1 bg-orange-100 text-orange-600 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">
-                                <Zap className="w-3 h-3" fill="currentColor" />
                                 {item.tag}
                               </div>
                             )}
                           </div>
                           
                           <button 
-                            onClick={() => handleRemove(item.id, item.addStand)}
+                            onClick={() => handleRemove(item.id, item.size)}
                             className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all"
                             title="Remove item"
                           >
@@ -120,31 +145,33 @@ const CartPage = () => {
                           {/* Price Block */}
                           <div>
                             <p className="text-2xl font-black text-slate-900 tracking-tight">
-                              Rs {((item.price + (item.addStand ? 6500 : 0)) * item.quantity).toLocaleString()}
+                              Rs {(item.price * item.quantity).toLocaleString()}
                             </p>
-                            {item.addStand && (
-                              <p className="text-xs font-bold text-orange-600 mt-1 flex items-center gap-1">
-                                <Check className="w-3 h-3" /> Includes Foldable Stand
-                              </p>
-                            )}
                           </div>
 
                           {/* Quantity Control */}
-                          <div className="flex items-center bg-slate-100 border border-slate-200 rounded-xl p-1.5 h-12">
-                            <button 
-                              onClick={() => handleQuantityChange(item.id, item.addStand, item.quantity - 1)}
-                              className="w-8 h-8 flex items-center justify-center bg-white text-slate-600 rounded-lg shadow-sm hover:text-orange-600 disabled:opacity-50 disabled:hover:text-slate-600 transition-all"
-                              disabled={item.quantity <= 1}
-                            >
-                              <Minus className="w-4 h-4" />
-                            </button>
-                            <span className="font-bold text-slate-900 w-10 text-center">{item.quantity}</span>
-                            <button 
-                              onClick={() => handleQuantityChange(item.id, item.addStand, item.quantity + 1)}
-                              className="w-8 h-8 flex items-center justify-center bg-white text-slate-600 rounded-lg shadow-sm hover:text-orange-600 transition-all"
-                            >
-                              <Plus className="w-4 h-4" />
-                            </button>
+                          <div className="grid grid-cols-2 gap-2 w-full">
+                            <div className="flex items-center bg-slate-100 border border-slate-200 rounded-xl px-2 py-1.5 h-12">
+                              <button 
+                                onClick={() => handleQuantityChange(item.id, item.size, item.quantity - 1)}
+                                className="w-8 h-full flex items-center justify-center bg-white text-slate-600 rounded-lg shadow-sm hover:text-orange-600 disabled:opacity-50 disabled:hover:text-slate-600 transition-all px-2"
+                                disabled={item.quantity <= 1}
+                              >
+                                <Minus className="w-4 h-4" />
+                              </button>
+                              <span className="font-bold text-slate-900 w-10 text-center">{item.quantity}</span>
+                              <button 
+                                onClick={() => handleQuantityChange(item.id, item.size, item.quantity + 1)}
+                                className="w-8 h-full flex items-center justify-center bg-white text-slate-600 rounded-lg shadow-sm hover:text-orange-600 transition-all px-2"
+                              >
+                                <Plus className="w-4 h-4" />
+                              </button>
+                            </div>
+                            {item.size && (
+                              <div className="flex items-center justify-center bg-[#241b14] text-white px-3 rounded-xl text-sm font-bold">
+                                {item.size}"
+                              </div>
+                            )}
                           </div>
 
                         </div>
@@ -153,49 +180,44 @@ const CartPage = () => {
                   ))}
                 </div>
 
-                {/* What's Included Box */}
-                <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-8 shadow-sm">
-                  <h3 className="text-lg font-black text-slate-900 mb-6 flex items-center gap-2">
-                    <Package className="w-5 h-5 text-amber-500" />
-                    What's in your package
-                  </h3>
-                  <div className="space-y-4">
-                    {cartItems.map((item) => (
-                      <div key={`${item.id}-${item.addStand}`} className="pl-4 border-l-2 border-orange-400">
-                        <p className="font-bold text-slate-800 text-sm mb-2">{item.quantity}x {item.name}</p>
-                        {item.included ? (
-                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            {item.included.map((inc, idx) => (
-                              <li key={idx} className="text-xs text-slate-500 font-medium flex items-center gap-2">
-                                <div className="bg-green-100 text-green-600 rounded-full p-0.5 shrink-0">
-                                  <Check className="w-3 h-3" strokeWidth={3} />
-                                </div>
-                                {inc}
-                              </li>
-                            ))}
-                            {item.addStand && (
-                              <li className="text-xs text-orange-600 font-bold flex items-center gap-2">
-                                <div className="bg-orange-100 text-orange-600 rounded-full p-0.5 shrink-0">
-                                  <Check className="w-3 h-3" strokeWidth={3} />
-                                </div>
-                                Foldable Metal Stand
-                              </li>
-                            )}
-                          </ul>
-                        ) : (
-                          <p className="text-xs text-slate-500">Standard packaging included.</p>
-                        )}
+                {/* Stand Suggestion Card */}
+                {cartItems.length > 0 && !hasStand && !standAdded && (
+                  <div className="mt-6 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6">
+                    <div className="flex flex-col sm:flex-row gap-4 items-center">
+                      <div className="w-20 h-20 bg-white rounded-xl overflow-hidden border border-amber-200 shrink-0">
+                        <Image
+                          src={standProductImage}
+                          alt={standProduct.name}
+                          width={80}
+                          height={80}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                    ))}
+                      <div className="flex-1 text-center sm:text-left">
+                        <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Complete Your Setup</p>
+                        <h3 className="text-lg font-bold text-slate-900">{standProduct.name}</h3>
+                        <p className="text-sm text-slate-500">{standProduct.description}</p>
+                      </div>
+                      <div className="text-center sm:text-right shrink-0">
+                        <p className="text-xl font-bold text-slate-900">Rs {standProduct.price.toLocaleString()}</p>
+                        <button
+                          onClick={handleAddStand}
+                          className="mt-2 flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700 transition-colors"
+                        >
+                          <PlusCircle className="w-4 h-4" />
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
 
               </div>
 
               {/* Right Column: Order Summary (Sticky) */}
               <div className="lg:col-span-5 xl:col-span-4">
                 <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-8 shadow-sm sticky top-24">
-                  
+                   
                   <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">Order Summary</h2>
 
                   {/* Pricing Breakdown */}
@@ -213,14 +235,14 @@ const CartPage = () => {
                   {/* Total Amount */}
                   <div className="flex justify-between items-end mb-8">
                     <span className="text-lg font-bold text-slate-900">Total</span>
-                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600 tracking-tight">
+                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
                       Rs {totalPrice.toLocaleString()}
                     </span>
                   </div>
 
                   {/* Action Buttons */}
                   <div className="space-y-3">
-                    <Link href="/checkout" className="flex items-center justify-center w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5">
+                    <Link href="/checkout" className="flex items-center justify-center w-full bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5">
                       Proceed to Checkout
                     </Link>
                     <Link href="/shop" className="flex items-center justify-center w-full bg-slate-50 text-slate-600 border border-slate-200 py-4 rounded-2xl font-bold text-sm hover:bg-slate-100 hover:text-slate-900 transition-all duration-300">

@@ -2,12 +2,21 @@
 
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../store/cartSlice';
+import { clearCart, addToCart } from '../store/cartSlice';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   ArrowLeft, CheckCircle, Shield, Truck, RotateCcw, 
-  CreditCard, Lock, ShoppingBag, Package, Zap 
+  CreditCard, Lock, ShoppingBag, Package, Zap, PlusCircle
 } from 'lucide-react';
+import standProductImage from '../assets/products/stand.png';
+
+const standProduct = {
+  id: 'stand-01',
+  name: 'Foldable Metal Stand',
+  price: 6500,
+  description: 'Premium foldable metal stand for easy storage and gameplay at the perfect height.',
+};
 
 const CheckoutPage = () => {
   const dispatch = useDispatch();
@@ -17,6 +26,7 @@ const CheckoutPage = () => {
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [orderNumber, setOrderNumber] = useState('');
+  const [standAdded, setStandAdded] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -32,6 +42,22 @@ const CheckoutPage = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
+
+  const handleAddStand = () => {
+    dispatch(addToCart({ 
+      product: {
+        id: 'stand-01',
+        name: standProduct.name,
+        price: standProduct.price,
+        image: standProductImage,
+        description: standProduct.description,
+      }, 
+      quantity: 1 
+    }));
+    setStandAdded(true);
+  };
+
+  const hasStand = cartItems.some(item => item.id === 'stand-01');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,11 +86,8 @@ const CheckoutPage = () => {
           name: item.name,
           price: item.price,
           quantity: item.quantity,
-          addStand: item.addStand,
-          standPrice: item.addStand ? 6500 : 0,
         })),
         subtotal: totalPrice,
-        standTotal: cartItems.reduce((sum, item) => sum + (item.addStand ? 6500 * item.quantity : 0), 0),
         total: totalPrice,
       };
 
@@ -152,7 +175,7 @@ const CheckoutPage = () => {
           
           <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 mb-8">
             <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Order Total Paid</p>
-            <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">
+            <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22]">
               Rs {totalPrice.toLocaleString()}
             </p>
           </div>
@@ -335,7 +358,7 @@ const CheckoutPage = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white py-5 rounded-2xl font-bold text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-5 rounded-2xl font-bold text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <>
@@ -376,22 +399,46 @@ const CheckoutPage = () => {
                       <div className="flex-1 py-1">
                         <p className="text-sm font-bold text-slate-900 leading-tight">{item.name}</p>
                         <p className="text-xs text-slate-500 mt-1">Qty: {item.quantity}</p>
-                        {item.addStand && (
-                          <div className="inline-flex items-center gap-1 bg-orange-100 text-orange-600 text-[9px] font-bold px-1.5 py-0.5 rounded mt-1.5 uppercase">
-                            <Zap className="w-2.5 h-2.5" /> Stand Added
-                          </div>
-                        )}
                       </div>
                       
                       {/* Line Price */}
                       <div className="py-1 text-right">
                         <p className="text-sm font-bold text-slate-900">
-                          Rs {((item.price + (item.addStand ? 6500 : 0)) * item.quantity).toLocaleString()}
+                          Rs {(item.price * item.quantity).toLocaleString()}
                         </p>
                       </div>
                     </div>
                   ))}
                 </div>
+
+                {/* Stand Suggestion Card */}
+                {cartItems.length > 0 && !hasStand && !standAdded && (
+                  <div className="mt-4 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4">
+                    <div className="flex gap-3 items-center">
+                      <div className="w-14 h-14 bg-white rounded-lg overflow-hidden border border-amber-200 shrink-0">
+                        <Image
+                          src={standProductImage}
+                          alt={standProduct.name}
+                          width={56}
+                          height={56}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[10px] font-bold text-amber-600 uppercase tracking-wider">Complete Your Setup</p>
+                        <p className="text-sm font-bold text-slate-900 truncate">{standProduct.name}</p>
+                        <p className="text-xs text-slate-500">Rs {standProduct.price.toLocaleString()}</p>
+                      </div>
+                      <button
+                        onClick={handleAddStand}
+                        className="shrink-0 flex items-center gap-1 text-xs font-bold text-amber-600 hover:text-amber-700 transition-colors"
+                      >
+                        <PlusCircle className="w-4 h-4" />
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                )}
 
                 {/* Totals Breakdown */}
                 <div className="space-y-3 mb-6">
@@ -409,7 +456,7 @@ const CheckoutPage = () => {
                 <div className="border-t border-slate-100 pt-6">
                   <div className="flex items-end justify-between">
                     <span className="text-lg font-bold text-slate-900">Total</span>
-                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600 tracking-tight">
+                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
                       Rs {finalTotal.toLocaleString()}
                     </span>
                   </div>

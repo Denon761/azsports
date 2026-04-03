@@ -44,7 +44,7 @@ const Features = () => {
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight animate-fade-in-up">
             Why most boards don't play{' '}
-            <span className="text-[#D3B157]">
+            <span className="text-[#241b14]">
               like they look
             </span>
           </h2>

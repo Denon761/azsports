@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingBag, Grid, List, Star, ArrowUpDown, Package } from 'lucide-react';
-import { products, accessories, standProduct } from '../data/products';
+import { ShoppingBag, Grid, List, Star, ArrowUpDown } from 'lucide-react';
+import { products, accessories } from '../data/products';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
 
@@ -13,6 +13,7 @@ export default function ShopPage() {
   
   const [activeCategory, setActiveCategory] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
+  const [typeFilter, setTypeFilter] = useState('all');
   const [sortBy, setSortBy] = useState('default');
 
   const allProducts = [...products, ...accessories];
@@ -23,19 +24,29 @@ export default function ShopPage() {
     { id: 'accessories', name: 'Accessories' },
   ];
 
+  const typeCategories = [
+    { id: 'all', name: 'All Types' },
+    { id: 'Regular Series', name: 'Regular Series' },
+    { id: 'Country Edition', name: 'Country Edition' },
+    { id: 'Special Edition', name: 'Special Edition' },
+  ];
+
   let filteredProducts = activeCategory === 'all'
     ? allProducts
     : allProducts.filter(p => p.category === activeCategory);
 
-  // Sort
+  if (typeFilter !== 'all') {
+    filteredProducts = filteredProducts.filter(p => p.type === typeFilter);
+  }
+
   filteredProducts = [...filteredProducts].sort((a, b) => {
     if (sortBy === 'price-asc') return a.price - b.price;
     if (sortBy === 'price-desc') return b.price - a.price;
     return 0;
   });
 
-  const handleAddToCart = (product, addStand = false) => {
-    dispatch(addToCart({ product, quantity: 1, addStand }));
+  const handleAddToCart = (product) => {
+    dispatch(addToCart({ product, quantity: 1 }));
   };
 
   return (
@@ -134,7 +145,7 @@ export default function ShopPage() {
                 <div
                   key={product.id}
                   className={`bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all group hover:shadow-lg hover:border-slate-400 ${
-                    viewMode === 'list' ? 'flex items-center gap-6 p-6' : ''
+                    viewMode === 'list' ? 'flex items-center' : ''
                   }`}
                 >
                   <div className={`relative overflow-hidden bg-slate-50 ${
@@ -152,7 +163,7 @@ export default function ShopPage() {
                       </span>
                     )}
                     <button
-                      onClick={() => handleAddToCart(product, product.category === 'boards')}
+                      onClick={() => handleAddToCart(product)}
                       className="absolute bottom-4 right-4 bg-slate-900 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                     >
                       <ShoppingBag className="w-5 h-5" />
@@ -169,8 +180,8 @@ export default function ShopPage() {
 
                     <div className="mt-auto flex items-center justify-between">
                       <div>
-                        <p className="text-2xl font-bold text-slate-900">
-                          Rs {product.price.toLocaleString()}
+                        <p className="text-xl font-bold text-slate-900">
+                          Rs {(product.sizes ? product.sizes[0].price : product.price).toLocaleString()}
                         </p>
                         {product.specs?.size && (
                           <p className="text-sm text-slate-500">{product.specs.size}</p>
@@ -188,38 +199,6 @@ export default function ShopPage() {
               ))}
             </div>
           )}
-
-          {/* Stand section */}
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <Package className="w-6 h-6" />
-              Frequently Bought Together
-            </h2>
-            <div className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center">
-              <Image
-                src={standProduct.image}
-                alt={standProduct.name}
-                width={160}
-                height={160}
-                className="object-cover rounded-xl"
-              />
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-slate-900">{standProduct.name}</h3>
-                <p className="text-slate-600 mt-1">{standProduct.description}</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-slate-900">
-                  Rs {standProduct.price.toLocaleString()}
-                </p>
-                <button
-                  onClick={() => handleAddToCart(standProduct)}
-                  className="mt-4 bg-slate-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-slate-800"
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>
