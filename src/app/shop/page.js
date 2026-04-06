@@ -7,6 +7,7 @@ import { ShoppingBag, Grid, List, Star, ArrowUpDown } from 'lucide-react';
 import { products, accessories } from '../data/products';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
+import SeriesGrid from '../components/SeriesGrid';
 
 export default function ShopPage() {
   const dispatch = useDispatch();
@@ -15,6 +16,14 @@ export default function ShopPage() {
   const [viewMode, setViewMode] = useState('grid');
   const [typeFilter, setTypeFilter] = useState('all');
   const [sortBy, setSortBy] = useState('default');
+  const [seriesLayout, setSeriesLayout] = useState('1x4');
+
+  const seriesIdToType = {
+    'Regular Series': 'Regular Series',
+    'Country Edition': 'Country Edition',
+    'Special Edition': 'Special Edition',
+    'Professional Series': 'Professional Series',
+  };
 
   const allProducts = [...products, ...accessories];
 
@@ -29,6 +38,7 @@ export default function ShopPage() {
     { id: 'Regular Series', name: 'Regular Series' },
     { id: 'Country Edition', name: 'Country Edition' },
     { id: 'Special Edition', name: 'Special Edition' },
+    { id: 'Professional Series', name: 'Professional Series' },
   ];
 
   let filteredProducts = activeCategory === 'all'
@@ -36,7 +46,8 @@ export default function ShopPage() {
     : allProducts.filter(p => p.category === activeCategory);
 
   if (typeFilter !== 'all') {
-    filteredProducts = filteredProducts.filter(p => p.type === typeFilter);
+    const filterType = seriesIdToType[typeFilter] || typeFilter;
+    filteredProducts = filteredProducts.filter(p => p.type === filterType);
   }
 
   filteredProducts = [...filteredProducts].sort((a, b) => {
@@ -60,6 +71,14 @@ export default function ShopPage() {
           <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto">
             Handcrafted boards & professional accessories — built for competition and family fun
           </p>
+        </div>
+      </section>
+
+      {/* Series Categories */}
+      <section className="py-8 md:py-12 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+         
+          <SeriesGrid layout={seriesLayout} />
         </div>
       </section>
 

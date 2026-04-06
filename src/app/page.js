@@ -6,13 +6,16 @@ import Reviews from "./components/Reviews";
 import Faqs from "./components/Faqs";
 import CtaBanner from "./components/CtaBanner";
 import TrustedStrip from "./components/TrustedStrip";
+import SeriesGrid from "./components/SeriesGrid";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       {/* <TrustedStrip/> */}
-     
+
+      <SeriesGrid layout="1x4" />
+      
       <ProductSlider />
 
       {/* Mid-page Promotional Banner */}
