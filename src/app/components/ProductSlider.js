@@ -20,13 +20,13 @@ const ProductCard = ({ product }) => {
     <div className="group relative bg-white h-full flex flex-col rounded-2xl md:rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
       
       {/* Floating Badges */}
-      <div className="absolute top-2 left-2 md:top-4 md:left-4 z-20 flex flex-col gap-2">
+      {/* <div className="absolute top-2 left-2 md:top-4 md:left-4 z-20 flex flex-col gap-2">
           {product.tag && (
               <span className="bg-amber-500 text-zinc-950 text-[8px] md:text-[10px] font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full uppercase tracking-widest shadow-md">
                 {product.tag}
               </span>
           )}
-      </div>
+      </div> */}
 
       {/* IMAGE AREA */}
       <Link href={`/shop/${product.slug}`} className="relative aspect-square bg-zinc-50 flex items-center justify-center overflow-hidden">
@@ -44,10 +44,10 @@ const ProductCard = ({ product }) => {
         
         {/* Header Row (Rating) */}
         <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-1">
+          {/* <div className="flex items-center gap-1">
             <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
             <span className="text-[10px] md:text-xs font-semibold text-zinc-600">4.9</span>
-          </div>
+          </div> */}
           <div className="hidden sm:flex items-center gap-1 text-[9px] uppercase font-bold text-zinc-400">
              <Shield className="w-3 h-3" /> Solid Wood
           </div>
@@ -61,16 +61,7 @@ const ProductCard = ({ product }) => {
         </Link>
         
         {/* Specs Tags */}
-        <div className="flex flex-wrap items-center gap-1 md:gap-2 mb-4">
-          <div className="flex items-center gap-1 bg-zinc-100 px-1.5 py-0.5 md:px-2.5 md:py-1 rounded-md text-[9px] md:text-xs font-medium text-zinc-600">
-            <Ruler className="w-3 h-3 text-zinc-500" />
-            <span>{product.specs?.size || 'Std'}</span>
-          </div>
-          <div className="hidden md:flex items-center gap-1.5 bg-zinc-100 px-2.5 py-1 rounded-md text-xs font-medium text-zinc-600">
-            <Layers className="w-3.5 h-3.5 text-zinc-500" />
-            <span>{product.specs?.ply || '16mm'}</span>
-          </div>
-        </div>
+       
 
         <div className="flex-grow"></div>
 
