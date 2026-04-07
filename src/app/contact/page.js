@@ -190,8 +190,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900">Visit Us</h3>
-                      <p className="text-gray-600">123 Mall Road</p>
-                      <p className="text-gray-600">Lahore, Pakistan</p>
+                      <p className="text-gray-600">Hakeem Ashraf Road, Opposite Janazagah, Rangpura</p>
+                      <p className="text-gray-600">Sialkot, Pakistan</p>
                     </div>
                   </div>
                 </div>

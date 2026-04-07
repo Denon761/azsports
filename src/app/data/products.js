@@ -506,6 +506,144 @@ export const products = [
       '1 Pro Striker',
       'Premium Board Cover'
     ]
+  },
+  {
+    id: 17,
+    slug: 'pro-tournament-classic',
+    name: 'Pro Tournament Classic',
+    tag: 'Tournament Grade',
+    type: 'Professional Series',
+    seriesNumber: 'PRO-001',
+    image: Image001,
+    description: 'Official tournament-grade board designed for competitive play. Features superior cushion and precise pocket placement.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 14990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '2" Indian Rosewood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 19990, specs: { size: '29" x 29"', ply: '10mm Premium', frame: '2" Indian Rosewood', weight: '11kg', boardThickness: '14mm' } },
+      { size: '36"', price: 24990, specs: { size: '32" x 32"', ply: '12mm Premium', frame: '2.5" Indian Rosewood', weight: '13kg', boardThickness: '16mm' } },
+      { size: '42"', price: 32990, specs: { size: '36" x 36"', ply: '14mm Premium', frame: '3" Indian Rosewood', weight: '18kg', boardThickness: '18mm' } },
+    ],
+    features: [
+      'Official tournament specifications',
+      'Premium Indian Rosewood frame',
+      'Superior cushion for precise rebounds',
+      'Professional playing surface',
+      'FIA-approved design',
+      '3-year warranty included'
+    ],
+    included: [
+      '1 Pro Tournament Classic Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '2 Pro Strikers',
+      'Premium Carrying Case'
+    ]
+  },
+  {
+    id: 18,
+    slug: 'pro-championship-edition',
+    name: 'Pro Championship Edition',
+    tag: 'Championship',
+    type: 'Professional Series',
+    seriesNumber: 'PRO-002',
+    image: Image002,
+    description: 'The ultimate championship board for professional tournaments. Features hand-carved details and tournament-grade cushion.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 18990, specs: { size: '24" x 24"', ply: '10mm Premium', frame: '2" Sheesham Wood', weight: '8kg', boardThickness: '14mm' } },
+      { size: '32"', price: 25990, specs: { size: '29" x 29"', ply: '12mm Premium', frame: '2.5" Sheesham Wood', weight: '12kg', boardThickness: '16mm' } },
+      { size: '36"', price: 32990, specs: { size: '32" x 32"', ply: '14mm Premium', frame: '2.5" Sheesham Wood', weight: '15kg', boardThickness: '18mm' } },
+      { size: '42"', price: 42990, specs: { size: '36" x 36"', ply: '16mm Premium', frame: '3" Sheesham Wood', weight: '20kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Hand-carved traditional patterns',
+      'Tournament-grade cushion system',
+      'Premium Sheesham wood construction',
+      'Anti-warp technology',
+      'Professional coin set included',
+      '5-year warranty included'
+    ],
+    included: [
+      '1 Pro Championship Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '2 Championship Strikers',
+      'Velvet Lined Carrying Case',
+      'Professional Score Sheet'
+    ]
+  },
+  {
+    id: 19,
+    slug: 'pro-master-select',
+    name: 'Pro Master Select',
+    tag: 'Master Series',
+    type: 'Professional Series',
+    seriesNumber: 'PRO-003',
+    image: Image003,
+    description: 'Master craftsmanship meets modern engineering. The Pro Master Select is built for serious players who demand the best.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 21990, specs: { size: '24" x 24"', ply: '12mm Tournament', frame: '2.5" Premium Hardwood', weight: '9kg', boardThickness: '16mm' } },
+      { size: '32"', price: 29990, specs: { size: '29" x 29"', ply: '14mm Tournament', frame: '2.5" Premium Hardwood', weight: '14kg', boardThickness: '18mm' } },
+      { size: '36"', price: 38990, specs: { size: '32" x 32"', ply: '16mm Tournament', frame: '3" Premium Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '42"', price: 49990, specs: { size: '36" x 36"', ply: '18mm Tournament', frame: '3.5" Premium Hardwood', weight: '22kg', boardThickness: '22mm' } },
+    ],
+    features: [
+      'Master craftsmanship',
+      'Tournament-approved specifications',
+      'Multi-layer cushion system',
+      'Hand-polished playing surface',
+      'Precision pocket alignment',
+      'Lifetime warranty included'
+    ],
+    included: [
+      '1 Pro Master Select Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '2 Master Series Strikers',
+      'Deluxe Carrying Case',
+      'Premium Cleaning Kit',
+      'Certificate of Authenticity'
+    ]
+  },
+  {
+    id: 20,
+    slug: 'pro-royal-champion',
+    name: 'Pro Royal Champion',
+    tag: 'Royal Edition',
+    type: 'Professional Series',
+    seriesNumber: 'PRO-004',
+    image: Image004,
+    description: 'The pinnacle of carrom board craftsmanship. Royal Champion features intricate inlay work and the finest materials.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 27990, specs: { size: '24" x 24"', ply: '14mm Elite', frame: '3" Royal Teak', weight: '10kg', boardThickness: '18mm' } },
+      { size: '32"', price: 37990, specs: { size: '29" x 29"', ply: '16mm Elite', frame: '3" Royal Teak', weight: '15kg', boardThickness: '20mm' } },
+      { size: '36"', price: 47990, specs: { size: '32" x 32"', ply: '18mm Elite', frame: '3.5" Royal Teak', weight: '19kg', boardThickness: '22mm' } },
+      { size: '42"', price: 59990, specs: { size: '36" x 36"', ply: '20mm Elite', frame: '4" Royal Teak', weight: '25kg', boardThickness: '24mm' } },
+    ],
+    features: [
+      'Royal Teak wood construction',
+      'Intricate hand-inlay designs',
+      'Elite-grade cushion system',
+      'Museum-quality finish',
+      ' collectors item',
+      'Lifetime warranty with priority service'
+    ],
+    included: [
+      '1 Pro Royal Champion Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '2 Royal Series Strikers',
+      'Mahogany Display Stand',
+      'Premium Leather Carrying Case',
+      'Engraved Certificate of Authenticity',
+      'Complimentary Annual Maintenance'
+    ]
   }
 ];
 

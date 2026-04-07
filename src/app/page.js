@@ -19,12 +19,12 @@ export default function Home() {
       <ProductSlider />
 
       {/* Mid-page Promotional Banner */}
-      <PromoBanner />
+      {/* <PromoBanner /> */}
       
-      <Features />
+      {/* <Features /> */}
 
       {/* Customer Reviews / Testimonials */}
-      <Reviews />
+      {/* <Reviews /> */}
 
       {/* Frequently Asked Questions */}
       <Faqs />

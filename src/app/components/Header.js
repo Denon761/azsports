@@ -11,10 +11,10 @@ import logo from '../assets/logo.jpeg';
 
 // --- DATA ARRAYS (CARROM THEME) ---
 const primaryLinks = [
-  { name: 'Shop All', href: '/shop' },
   { name: 'Regular Series', href: '/shop?type=Regular Series', query: 'type=Regular Series' },
-  { name: 'Country Edition', href: '/shop?type=Country Edition', query: 'type=Country Edition' },
-  { name: 'Special Edition', href: '/shop?type=Special Edition', query: 'type=Special Edition' },
+  { name: 'Professional Series', href: '/shop?type=Professional Series', query: 'type=Professional Series' },
+  { name: 'Country Series', href: '/shop?type=Country Edition', query: 'type=Country Edition' },
+  { name: 'Special Series', href: '/shop?type=Special Edition', query: 'type=Special Edition' },
   { name: 'Accessories', href: '/shop?category=accessories', query: 'category=accessories' },
 ];
 
@@ -171,13 +171,13 @@ const Header = () => {
           <hr className="border-gray-200 mx-6 mb-6" />
 
           {/* Location Selector */}
-          <div className="px-6">
+          {/* <div className="px-6">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Location</p>
             <button className="w-full border border-gray-300 rounded-xl py-3.5 px-4 flex items-center justify-between bg-gray-50 text-gray-700 hover:border-amber-500/50 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300">
               <span className="font-semibold text-sm">Pakistan</span>
               <ChevronDown className="w-4 h-4" />
             </button>
-          </div>
+          </div> */}
 
         </div>
       </div>

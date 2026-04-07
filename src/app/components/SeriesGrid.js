@@ -8,26 +8,26 @@ const seriesData = [
   {
     id: 'Regular Series',
     name: 'Regular Series',
-    description: 'Classic carrom boards for everyday play',
     image: '/assets/series/regular.jpeg',
+    url: 'Regular Series',
   },
   {
-    id: 'Country Edition',
-    name: 'Country Edition',
-    description: 'Boards featuring iconic landmarks',
+    id: 'Country Series',
+    name: 'Country Series',
     image: '/assets/series/country.jpeg',
+    url: 'Country Edition',
   },
   {
-    id: 'Special Edition',
-    name: 'Special Edition',
-    description: 'Premium boards with unique designs',
+    id: 'Special Series',
+    name: 'Special Series',
     image: '/assets/series/special.jpeg',
+    url: 'Special Edition',
   },
   {
     id: 'Professional Series',
     name: 'Professional Series',
-    description: 'Tournament-grade boards for professionals',
     image: '/assets/series/professinal.jpeg',
+    url: 'Professional Series',
   },
 ];
 
@@ -52,7 +52,7 @@ export default function SeriesGrid({ layout = '1x4', showTitle = true }) {
         {seriesData.map((series) => (
           <Link
             key={series.id}
-            href={`/shop?type=${encodeURIComponent(series.id)}`}
+            href={`/shop?type=${encodeURIComponent(series.url)}`}
             className="group relative overflow-hidden rounded-2xl bg-slate-100 block"
           >
             <div className={`relative overflow-hidden bg-slate-200 ${
@@ -72,12 +72,9 @@ export default function SeriesGrid({ layout = '1x4', showTitle = true }) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                <h3 className="text-sm md:text-base font-bold text-white mb-1">
+                <h3 className="text-sm md:text-base font-bold text-white">
                   {series.name}
                 </h3>
-                <p className="text-xs md:text-sm text-white/80 line-clamp-2">
-                  {series.description}
-                </p>
               </div>
             </div>
           </Link>

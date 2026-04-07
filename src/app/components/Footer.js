@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
 
         {/* ── Newsletter Section (Wide Card) ── */}
-        <div className="mt-16 bg-white p-8 md:p-10 rounded-[2rem] border border-gray-200 hover:border-amber-500/30 transition-all duration-500 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden group shadow-sm">
+        {/* <div className="mt-16 bg-white p-8 md:p-10 rounded-[2rem] border border-gray-200 hover:border-amber-500/30 transition-all duration-500 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden group shadow-sm">
           
           <div className="absolute right-0 bottom-0 w-[300px] h-[300px] bg-amber-500/5 rounded-full blur-[80px] mix-blend-screen pointer-events-none group-hover:bg-amber-500/10 transition-colors duration-700"></div>
 
@@ -154,7 +154,7 @@ const Footer = () => {
               Subscribe <ArrowRight className="w-4 h-4" />
             </button>
           </form>
-        </div>
+        </div> */}
 
         {/* ── Bottom Bar ── */}
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
@@ -166,7 +166,7 @@ const Footer = () => {
             <Link href="/cookies" className="hover:text-amber-600 transition-colors">Cookies</Link>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-2.5">
+          {/* <div className="flex flex-wrap justify-center items-center gap-2.5">
             {['VISA', 'Mastercard', 'PayPal', 'COD'].map((method) => (
               <span 
                 key={method} 
@@ -175,7 +175,7 @@ const Footer = () => {
                 {method}
               </span>
             ))}
-          </div>
+          </div> */}
 
         </div>
 
