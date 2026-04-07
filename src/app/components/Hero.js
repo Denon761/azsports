@@ -44,7 +44,7 @@ const Hero = () => {
             </p>
 
             {/* Quick Value Props */}
-            <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 text-sm font-medium text-gray-700">
+            {/* <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 text-sm font-medium text-gray-700">
               <li className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-amber-500" />
                 100% Solid Wood
@@ -53,10 +53,10 @@ const Hero = () => {
                 <Zap className="w-5 h-5 text-amber-500" />
                 Tournament Spec Rebound
               </li>
-            </ul>
+            </ul> */}
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
+            {/* <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
               <Link 
                 href="/shop" 
                 className="bg-[#241b14] text-white px-7 py-3 md:py-3.5 rounded-lg text-sm md:text-base font-semibold hover:shadow-[0_0_20px_rgba(36,27,20,0.35)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-0.5"
@@ -69,7 +69,7 @@ const Hero = () => {
               >
                 Browse Collection
               </Link>
-            </div>
+            </div> */}
             
           </div>
 

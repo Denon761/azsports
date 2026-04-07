@@ -13,10 +13,11 @@ const footerLinks = [
     title: "Shop",
     items: [
       { label: "All Products", href: "/shop" },
-      // { label: "Tournament Boards", href: "/shop" },
-      // { label: "Practice Boards", href: "/shop" },
+      { label: "Regular Series", href: "/shop?type=Regular Series" },
+      { label: "Professional Series", href: "/shop?type=Professional Series" },
+      { label: "Country Series", href: "/shop?type=Country Edition" },
+      { label: "Special Series", href: "/shop?type=Special Edition" },
       { label: "Accessories", href: "/shop" },
-      // { label: "Foldable Stands", href: "/shop" },
     ]
   },
   {

@@ -78,8 +78,7 @@ const ProductCard = ({ product }) => {
             onClick={handleAddToCart}
             className="bg-zinc-900 text-white w-full sm:w-auto px-3 h-10 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center gap-2 font-semibold text-[11px] md:text-sm hover:bg-amber-500 transition-all group/btn"
           >
-            <span className="hidden md:inline">Add to Cart</span>
-            <ShoppingCart className="w-4 h-4" />
+          Buy Now
           </button>
         </div>
       </div>
@@ -96,7 +95,7 @@ const ProductGrid = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 lg:mb-12 gap-6">
           <div className="max-w-2xl text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-950 tracking-tight mb-4 leading-tight font-heading">
-              Select Your <span className="text-amber-500 block sm:inline">Champion's Board.</span>
+              Select Your <span className="text-black block sm:inline">Champion's Board.</span>
             </h2>
           </div>
 

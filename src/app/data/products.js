@@ -212,7 +212,7 @@ export const products = [
   {
     id: 4,
     slug: 'pro-elite',
-    name: 'Pro Elite',
+    name: 'Pro Elite Board',
     tag: 'Professional',
     type: 'Regular Series',
     seriesNumber: '004',

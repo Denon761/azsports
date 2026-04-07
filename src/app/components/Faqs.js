@@ -22,10 +22,7 @@ export default function Faqs() {
         <div className="text-center mb-16">
           
           {/* Tagline Badge */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-[10px] md:text-xs font-bold text-amber-500 tracking-widest uppercase mb-6">
-            <HelpCircle className="w-3.5 h-3.5" />
-            Support
-          </div>
+        
 
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight tracking-tight font-heading">
             Frequently Asked <span className="text-[#241b14]">Questions</span>

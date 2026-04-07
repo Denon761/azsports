@@ -19,7 +19,7 @@ const primaryLinks = [
 ];
 
 const utilityLinks = [
-  { name: 'My Account', href: '/account' },
+  // { name: 'My Account', href: '/account' },
   { name: 'About Us', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'Rules of Carrom', href: '/rules' },

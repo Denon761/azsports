@@ -119,11 +119,11 @@ const CartPage = () => {
                         <div className="flex items-start justify-between gap-4">
                           <div>
                             <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-1">{item.name}</h3>
-                            {item.tag && (
+                            {/* {item.tag && (
                               <div className="inline-flex items-center gap-1 bg-orange-100 text-orange-600 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">
                                 {item.tag}
                               </div>
-                            )}
+                            )} */}
                           </div>
                           
                           <button 
@@ -182,9 +182,9 @@ const CartPage = () => {
 
                 {/* Stand Suggestion Card */}
                 {cartItems.length > 0 && !hasStand && !standAdded && (
-                  <div className="mt-6 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6">
+                  <div className="mt-6 bg-gradient-to-r from-gray-50 to-gray-50 border border-gray-200 rounded-2xl p-6">
                     <div className="flex flex-col sm:flex-row gap-4 items-center">
-                      <div className="w-20 h-20 bg-white rounded-xl overflow-hidden border border-amber-200 shrink-0">
+                      <div className="w-20 h-20 bg-white rounded-xl overflow-hidden border border-gray-200 shrink-0">
                         <Image
                           src={standProductImage}
                           alt={standProduct.name}
@@ -194,7 +194,7 @@ const CartPage = () => {
                         />
                       </div>
                       <div className="flex-1 text-center sm:text-left">
-                        <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Complete Your Setup</p>
+                        <p className="text-xs font-bold text-black-600 uppercase tracking-wider mb-1">Complete Your Setup</p>
                         <h3 className="text-lg font-bold text-slate-900">{standProduct.name}</h3>
                         <p className="text-sm text-slate-500">{standProduct.description}</p>
                       </div>
@@ -202,7 +202,7 @@ const CartPage = () => {
                         <p className="text-xl font-bold text-slate-900">Rs {standProduct.price.toLocaleString()}</p>
                         <button
                           onClick={handleAddStand}
-                          className="mt-2 flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700 transition-colors"
+                          className="mt-2 flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-gray-700 transition-colors"
                         >
                           <PlusCircle className="w-4 h-4" />
                           Add to Cart

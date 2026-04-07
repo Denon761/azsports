@@ -130,12 +130,12 @@ function ShopPageContent() {
                         {product.tag}
                       </span>
                     )} */}
-                    <button
+                    {/* <button
                       onClick={() => handleAddToCart(product)}
                       className="absolute bottom-4 right-4 bg-slate-900 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                     >
                       <ShoppingBag className="w-5 h-5" />
-                    </button>
+                    </button> */}
                   </div>
 
                   <div className="p-4 flex flex-col">
