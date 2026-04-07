@@ -7,6 +7,10 @@ import ImageUSA from '../assets/products/usa.jpeg';
 import ImageCanada from '../assets/products/canada.jpeg';
 import ImagePK from '../assets/products/pk.jpeg';
 import ImageAfgan from '../assets/products/afgan.jpeg';
+import ImageNipal from '../assets/products/nipal.jpeg';
+import ImageSirilanka from '../assets/products/sirilanka.jpeg';
+import ImageBangladesh from '../assets/products/bangladesh.jpeg';
+import ImageMaldive from '../assets/products/maldive.jpeg';
 import ImageRed from '../assets/products/red.jpeg';
 import ImageBlue from '../assets/products/blue.jpeg';
 import ImageWhite from '../assets/products/white.jpeg';
@@ -374,9 +378,141 @@ export const products = [
       'Premium Board Cover'
     ]
   },
-  // Special Edition - Colors
   {
     id: 9,
+    slug: 'nepal-edition',
+    name: 'Nepal Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'Nepal',
+    image: ImageNipal,
+    description: 'Special Nepal edition board featuring iconic Himalayan design with premium quality.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Nepal themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with patriotic accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Nepal Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 10,
+    slug: 'sri-lanka-edition',
+    name: 'Sri Lanka Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'Sri Lanka',
+    image: ImageSirilanka,
+    description: 'Special Sri Lanka edition board featuring iconic lion design with premium quality.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Sri Lanka themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with patriotic accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Sri Lanka Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 11,
+    slug: 'bangladesh-edition',
+    name: 'Bangladesh Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'Bangladesh',
+    image: ImageBangladesh,
+    description: 'Special Bangladesh edition board featuring iconic design with premium quality.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Bangladesh themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with patriotic accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Bangladesh Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  {
+    id: 12,
+    slug: 'maldives-edition',
+    name: 'Maldives Edition',
+    tag: 'Country Edition',
+    type: 'Country Edition',
+    country: 'Maldives',
+    image: ImageMaldive,
+    description: 'Special Maldives edition board featuring iconic island design with premium quality.',
+    category: 'boards',
+    inStock: true,
+    sizes: [
+      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+    ],
+    features: [
+      'Maldives themed premium design',
+      'High-quality wood construction',
+      'Professional playing surface',
+      'Includes complete coin set',
+      'Durable finish with patriotic accents',
+      '2-year warranty included'
+    ],
+    included: [
+      '1 Maldives Edition Board',
+      '19 Carrom Men (Black & White)',
+      '1 Queen (Red)',
+      '1 Pro Striker',
+      'Premium Board Cover'
+    ]
+  },
+  // Special Edition - Colors
+  {
+    id: 13,
     slug: 'red-special-edition',
     name: 'Red Special Edition',
     tag: 'Special Edition',
@@ -409,7 +545,7 @@ export const products = [
     ]
   },
   {
-    id: 10,
+    id: 14,
     slug: 'blue-special-edition',
     name: 'Blue Special Edition',
     tag: 'Special Edition',
@@ -442,7 +578,7 @@ export const products = [
     ]
   },
   {
-    id: 11,
+    id: 15,
     slug: 'white-special-edition',
     name: 'White Special Edition',
     tag: 'Special Edition',
@@ -475,7 +611,7 @@ export const products = [
     ]
   },
   {
-    id: 12,
+    id: 16,
     slug: 'black-special-edition',
     name: 'Black Special Edition',
     tag: 'Special Edition',
