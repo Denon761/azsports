@@ -160,7 +160,7 @@ const CheckoutPage = () => {
             <CheckCircle className="w-20 h-20 text-green-500 relative z-10" strokeWidth={2} />
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">Order Confirmed!</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight font-heading">Order Confirmed!</h2>
           
           <p className="text-slate-500 mb-6 leading-relaxed">
             Thank you for your purchase. Your premium carrom gear is being prepared and will be shipped shortly.
@@ -214,7 +214,7 @@ const CheckoutPage = () => {
 
       {/* Page Header */}
       <section className="pt-10 pb-6 max-w-7xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Secure Checkout</h1>
+        <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight font-heading">Secure Checkout</h1>
         <p className="text-slate-500 mt-2 font-medium">Complete your order details below</p>
       </section>
 

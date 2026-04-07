@@ -26,7 +26,7 @@ export default function Reviews() {
             Testimonials
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight font-heading">
             What Our <span className="text-[#241b14]">Champions</span> Say
           </h2>
           

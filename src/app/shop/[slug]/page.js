@@ -90,7 +90,7 @@ export default function ProductDetailPage() {
             {/* Right - Details */}
             <div className="flex flex-col">
               <p className="text-slate-500 font-medium mb-2">{product.type}</p>
-              <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">{product.name}</h1>
+              <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 font-heading">{product.name}</h1>
               <p className="text-slate-600 mb-8 leading-relaxed">{product.description}</p>
                
               {/* Size Selection */}

@@ -7,7 +7,7 @@ export function PageHero({ title, description }) {
   return (
     <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-12 md:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <h1 className="text-2xl md:text-4xl font-black mb-4 tracking-tighter">
+        <h1 className="text-2xl md:text-4xl font-black mb-4 tracking-tighter font-heading">
           {title}
         </h1>
         <p className="text-gray-200 text-sm md:text-base font-medium max-w-2xl mx-auto">
@@ -28,7 +28,7 @@ export function ContentRenderer({ sections }) {
         {sections.map((section, index) => (
           <div key={index} className="space-y-4">
             {section.title && (
-              <h2 className="text-xl md:text-2xl font-black text-primary border-b pb-2">
+              <h2 className="text-xl md:text-2xl font-black text-primary border-b pb-2 font-heading">
                 {section.title}
               </h2>
             )}

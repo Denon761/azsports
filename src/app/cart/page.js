@@ -65,7 +65,7 @@ const CartPage = () => {
 
       {/* Page Header */}
       <section className="pt-10 pb-6 max-w-7xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Shopping Cart</h1>
+        <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight font-heading">Shopping Cart</h1>
         <p className="text-slate-500 mt-2 font-medium">
           You have {cartItems.length} {cartItems.length === 1 ? 'item' : 'items'} in your cart
         </p>

@@ -73,34 +73,26 @@ function ShopPageContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16 text-center">
           {currentCategory ? (
             <>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+              <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4 font-heading">
                 {currentCategory.name}
               </h1>
               <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto">
-                {currentCategory.description} — Hand-crafting carrom boards | Since 1940.
+              Hand-crafting carrom boards | Since 1940.
               </p>
             </>
           ) : (
             <>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+              <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4 font-heading">
                 Premium Carrom Collection
               </h1>
               <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto">
-                Handcrafted boards & professional accessories — built for competition and family fun — Hand-crafting carrom boards | Since 1940.
+              Hand-crafting carrom boards | Since 1940.
               </p>
             </>
           )}
         </div>
       </section>
 
-      {/* Series Categories - Only show when not filtered */}
-      {!isFiltered && (
-        <section className="py-8 md:py-12 bg-white border-b border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <SeriesGrid layout="1x4" />
-          </div>
-        </section>
-      )}
 
       {/* Main Content */}
       <section className="py-12 md:py-16">
@@ -120,7 +112,7 @@ function ShopPageContent() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}
@@ -146,28 +138,29 @@ function ShopPageContent() {
                     </button>
                   </div>
 
-                  <div className="p-6 flex flex-col">
+                  <div className="p-4 flex flex-col">
                     <Link href={`/shop/${product.slug}`}>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2 hover:text-slate-700">
+                      <h3 className="text-sm sm:text-xl font-bold text-slate-900 hover:text-slate-700">
                         {product.name}
                       </h3>
-                    </Link>
-                    <p className="text-slate-600 text-sm mb-4 line-clamp-2">{product.description}</p>
-
-                    <div className="mt-auto flex items-center justify-between">
                       <div>
-                        <p className="text-xl font-bold text-slate-900">
+                        <p className="text-sm sm:text-xl font-bold text-green-800 mb-2">
                           Rs {(product.sizes ? product.sizes[0].price : product.price).toLocaleString()}
                         </p>
                         {product.specs?.size && (
                           <p className="text-sm text-slate-500">{product.specs.size}</p>
                         )}
                       </div>
+                    </Link>
+                    <p className="text-slate-600 text-sm mb-4 line-clamp-2">{product.description}</p>
+
+                    <div className="mt-auto flex items-center justify-between">
+                      
                       <Link
                         href={`/shop/${product.slug}`}
-                        className="bg-slate-900 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-slate-800"
+                        className="bg-slate-900 text-white px-5 py-2.5 rounded-xl w-full text-center text-xs font-medium hover:bg-slate-800"
                       >
-                        View Details
+                        Buy Now
                       </Link>
                     </div>
                   </div>

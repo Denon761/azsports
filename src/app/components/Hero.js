@@ -32,11 +32,9 @@ const Hero = () => {
             </div>
 
             {/* Huge Premium Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6">
-              Master the <br />
-              <span className="text-[#241b14]">
-                Perfect Strike.
-              </span> 
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6 font-heading">
+             Hand-crafting carrom boards  
+                | Since 1940.
             </h1>
 
             {/* Description */}

@@ -104,7 +104,7 @@ const ProductGrid = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 lg:mb-12 gap-6">
           <div className="max-w-2xl text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-950 tracking-tight mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-950 tracking-tight mb-4 leading-tight font-heading">
               Select Your <span className="text-amber-500 block sm:inline">Champion's Board.</span>
             </h2>
           </div>

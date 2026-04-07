@@ -27,7 +27,7 @@ export default function PromoBanner() {
             </div>
             
             {/* Headline with High-Contrast Gradient */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 leading-tight tracking-tight font-heading">
               Get <span className="text-[#241b14]">20% Off</span> Your First Order
             </h2>
             

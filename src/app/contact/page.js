@@ -37,7 +37,7 @@ export default function ContactPage() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <MessageCircle className="w-16 h-16 text-amber-500 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
             Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d2e22] via-[#4a3b2d] to-[#5a4a3a]">Us</span>
           </h1>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-sm">
-              <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6">Send us a Message</h2>
+              <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 font-heading">Send us a Message</h2>
               
               {submitted ? (
                 <div className="text-center py-12">
@@ -149,7 +149,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               {/* Contact Methods */}
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-                <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6">Get in Touch</h2>
+                <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 font-heading">Get in Touch</h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center shrink-0 border border-amber-500/30">
@@ -199,7 +199,7 @@ export default function ContactPage() {
 
               {/* Business Hours */}
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-                <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center gap-2">
+                <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center gap-2 font-heading">
                   <Clock className="w-6 h-6 text-amber-500" />
                   Business Hours
                 </h2>

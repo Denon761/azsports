@@ -13,10 +13,10 @@ const footerLinks = [
     title: "Shop",
     items: [
       { label: "All Products", href: "/shop" },
-      { label: "Tournament Boards", href: "/shop" },
-      { label: "Practice Boards", href: "/shop" },
-      { label: "Strikers & Coins", href: "/shop" },
-      { label: "Foldable Stands", href: "/shop" },
+      // { label: "Tournament Boards", href: "/shop" },
+      // { label: "Practice Boards", href: "/shop" },
+      { label: "Accessories", href: "/shop" },
+      // { label: "Foldable Stands", href: "/shop" },
     ]
   },
   {
@@ -48,8 +48,8 @@ const footerLinks = [
 ];
 
 const socials = [
-  { Icon: Instagram, href: "https://instagram.com/azsports", label: "Instagram" },
-  { Icon: Facebook,  href: "https://facebook.com/azsports",  label: "Facebook"  },
+  { Icon: Instagram, href: "https://www.instagram.com/amjadzahoor.sports?utm_source=qr&igsh=cDRtaHU2aXpoem0w", label: "Instagram" },
+  { Icon: Facebook,  href: "https://www.facebook.com/share/19b1jawjxm/",  label: "Facebook"  },
   { Icon: Youtube,   href: "https://youtube.com/@azsports",  label: "YouTube"   },
   { Icon: Twitter,   href: "https://twitter.com/azsports",   label: "Twitter"   },
 ];
@@ -69,7 +69,7 @@ const Footer = () => {
           {/* Brand + short desc (Takes up 2 columns on desktop) */}
           <div className="col-span-2 md:col-span-2 pr-0 md:pr-8">
             <Link href="/" className="inline-block mb-4">
-              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-gray-900 group">
+              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-gray-900 group font-heading">
                 AZ <span className="text-[#241b14] group-hover:text-[#3d2e22] transition-all duration-300">SPORTS</span>
               </h2>
             </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
           
           <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 font-medium">
-            <span>© {new Date().getFullYear()} Az SPORTS Ltd.</span>
+            <span>© {new Date().getFullYear()} AZ SPORTS.</span>
             <Link href="/privacy" className="hover:text-amber-600 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-amber-600 transition-colors">Terms of Service</Link>
             <Link href="/cookies" className="hover:text-amber-600 transition-colors">Cookies</Link>

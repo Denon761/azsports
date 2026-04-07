@@ -23,7 +23,7 @@ export default function CtaBanner() {
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight tracking-tight font-heading">
               Ready to <span className="text-[#241b14]">Elevate Your Game?</span>
             </h2>
             

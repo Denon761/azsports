@@ -27,7 +27,7 @@ export default function Faqs() {
             Support
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight tracking-tight font-heading">
             Frequently Asked <span className="text-[#241b14]">Questions</span>
           </h2>
           

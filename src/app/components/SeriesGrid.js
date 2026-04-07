@@ -3,30 +3,34 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import regularImg from '@/app/assets/regular series.jpeg';
+import countryImg from '@/app/assets/contry series category.jpeg';
+import specialImg from '@/app/assets/special series categry.jpeg';
+import professionalImg from '@/app/assets/professianal series.jpeg';
 
 const seriesData = [
   {
     id: 'Regular Series',
     name: 'Regular Series',
-    image: '/assets/series/regular.jpeg',
+    image: regularImg,
     url: 'Regular Series',
   },
   {
     id: 'Country Series',
     name: 'Country Series',
-    image: '/assets/series/country.jpeg',
+    image: countryImg,
     url: 'Country Edition',
   },
   {
     id: 'Special Series',
     name: 'Special Series',
-    image: '/assets/series/special.jpeg',
+    image: specialImg,
     url: 'Special Edition',
   },
   {
     id: 'Professional Series',
     name: 'Professional Series',
-    image: '/assets/series/professinal.jpeg',
+    image: professionalImg,
     url: 'Professional Series',
   },
 ];

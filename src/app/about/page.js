@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
             AZ <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d2e22] via-[#4a3b2d] to-[#5a4a3a]">SPORTS</span>
           </h1>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6">Our Origin & Foundation</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 font-heading">Our Origin & Foundation</h2>
               <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
                 AZ Sports was founded in 1940 by the <strong className="text-gray-900">Late Mirza Zahoor Ellahi</strong>, a pioneer of Pakistan's sports manufacturing industry and a founding member of The Pakistan Sports Cooperative Industrial Society Limited. 
               </p>
@@ -52,7 +52,7 @@ export default function AboutPage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center border border-gray-200 shadow-sm">
+            <div className="bg-white rounded-3xl p-6 flex flex-col items-center justify-center text-center border border-gray-200 shadow-sm">
                <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden mb-6">
                 <Image 
                   src="/assets/products/003.jpeg"
@@ -72,7 +72,7 @@ export default function AboutPage() {
       {/* Core Manufacturing Values Section */}
       <section className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 text-center">Why Handmade Matters Today</h2>
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 text-center font-heading">Why Handmade Matters Today</h2>
           <p className="text-center text-gray-600 text-sm mb-12 max-w-2xl mx-auto">
             Unlike industrial factories that prioritize mass output, our traditional craftsmanship emphasizes balance, durability, and long-term professional performance.
           </p>
@@ -103,7 +103,7 @@ export default function AboutPage() {
       {/* Legacy & Timeline Section */}
       <section className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-12 text-center">Manufacturing Legacy Timeline</h2>
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-12 text-center font-heading">Manufacturing Legacy Timeline</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { year: '1940', text: 'Foundation of AZ Sports by Late Mirza Zahoor Ellahi in Sialkot.' },
@@ -126,7 +126,7 @@ export default function AboutPage() {
       {/* Quick Facts & Application Target Market Section */}
       <section className="py-16 bg-gray-50">
          <div className="max-w-4xl mx-auto px-4 sm:px-6">
-           <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
              <h2 className="text-xl font-black text-gray-900 mb-6 text-center border-b border-gray-200 pb-4">Our Professional Reach</h2>
              <p className="text-gray-600 text-sm text-center mb-8 max-w-2xl mx-auto">
                From individual professional boards to bulk export consignments, we service both local Pakistan markets and international clients worldwide. Every order receives the exact same precision and quality control.
@@ -147,7 +147,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-6">Work With Us</h2>
+          <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-6 font-heading">Work With Us</h2>
           <p className="text-gray-600 text-sm md:text-base mb-8 max-w-2xl mx-auto">
             AZ Sports is not just a brand; it is a legacy of craftsmanship—built to perform and made to last for generations. For product inquiries, export orders, or dealership opportunities, we welcome you to contact our team.
           </p>

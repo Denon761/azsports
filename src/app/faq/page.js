@@ -57,7 +57,7 @@ export default function FAQPage() {
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d2e22] via-[#4a3b2d] to-[#5a4a3a]">Questions</span>
           </h1>
           <p className="text-gray-600 text-base md:text-lg">
@@ -70,21 +70,21 @@ export default function FAQPage() {
       <section className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-8">
           {faqData.map((section, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 space-y-4 shadow-sm">
+            <div key={index} className="bg-white border border-gray-200 rounded-2xl p-6 space-y-4 shadow-sm">
               {section.title && (
-                <h2 className="text-xl md:text-2xl font-black text-gray-900 border-b border-gray-200 pb-2">
+                <h2 className="text-lg md:text-2xl font-black text-gray-900 border-b border-gray-200 pb-2">
                   {section.title}
                 </h2>
               )}
               
               {section.content && section.content.map((paragraph, pIdx) => (
-                <p key={pIdx} className="text-gray-600 text-sm md:text-base leading-relaxed">
+                <p key={pIdx} className="text-gray-600 text-xs md:text-base leading-relaxed">
                   {paragraph}
                 </p>
               ))}
 
               {section.list && section.list.length > 0 && (
-                <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-600 mt-4">
+                <ul className="list-disc pl-5 space-y-2 text-xs md:text-base text-gray-600 mt-4">
                   {section.list.map((item, lIdx) => (
                     <li key={lIdx}>{item}</li>
                   ))}

@@ -42,7 +42,7 @@ const Features = () => {
             Premium Engineering
           </div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight animate-fade-in-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight font-heading animate-fade-in-up">
             Why most boards don't play{' '}
             <span className="text-[#241b14]">
               like they look
