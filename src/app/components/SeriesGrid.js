@@ -12,8 +12,8 @@ const seriesData = [
   {
     id: 'Regular Series',
     name: 'Regular Series',
-    image: regularImg,
-    url: 'Regular Series',
+    image: professionalImg,
+     url: 'Regular Series',
   },
   {
     id: 'Country Series',
@@ -30,7 +30,8 @@ const seriesData = [
   {
     id: 'Professional Series',
     name: 'Professional Series',
-    image: professionalImg,
+    image: regularImg,
+   
     url: 'Professional Series',
   },
 ];
