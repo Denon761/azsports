@@ -125,11 +125,11 @@ function ShopPageContent() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    {product.tag && (
+                    {/* {product.tag && (
                       <span className="absolute top-4 left-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                         {product.tag}
                       </span>
-                    )}
+                    )} */}
                     <button
                       onClick={() => handleAddToCart(product)}
                       className="absolute bottom-4 right-4 bg-slate-900 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
