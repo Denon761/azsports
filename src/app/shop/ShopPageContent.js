@@ -118,7 +118,7 @@ function ShopPageContent() {
                   key={product.id}
                   className="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all group hover:shadow-lg hover:border-slate-400"
                 >
-                  <div className="relative overflow-hidden bg-slate-50 aspect-square">
+                  <Link href={`/shop/${product.slug}`} className="relative overflow-hidden bg-slate-50 aspect-square block">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -136,7 +136,7 @@ function ShopPageContent() {
                     >
                       <ShoppingBag className="w-5 h-5" />
                     </button> */}
-                  </div>
+                  </Link>
 
                   <div className="p-4 flex flex-col">
                     <Link href={`/shop/${product.slug}`}>

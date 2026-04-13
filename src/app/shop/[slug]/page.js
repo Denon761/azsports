@@ -67,7 +67,7 @@ export default function ProductDetailPage() {
       </section>
 
       {/* Main Product Section */}
-      <section className="py-12">
+      <section className="py-12 pb-24 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             
@@ -93,12 +93,12 @@ export default function ProductDetailPage() {
               {availableSizes.length > 0 && (
                 <div className="mb-8">
                   <label className="text-sm font-bold text-slate-900 mb-3 block">Select Size</label>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="grid grid-cols-2 gap-3">
                     {availableSizes.map((sizeOption) => (
                       <button
                         key={sizeOption.size}
                         onClick={() => setSelectedSize(sizeOption.size)}
-                        className={`px-5 py-3 rounded-xl font-bold border-2 transition-all ${
+                        className={`px-4 py-3 rounded-xl font-bold border-2 transition-all ${
                           selectedSize === sizeOption.size
                             ? 'bg-slate-900 text-white border-slate-900'
                             : 'bg-white text-slate-700 border-slate-200 hover:border-slate-400'
@@ -135,8 +135,8 @@ export default function ProductDetailPage() {
               )}
 
               {/* Quantity & Add to Cart */}
-              <div className="grid grid-cols-2 gap-3 mb-8">
-                <div className="flex items-center bg-white border border-slate-200 rounded-2xl h-14 px-2">
+              <div className="grid grid-cols-2 gap-3 mb-8 fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 z-50 md:relative md:bottom-auto md:left-auto md:right-auto md:bg-transparent md:border-none md:p-0 md:mb-0 md:grid-cols-3">
+                <div className="flex items-center bg-white border border-slate-200 rounded-2xl h-12 px-2">
                   <button 
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
                     className="w-10 h-full flex items-center justify-center text-slate-600 hover:text-orange-600 transition-colors"
@@ -155,7 +155,7 @@ export default function ProductDetailPage() {
                 {/* Add to Cart Button */}
                 <button 
                   onClick={handleAddToCart}
-                  className="bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white h-14 rounded-2xl font-bold px-4 py-3 hover:shadow-[0_10px_20px_rgba(36,27,20,0.3)] transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
+                  className="bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white h-12 rounded-2xl font-bold px-4 py-3 hover:shadow-[0_10px_20px_rgba(36,27,20,0.3)] transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
                 >
                   <ShoppingBag className="w-5 h-5" />
                   <span>Add to Cart</span>
