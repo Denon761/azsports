@@ -1,20 +1,12 @@
 "use client";
 
 import React from 'react';
-import { Layers, Ruler, ShoppingCart, Star, Shield, ArrowRight } from 'lucide-react';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../store/cartSlice'; 
+import { Layers, Ruler, Star, Shield, ArrowRight } from 'lucide-react';
 import { products } from '../data/products';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const ProductCard = ({ product }) => {
-  const dispatch = useDispatch();
-
-  const handleAddToCart = (e) => {
-    e.preventDefault();
-    dispatch(addToCart({ product, quantity: 1 }));
-  };
 
   return (
     <div className="group relative bg-white h-full flex flex-col rounded-2xl md:rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
@@ -74,12 +66,12 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
           
-          <button 
-            onClick={handleAddToCart}
+          <Link 
+            href={`/shop/${product.slug}`}
             className="bg-zinc-900 text-white w-full sm:w-auto px-3 h-10 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center gap-2 font-semibold text-[11px] md:text-sm hover:bg-amber-500 transition-all group/btn"
           >
           Buy Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

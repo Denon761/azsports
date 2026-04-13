@@ -80,11 +80,7 @@ export default function ProductDetailPage() {
                 className="object-cover"
                 priority
               />
-              {product.tag && (
-                <span className="absolute top-4 left-4 bg-amber-600 text-white text-sm font-bold px-4 py-1 rounded-full">
-                  {product.tag}
-                </span>
-              )}
+
             </div>
 
             {/* Right - Details */}
