@@ -109,11 +109,11 @@ export const products = [
   // Regular Series
   {
     id: 1,
-    slug: 'rookie-gen-1',
-    name: 'Rookie Gen-1',
-    tag: 'Beginner',
+    slug: 'rs-01',
+    name: 'RS-01',
+    tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: '001',
+    seriesNumber: 'RS-01',
     image: Image001,
     description: 'Perfect for beginners and casual players. Lightweight design with smooth matte finish.',
     category: 'boards',
@@ -133,7 +133,7 @@ export const products = [
       '1-year warranty included'
     ],
     included: [
-      '1 Rookie Gen-1 Board',
+      '1 RS-01 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '1 Striker',
@@ -142,11 +142,11 @@ export const products = [
   },
   {
     id: 2,
-    slug: 'club-pro',
-    name: 'Club Pro',
-    tag: 'Intermediate',
+    slug: 'rs-02',
+    name: 'RS-02',
+    tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: '002',
+    seriesNumber: 'RS-02',
     image: Image002,
     description: 'Designed for intermediate players who want to take their game to the next level.',
     category: 'boards',
@@ -166,7 +166,7 @@ export const products = [
       '2-year warranty included'
     ],
     included: [
-      '1 Club Pro Board',
+      '1 RS-02 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '1 Pro Striker',
@@ -176,11 +176,11 @@ export const products = [
   },
   {
     id: 3,
-    slug: 'champion-series',
-    name: 'Champion Series',
-    tag: 'Tournament Grade',
+    slug: 'rs-03',
+    name: 'RS-03',
+    tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: '003',
+    seriesNumber: 'RS-03',
     image: Image003,
     description: 'Professional tournament-grade board used by champions worldwide.',
     category: 'boards',
@@ -200,7 +200,7 @@ export const products = [
       '5-year warranty included'
     ],
     included: [
-      '1 Champion Series Board',
+      '1 RS-03 Board',
       '19 Premium Carrom Men',
       '1 Queen (Red)',
       '2 Pro Strikers',
@@ -211,11 +211,11 @@ export const products = [
   },
   {
     id: 4,
-    slug: 'pro-elite',
-    name: 'Pro Elite Board',
-    tag: 'Professional',
+    slug: 'rs-04',
+    name: 'RS-04',
+    tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: '004',
+    seriesNumber: 'RS-04',
     image: Image004,
     description: 'Elite professional board for serious competitive players seeking maximum performance.',
     category: 'boards',
@@ -235,7 +235,7 @@ export const products = [
       '5-year warranty included'
     ],
     included: [
-      '1 Pro Elite Board',
+      '1 RS-04 Board',
       '19 Premium Carrom Men',
       '1 Queen (Red)',
       '2 Pro Strikers',
@@ -645,11 +645,11 @@ export const products = [
   },
   {
     id: 17,
-    slug: 'pro-tournament-classic',
-    name: 'Pro Tournament Classic',
-    tag: 'Tournament Grade',
+    slug: 'ps-01',
+    name: 'PS-01',
+    tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PRO-001',
+    seriesNumber: 'PS-01',
     image: Image001,
     description: 'Official tournament-grade board designed for competitive play. Features superior cushion and precise pocket placement.',
     category: 'boards',
@@ -669,7 +669,7 @@ export const products = [
       '3-year warranty included'
     ],
     included: [
-      '1 Pro Tournament Classic Board',
+      '1 PS-01 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Pro Strikers',
@@ -678,11 +678,11 @@ export const products = [
   },
   {
     id: 18,
-    slug: 'pro-championship-edition',
-    name: 'Pro Championship Edition',
-    tag: 'Championship',
+    slug: 'ps-02',
+    name: 'PS-02',
+    tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PRO-002',
+    seriesNumber: 'PS-02',
     image: Image002,
     description: 'The ultimate championship board for professional tournaments. Features hand-carved details and tournament-grade cushion.',
     category: 'boards',
@@ -702,7 +702,7 @@ export const products = [
       '5-year warranty included'
     ],
     included: [
-      '1 Pro Championship Edition Board',
+      '1 PS-02 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Championship Strikers',
@@ -712,13 +712,13 @@ export const products = [
   },
   {
     id: 19,
-    slug: 'pro-master-select',
-    name: 'Pro Master Select',
-    tag: 'Master Series',
+    slug: 'ps-03',
+    name: 'PS-03',
+    tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PRO-003',
+    seriesNumber: 'PS-03',
     image: Image003,
-    description: 'Master craftsmanship meets modern engineering. The Pro Master Select is built for serious players who demand the best.',
+    description: 'Master craftsmanship meets modern engineering. The PS-03 is built for serious players who demand the best.',
     category: 'boards',
     inStock: true,
     sizes: [
@@ -736,7 +736,7 @@ export const products = [
       'Lifetime warranty included'
     ],
     included: [
-      '1 Pro Master Select Board',
+      '1 PS-03 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Master Series Strikers',
@@ -747,13 +747,13 @@ export const products = [
   },
   {
     id: 20,
-    slug: 'pro-royal-champion',
-    name: 'Pro Royal Champion',
-    tag: 'Royal Edition',
+    slug: 'ps-04',
+    name: 'PS-04',
+    tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PRO-004',
+    seriesNumber: 'PS-04',
     image: Image004,
-    description: 'The pinnacle of carrom board craftsmanship. Royal Champion features intricate inlay work and the finest materials.',
+    description: 'The pinnacle of carrom board craftsmanship. PS-04 features intricate inlay work and the finest materials.',
     category: 'boards',
     inStock: true,
     sizes: [
@@ -767,11 +767,11 @@ export const products = [
       'Intricate hand-inlay designs',
       'Elite-grade cushion system',
       'Museum-quality finish',
-      ' collectors item',
+      'Collectors item',
       'Lifetime warranty with priority service'
     ],
     included: [
-      '1 Pro Royal Champion Board',
+      '1 PS-04 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Royal Series Strikers',

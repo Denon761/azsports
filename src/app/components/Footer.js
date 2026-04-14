@@ -12,7 +12,7 @@ const footerLinks = [
   {
     title: "Shop",
     items: [
-      { label: "All Products", href: "/shop" },
+      // { label: "All Products", href: "/shop" },
       { label: "Regular Series", href: "/shop?type=Regular Series" },
       { label: "Professional Series", href: "/shop?type=Professional Series" },
       { label: "Country Series", href: "/shop?type=Country Edition" },
@@ -25,7 +25,7 @@ const footerLinks = [
     items: [
       { label: "Official Rules", href: "/rules" },
       { label: "Board Maintenance", href: "/maintenance" },
-      { label: "About Az SPORTS", href: "/about" },
+      { label: "About Az Sports", href: "/about" },
       { label: "Contact Us", href: "/contact" },
     ]
   },

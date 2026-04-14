@@ -76,7 +76,7 @@ function ShopPageContent() {
               <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4 font-heading">
                 {currentCategory.name}
               </h1>
-              <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto">
+              <p className="text-slate-600 text-sm font-bold max-w-3xl mx-auto">
               Hand-crafting carrom boards | Since 1940.
               </p>
             </>
@@ -152,7 +152,7 @@ function ShopPageContent() {
                         )}
                       </div>
                     </Link>
-                    <p className="text-slate-600 text-sm mb-4 line-clamp-2">{product.description}</p>
+                    {/* <p className="text-slate-600 text-sm mb-4 line-clamp-2">{product.description}</p> */}
 
                     <div className="mt-auto flex items-center justify-between">
                       
