@@ -115,7 +115,7 @@ export default function ProductDetailPage() {
                             : 'bg-white text-slate-700 border-slate-200 hover:border-slate-400'
                         }`}
                       >
-                        {sizeOption.size}"
+                        {sizeOption.size} inches
                       </button>
                     ))}
                   </div>
