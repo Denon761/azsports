@@ -14,9 +14,9 @@ export default function CookiesPage() {
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <Cookie className="w-16 h-16 text-amber-500 mx-auto mb-6" />
+          <Cookie className="w-16 h-16 mx-auto mb-6" />
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            Cookie <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500">Policy</span>
+            Cookie Policy
           </h1>
           <p className="text-gray-600 text-base md:text-lg">Understanding how we use cookies</p>
         </div>
@@ -138,8 +138,8 @@ export default function CookiesPage() {
               If you have any questions about our use of cookies, please contact us:
             </p>
             <ul className="list-none text-gray-600 text-sm md:text-base">
-              <li>Email: privacy@azsports.com</li>
-              <li>Address: 123 High Street, London, United Kingdom</li>
+              <li>Email: info@azsports.com</li>
+              <li>Address: Hakeem Ashraf Road, Opposite Janazagah, Rangpura , Sialkot Punjab</li>
             </ul>
           </div>
         </div>

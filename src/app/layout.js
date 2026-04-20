@@ -1,17 +1,17 @@
-import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
+import { Roboto, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RootProvider from "./providers";
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "700", "900"],
 });
 
-const instrument = Instrument_Sans({
-  variable: "--font-instrument",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -25,8 +25,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bricolage.variable} ${instrument.variable} antialiased bg-gray-50 text-gray-900`}
-        style={{ fontFamily: "var(--font-instrument), sans-serif" }}
+        className={`${roboto.variable} ${inter.variable} antialiased bg-gray-50 text-gray-900`}
+        style={{ fontFamily: "var(--font-inter), sans-serif" }}
       >
         <RootProvider>
           <Header/>

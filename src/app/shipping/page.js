@@ -73,7 +73,7 @@ export default function ShippingPolicyPage() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            Shipping <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500">Policy</span>
+            Shipping Policy
           </h1>
           <p className="text-gray-600 text-base md:text-lg">
             Details on domestic shipping within Pakistan and worldwide export handling.

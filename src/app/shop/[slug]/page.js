@@ -84,20 +84,20 @@ export default function ProductDetailPage() {
             
             {/* Left - Image */}
             <div className="relative aspect-square bg-white rounded-3xl overflow-hidden border border-slate-200">
-              <Image
-                src={product.image}
+                  <Image
+                    src={product.image}
                 alt={product.name}
-                fill
-                className="object-cover"
+                    fill
+                    className="object-cover"
                 priority
-              />
+                  />
 
             </div>
 
             {/* Right - Details */}
             <div className="flex flex-col">
-              <p className="text-slate-500 font-medium mb-2">{product.type}</p>
-              <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 font-heading">{product.name}</h1>
+              <h1 className="text-slate-500 font-medium mb-2">{product.name}</h1>
+              <p className="text-3xl md:text-4xl font-black text-slate-900 mb-4 font-heading">{product.type}</p>
               <p className="text-slate-600 mb-8 leading-relaxed">{product.description}</p>
                
 {/* Size Selection */}
@@ -327,12 +327,12 @@ export default function ProductDetailPage() {
       <section className="py-16 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-8">You May Also Like</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {relatedProducts.map((relProduct) => (
               <Link 
                 key={relProduct.id} 
                 href={`/shop/${relProduct.slug}`}
-                className="bg-white border border-slate-200 rounded-2xl p-4 hover:shadow-lg transition-all"
+                className="bg-white border border-slate-200 rounded-2xl p-2 hover:shadow-lg transition-all"
               >
                 <div className="relative aspect-square bg-slate-50 rounded-xl overflow-hidden mb-4">
                   <Image
