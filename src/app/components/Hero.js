@@ -6,6 +6,17 @@ const Hero = () => {
   return (
     <section className="relative w-full min-h-[300px] lg:min-h-[750px] bg-gray-50 flex items-center overflow-hidden font-sans">
       
+      {/* Mobile Banner Image - Full width background on mobile only */}
+      <div className="lg:hidden absolute inset-0 w-full h-full">
+        <img 
+          src="https://ts1xw1iyvq.ufs.sh/f/vW3Htblq8C7my3ULmOnfr6gcBibRhO58zFdGI2wPxAv1tlk9" 
+          alt="Championship Carrom Board Mobile Banner" 
+          className="w-full h-full object-cover brightness-95 contrast-110"
+        />
+        {/* Dark overlay for text readability on mobile */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </div>
+
       {/* --- BACKGROUND EFFECTS --- */}
       {/* Decorative ambient glowing orbs behind the layout */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
@@ -19,32 +30,62 @@ const Hero = () => {
           {/* LEFT COLUMN - TEXT & CTA */}
           <div className="flex flex-col items-start text-left pt-10 lg:pt-0">
             
-            {/* Social Proof Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-amber-50 border border-amber-200 backdrop-blur-md mb-8">
-              <div className="flex text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} fill="currentColor" className="w-3.5 h-3.5" />
-                ))}
+            {/* Mobile wrapper - centers content and ensures readability with bg overlay */}
+            <div className="lg:hidden w-full mb-auto">
+              {/* Social Proof Badge */}
+              <div className="inline-flex items-center gap-2.5 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-amber-50/90 border border-amber-200 backdrop-blur-md mb-6">
+                <div className="flex text-amber-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} fill="currentColor" className="w-3.5 h-3.5" />
+                  ))}
+                </div>
+                <span className="text-xs md:text-sm font-medium text-gray-700">
+                  Trusted by 2,000+ Pro Players
+                </span>
               </div>
-              <span className="text-xs md:text-sm font-medium text-gray-700">
-                Trusted by 2,000+ Pro Players
-              </span>
+
+              {/* Huge Premium Headline */}
+              <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1] mb-4 font-heading drop-shadow-lg">
+                Hand-crafting carrom boards<br />
+                <span className="text-amber-300">| Since 1940.</span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-base sm:text-lg text-white/90 max-w-xl leading-relaxed mb-6 drop-shadow-md">
+                Experience the glass-like glide, razor-sharp accuracy, and 
+                legendary rebound of championship-grade carrom boards.
+              </p>
             </div>
 
-            {/* Huge Premium Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6 font-heading">
-             Hand-crafting carrom boards  
+            {/* Desktop content - hidden on mobile */}
+            <div className="hidden lg:block">
+              {/* Social Proof Badge */}
+              <div className="inline-flex items-center gap-2.5 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-amber-50 border border-amber-200 backdrop-blur-md mb-8">
+                <div className="flex text-amber-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} fill="currentColor" className="w-3.5 h-3.5" />
+                  ))}
+                </div>
+                <span className="text-xs md:text-sm font-medium text-gray-700">
+                  Trusted by 2,000+ Pro Players
+                </span>
+              </div>
+
+              {/* Huge Premium Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6 font-heading">
+                Hand-crafting carrom boards<br />
                 | Since 1940.
-            </h1>
+              </h1>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg text-gray-600 max-w-xl leading-relaxed mb-8">
-              Experience the glass-like glide, razor-sharp accuracy, and 
-              legendary rebound of championship-grade carrom boards. Handcrafted in Pakistan since 1940.
-            </p>
+              {/* Description */}
+              <p className="text-base sm:text-lg text-gray-600 max-w-xl leading-relaxed mb-8">
+                Experience the glass-like glide, razor-sharp accuracy, and 
+                legendary rebound of championship-grade carrom boards. Handcrafted in Pakistan since 1940.
+              </p>
+            </div>
 
-            {/* Quick Value Props */}
-            {/* <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 text-sm font-medium text-gray-700">
+            {/* Quick Value Props - Desktop only */}
+            {/* <ul className="hidden lg:flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 text-sm font-medium text-gray-700">
               <li className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-amber-500" />
                 100% Solid Wood
@@ -55,8 +96,8 @@ const Hero = () => {
               </li>
             </ul> */}
 
-            {/* CTA Buttons */}
-            {/* <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
+            {/* CTA Buttons - Desktop only */}
+            {/* <div className="hidden lg:flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
               <Link 
                 href="/shop" 
                 className="bg-[#241b14] text-white px-7 py-3 md:py-3.5 rounded-lg text-sm md:text-base font-semibold hover:shadow-[0_0_20px_rgba(36,27,20,0.35)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-0.5"
@@ -73,7 +114,7 @@ const Hero = () => {
             
           </div>
 
-          {/* RIGHT COLUMN - VISUAL SHOWCASE */}
+          {/* RIGHT COLUMN - VISUAL SHOWCASE - Desktop only */}
           <div className="relative w-full h-[350px] lg:h-[600px] flex items-center justify-center group mt-8 lg:mt-0 hidden lg:flex">
             
             {/* Ambient shadow specifically for the board to ground it */}
