@@ -2,12 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  Menu, X, User, ShoppingBag, MessageCircle, ChevronDown
-} from 'lucide-react';
-import { useSelector } from 'react-redux';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../assets/logo.jpeg';
+   Menu, X, User, ShoppingBag, MessageCircle, ChevronDown
+ } from 'lucide-react';
+ import { useSelector } from 'react-redux';
+ import Link from 'next/link';
+ import Image from 'next/image';
+ import logo from '../assets/logo.jpeg';
+ import CountrySelector from './CountrySelector';
 
 // --- DATA ARRAYS (CARROM THEME) ---
 const primaryLinks = [
@@ -75,6 +76,9 @@ const Header = () => {
 
           {/* Right Action Icons */}
           <div className="flex items-center gap-2 sm:gap-4">
+            
+            {/* Country Selector */}
+            <CountrySelector />
             
             {/* WhatsApp Icon */}
             <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100 hidden sm:block" title="Chat on WhatsApp">

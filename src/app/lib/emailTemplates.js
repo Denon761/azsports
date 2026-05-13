@@ -1,7 +1,23 @@
 // Email template utilities for AZ Sports
 
+const formatPrice = (price, currency) => {
+  const symbol = currency?.symbol || 'Rs';
+  return `${symbol} ${price.toLocaleString()}`;
+};
+
 export const generateOrderConfirmationEmail = (orderDetails) => {
-  const { customerName, customerEmail, orderNumber, orderDate, items, subtotal, standTotal, total, shippingAddress } = orderDetails;
+  const { 
+    customerName, 
+    customerEmail, 
+    orderNumber, 
+    orderDate, 
+    items, 
+    subtotal, 
+    standTotal, 
+    total, 
+    shippingAddress,
+    currency = { symbol: 'Rs', code: 'PKR' }
+  } = orderDetails;
 
   const itemsHtml = items.map(item => `
     <tr>
@@ -11,8 +27,8 @@ export const generateOrderConfirmationEmail = (orderDetails) => {
         ${item.addStand ? '<br><span style="color: #888; font-size: 11px;">+ Foldable Stand</span>' : ''}
       </td>
       <td style="padding: 12px; border-bottom: 1px solid #333; text-align: center; color: #fff;">${item.quantity}</td>
-      <td style="padding: 12px; border-bottom: 1px solid #333; text-align: right; color: #fff;">Rs ${item.price.toLocaleString()}</td>
-      <td style="padding: 12px; border-bottom: 1px solid #333; text-align: right; color: #fff;">Rs ${(item.price * item.quantity).toLocaleString()}</td>
+      <td style="padding: 12px; border-bottom: 1px solid #333; text-align: right; color: #fff;">${formatPrice(item.price, currency)}</td>
+      <td style="padding: 12px; border-bottom: 1px solid #333; text-align: right; color: #fff;">${formatPrice(item.price * item.quantity, currency)}</td>
     </tr>
   `).join('');
 
@@ -82,20 +98,20 @@ export const generateOrderConfirmationEmail = (orderDetails) => {
           <tr>
             <td style="padding: 30px;">
               <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #27272a; border-radius: 8px;">
-                <tr>
-                  <td style="padding: 15px; color: #a1a1aa; font-size: 14px;">Subtotal</td>
-                  <td style="padding: 15px; text-align: right; color: #fff; font-size: 14px;">Rs ${subtotal.toLocaleString()}</td>
-                </tr>
-                ${standTotal > 0 ? `
-                <tr>
-                  <td style="padding: 15px; color: #a1a1aa; font-size: 14px;">Stands</td>
-                  <td style="padding: 15px; text-align: right; color: #fff; font-size: 14px;">Rs ${standTotal.toLocaleString()}</td>
-                </tr>
-                ` : ''}
-                <tr>
-                  <td style="padding: 15px; border-top: 1px solid #3f3f46; color: #fff; font-size: 16px; font-weight: 700;">Total</td>
-                  <td style="padding: 15px; border-top: 1px solid #3f3f46; text-align: right; color: #f59e0b; font-size: 20px; font-weight: 700;">Rs ${total.toLocaleString()}</td>
-                </tr>
+                 <tr>
+                   <td style="padding: 15px; color: #a1a1aa; font-size: 14px;">Subtotal</td>
+                   <td style="padding: 15px; text-align: right; color: #fff; font-size: 14px;">${formatPrice(subtotal, currency)}</td>
+                 </tr>
+                 ${standTotal > 0 ? `
+                 <tr>
+                   <td style="padding: 15px; color: #a1a1aa; font-size: 14px;">Stands</td>
+                   <td style="padding: 15px; text-align: right; color: #fff; font-size: 14px;">${formatPrice(standTotal, currency)}</td>
+                 </tr>
+                 ` : ''}
+                 <tr>
+                   <td style="padding: 15px; border-top: 1px solid #3f3f46; color: #fff; font-size: 16px; font-weight: 700;">Total</td>
+                   <td style="padding: 15px; border-top: 1px solid #3f3f46; text-align: right; color: #f59e0b; font-size: 20px; font-weight: 700;">${formatPrice(total, currency)}</td>
+                 </tr>
               </table>
             </td>
           </tr>
@@ -137,7 +153,15 @@ export const generateOrderConfirmationEmail = (orderDetails) => {
 };
 
 export const generateOrderReceivedEmail = (orderDetails) => {
-  const { customerName, orderNumber, orderDate, items, total, customerEmail } = orderDetails;
+  const { 
+    customerName, 
+    orderNumber, 
+    orderDate, 
+    items, 
+    total, 
+    customerEmail,
+    currency = { symbol: 'Rs', code: 'PKR' }
+  } = orderDetails;
 
   const itemsList = items.map(item => `${item.name} x${item.quantity}`).join(', ');
 
@@ -169,14 +193,14 @@ export const generateOrderReceivedEmail = (orderDetails) => {
                     <p style="margin: 5px 0 0; color: #fff; font-size: 14px;">${customerName}</p>
                     <p style="margin: 0; color: #a1a1aa; font-size: 12px;">${customerEmail}</p>
                   </td>
-                  <td style="padding: 15px; border-left: 1px solid #3f3f46;">
-                    <p style="margin: 0; color: #f59e0b; font-size: 12px; font-weight: 600;">DATE</p>
-                    <p style="margin: 5px 0 0; color: #fff; font-size: 14px;">${orderDate}</p>
-                  </td>
-                  <td style="padding: 15px; border-left: 1px solid #3f3f46;">
-                    <p style="margin: 0; color: #f59e0b; font-size: 12px; font-weight: 600;">TOTAL</p>
-                    <p style="margin: 5px 0 0; color: #f59e0b; font-size: 18px; font-weight: 700;">Rs ${total.toLocaleString()}</p>
-                  </td>
+                   <td style="padding: 15px; border-left: 1px solid #3f3f46;">
+                     <p style="margin: 0; color: #f59e0b; font-size: 12px; font-weight: 600;">DATE</p>
+                     <p style="margin: 5px 0 0; color: #fff; font-size: 14px;">${orderDate}</p>
+                   </td>
+                   <td style="padding: 15px; border-left: 1px solid #3f3f46;">
+                     <p style="margin: 0; color: #f59e0b; font-size: 12px; font-weight: 600;">TOTAL</p>
+                     <p style="margin: 5px 0 0; color: #f59e0b; font-size: 18px; font-weight: 700;">${formatPrice(total, currency)}</p>
+                   </td>
                 </tr>
               </table>
               

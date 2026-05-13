@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RootProvider from "./providers";
+import LocationDetector from "./components/LocationDetector";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         style={{ fontFamily: "var(--font-inter), sans-serif" }}
       >
         <RootProvider>
+          <LocationDetector />
           <Header/>
           {children}
           <Footer/>

@@ -5,8 +5,10 @@ import { Layers, Ruler, Star, Shield, ArrowRight } from 'lucide-react';
 import { products } from '../data/products';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useCurrency } from '../context/CurrencyContext';
 
 const ProductCard = ({ product }) => {
+  const { formatCurrency, getLocalizedPrice } = useCurrency();
 
   return (
     <div className="group relative bg-white h-full flex flex-col rounded-2xl md:rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
@@ -57,14 +59,14 @@ const ProductCard = ({ product }) => {
 
         <div className="flex-grow"></div>
 
-        {/* Price and Button */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-3 border-t border-zinc-100 gap-2">
-          <div className="flex flex-col">
-            <span className="text-[8px] md:text-[10px] font-bold uppercase text-zinc-400">Price</span>
-            <div className="text-sm md:text-xl font-black text-zinc-900">
-              Rs {(product.sizes ? product.sizes[0].price : product.price).toLocaleString()}
-            </div>
-          </div>
+         {/* Price and Button */}
+         <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-3 border-t border-zinc-100 gap-2">
+           <div className="flex flex-col">
+             <span className="text-[8px] md:text-[10px] font-bold uppercase text-zinc-400">Price</span>
+             <div className="text-sm md:text-xl font-black text-zinc-900">
+               {formatCurrency(getLocalizedPrice(product, 0))}
+             </div>
+           </div>
           
           <Link 
             href={`/shop/${product.slug}`}

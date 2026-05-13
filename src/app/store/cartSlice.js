@@ -11,7 +11,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const { product, quantity = 1, size = null } = action.payload;
+      const { product, quantity = 1, size = null, price: customPrice } = action.payload;
       
       const itemKey = size ? `${product.id}-${size}` : product.id;
       
@@ -26,10 +26,15 @@ const cartSlice = createSlice({
           ? product.sizes.find(s => s.size === size) 
           : null;
         
+        // Use explicitly provided price, or derive from size or product
+        const itemPrice = customPrice !== undefined 
+          ? customPrice 
+          : (sizeData ? sizeData.price : product.price);
+        
         state.items.push({
           id: product.id,
           name: product.name,
-          price: sizeData ? sizeData.price : product.price,
+          price: itemPrice,
           image: product.image?.src || product.image || null,
           description: product.description || '',
           features: product.features || [],

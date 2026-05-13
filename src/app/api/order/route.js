@@ -27,7 +27,8 @@ export async function POST(request) {
       standTotal, 
       total, 
       shippingAddress,
-      orderNumber 
+      orderNumber,
+      currency = { symbol: 'Rs', code: 'PKR' } // Default to PKR
     } = body;
 
     // Validate required fields
@@ -56,7 +57,8 @@ export async function POST(request) {
       subtotal: subtotal || 0,
       standTotal: standTotal || 0,
       total: total || 0,
-      shippingAddress
+      shippingAddress,
+      currency: currency,
     });
 
     const adminEmailHtml = generateOrderReceivedEmail({
@@ -65,7 +67,8 @@ export async function POST(request) {
       orderNumber: orderNum,
       orderDate,
       items,
-      total: total || 0
+      total: total || 0,
+      currency: currency,
     });
 
     const transporter = createTransporter();

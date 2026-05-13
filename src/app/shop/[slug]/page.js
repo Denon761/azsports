@@ -11,11 +11,13 @@ import {
   Minus, Plus, Package, ChevronDown
 } from 'lucide-react';
 import { addToCart } from '../../store/cartSlice';
+import { useCurrency } from '../../context/CurrencyContext';
 
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
   const dispatch = useDispatch();
+  const { formatCurrency, getLocalizedPrice } = useCurrency();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
   const [showAddedMessage, setShowAddedMessage] = useState(false);
@@ -26,6 +28,10 @@ export default function ProductDetailPage() {
 
   const productPrice = product?.sizes ? product.sizes[0].price : product?.price;
   const availableSizes = product?.sizes || [];
+  
+  // Compute localized price for current selection
+  const sizeIndex = selectedSize ? availableSizes.findIndex(s => s.size === selectedSize) : 0;
+  const displayPrice = getLocalizedPrice(product, sizeIndex >= 0 ? sizeIndex : 0);
 
   if (!product) {
     return (
@@ -45,20 +51,30 @@ export default function ProductDetailPage() {
   }
 
   const handleAddToCart = () => {
+    const sizeOption = availableSizes.find(s => s.size === selectedSize) || availableSizes[0];
+    const sizeIndex = availableSizes.findIndex(s => s.size === selectedSize);
+    const localizedPrice = getLocalizedPrice(product, sizeIndex >= 0 ? sizeIndex : 0);
+    
     dispatch(addToCart({ 
       product, 
       quantity, 
-      size: selectedSize || (availableSizes[0]?.size || null) 
+      size: selectedSize || sizeOption?.size || null,
+      price: localizedPrice,
     }));
     setShowAddedMessage(true);
     setTimeout(() => setShowAddedMessage(false), 3000);
   };
 
   const handleBuyNow = () => {
+    const sizeOption = availableSizes.find(s => s.size === selectedSize) || availableSizes[0];
+    const sizeIndex = availableSizes.findIndex(s => s.size === selectedSize);
+    const localizedPrice = getLocalizedPrice(product, sizeIndex >= 0 ? sizeIndex : 0);
+    
     dispatch(addToCart({ 
       product, 
       quantity, 
-      size: selectedSize || (availableSizes[0]?.size || null) 
+      size: selectedSize || sizeOption?.size || null,
+      price: localizedPrice,
     }));
     router.push('/checkout');
   };
@@ -96,8 +112,8 @@ export default function ProductDetailPage() {
 
             {/* Right - Details */}
             <div className="flex flex-col">
-              <h1 className="text-slate-500 font-medium mb-2">{product.name}</h1>
-              <p className="text-3xl md:text-4xl font-black text-slate-900 mb-4 font-heading">{product.type}</p>
+              <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-2 font-heading">{product.name}</h1>
+              <p className="text-slate-500 font-medium mb-4">{product.type}</p>
               <p className="text-slate-600 mb-8 leading-relaxed">{product.description}</p>
                
 {/* Size Selection */}
@@ -142,12 +158,12 @@ export default function ProductDetailPage() {
                 </div>
               </div>
                
-              {/* Price Display */}
-              <div className="flex items-end gap-4 mb-8 pb-8 border-b border-slate-200">
-                <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
-                  Rs {(selectedSize ? availableSizes.find(s => s.size === selectedSize)?.price : productPrice).toLocaleString()}
-                </span>
-              </div>
+               {/* Price Display */}
+               <div className="flex items-end gap-4 mb-8 pb-8 border-b border-slate-200">
+                 <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
+                   {formatCurrency(displayPrice)}
+                 </span>
+               </div>
 
               {/* Product Details Dropdowns */}
               <div className="space-y-4 mb-8">
@@ -344,7 +360,7 @@ export default function ProductDetailPage() {
                 </div>
                 <h3 className="font-bold text-slate-900">{relProduct.name}</h3>
                 <p className="text-amber-600 font-bold mt-1">
-                  Rs {(relProduct.sizes ? relProduct.sizes[0].price : relProduct.price).toLocaleString()}
+                  {formatCurrency(getLocalizedPrice(relProduct, 0))}
                 </p>
               </Link>
             ))}

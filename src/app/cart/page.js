@@ -10,16 +10,22 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import standProductImage from '../assets/products/stand.png';
+import { useCurrency } from '../context/CurrencyContext';
 
 const standProduct = {
   id: 'stand-01',
   name: 'Foldable Metal Stand',
   price: 6500,
+  prices: {
+    PK: [6500],
+    US: [Math.round(6500 * 0.0036)], // ~$23
+  },
   description: 'Premium foldable metal stand for easy storage and gameplay at the perfect height.',
 };
 
 const CartPage = () => {
   const dispatch = useDispatch();
+  const { formatCurrency, getLocalizedPrice } = useCurrency();
   const cartItems = useSelector(state => state.cart.items);
   const totalPrice = useSelector(state => state.cart.totalPrice);
   const [standAdded, setStandAdded] = useState(false);
@@ -33,15 +39,18 @@ const CartPage = () => {
   };
 
   const handleAddStand = () => {
+    const localizedPrice = getLocalizedPrice(standProduct, 0);
     dispatch(addToCart({ 
       product: {
-        id: 'stand-01',
+        id: standProduct.id,
         name: standProduct.name,
         price: standProduct.price,
         image: standProductImage,
         description: standProduct.description,
+        prices: standProduct.prices,
       }, 
-      quantity: 1 
+      quantity: 1,
+      price: localizedPrice,
     }));
     setStandAdded(true);
   };
@@ -142,12 +151,12 @@ const CartPage = () => {
                         {/* Price & Quantity Controls */}
                         <div className="mt-auto pt-6 flex flex-wrap items-end justify-between gap-4">
                           
-                          {/* Price Block */}
-                          <div>
-                            <p className="text-2xl font-black text-slate-900 tracking-tight">
-                              Rs {(item.price * item.quantity).toLocaleString()}
-                            </p>
-                          </div>
+                         {/* Price Block */}
+                         <div>
+                           <p className="text-2xl font-black text-slate-900 tracking-tight">
+                             {formatCurrency(item.price * item.quantity)}
+                           </p>
+                         </div>
 
                           {/* Quantity Control */}
                           <div className="grid grid-cols-2 gap-2 w-full">
@@ -198,16 +207,16 @@ const CartPage = () => {
                         <h3 className="text-lg font-bold text-slate-900">{standProduct.name}</h3>
                         <p className="text-sm text-slate-500">{standProduct.description}</p>
                       </div>
-                      <div className="text-center sm:text-right shrink-0">
-                        <p className="text-xl font-bold text-slate-900">Rs {standProduct.price.toLocaleString()}</p>
-                        <button
-                          onClick={handleAddStand}
-                          className="mt-2 flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-gray-700 transition-colors"
-                        >
-                          <PlusCircle className="w-4 h-4" />
-                          Add to Cart
-                        </button>
-                      </div>
+                       <div className="text-center sm:text-right shrink-0">
+                         <p className="text-xl font-bold text-slate-900">{formatCurrency(getLocalizedPrice(standProduct, 0))}</p>
+                         <button
+                           onClick={handleAddStand}
+                           className="mt-2 flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-gray-700 transition-colors"
+                         >
+                           <PlusCircle className="w-4 h-4" />
+                           Add to Cart
+                         </button>
+                       </div>
                     </div>
                   </div>
                 )}
@@ -220,25 +229,25 @@ const CartPage = () => {
                    
                   <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">Order Summary</h2>
 
-                  {/* Pricing Breakdown */}
-                  <div className="space-y-4 mb-6 pb-6 border-b border-slate-100">
-                    <div className="flex justify-between text-slate-500 font-medium text-sm md:text-base">
-                      <span>Subtotal ({cartItems.reduce((sum, item) => sum + item.quantity, 0)} items)</span>
-                      <span className="text-slate-900 font-bold">Rs {totalPrice.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between text-slate-500 font-medium text-sm md:text-base">
-                      <span>Shipping Delivery</span>
-                      <span className="text-green-600 font-bold">FREE</span>
-                    </div>
-                  </div>
+                   {/* Pricing Breakdown */}
+                   <div className="space-y-4 mb-6 pb-6 border-b border-slate-100">
+                     <div className="flex justify-between text-slate-500 font-medium text-sm md:text-base">
+                       <span>Subtotal ({cartItems.reduce((sum, item) => sum + item.quantity, 0)} items)</span>
+                       <span className="text-slate-900 font-bold">{formatCurrency(totalPrice)}</span>
+                     </div>
+                     <div className="flex justify-between text-slate-500 font-medium text-sm md:text-base">
+                       <span>Shipping Delivery</span>
+                       <span className="text-green-600 font-bold">FREE</span>
+                     </div>
+                   </div>
 
-                  {/* Total Amount */}
-                  <div className="flex justify-between items-end mb-8">
-                    <span className="text-lg font-bold text-slate-900">Total</span>
-                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
-                      Rs {totalPrice.toLocaleString()}
-                    </span>
-                  </div>
+                   {/* Total Amount */}
+                   <div className="flex justify-between items-end mb-8">
+                     <span className="text-lg font-bold text-slate-900">Total</span>
+                     <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
+                       {formatCurrency(totalPrice)}
+                     </span>
+                   </div>
 
                   {/* Action Buttons */}
                   <div className="space-y-3">

@@ -9,6 +9,7 @@ import { products, accessories } from '../data/products';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
 import SeriesGrid from '../components/SeriesGrid';
+import { useCurrency } from '../context/CurrencyContext';
 
 const categoryInfo = {
   'Regular Series': {
@@ -31,6 +32,7 @@ const categoryInfo = {
 
 function ShopPageContent() {
   const dispatch = useDispatch();
+  const { formatCurrency, getLocalizedPrice } = useCurrency();
   const searchParams = useSearchParams();
   
   const [typeFilter, setTypeFilter] = useState('all');
@@ -145,7 +147,7 @@ function ShopPageContent() {
                       </h3>
                       <div>
                         <p className="text-sm sm:text-xl font-bold text-green-800 mb-2">
-                          Rs {(product.sizes ? product.sizes[0].price : product.price).toLocaleString()}
+                          {formatCurrency(getLocalizedPrice(product, 0))}
                         </p>
                         {product.specs?.size && (
                           <p className="text-sm text-slate-500">{product.specs.size}</p>

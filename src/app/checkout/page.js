@@ -10,16 +10,22 @@ import {
   CreditCard, Lock, ShoppingBag, Package, Zap, PlusCircle
 } from 'lucide-react';
 import standProductImage from '../assets/products/stand.png';
+import { useCurrency } from '../context/CurrencyContext';
 
 const standProduct = {
   id: 'stand-01',
   name: 'Foldable Metal Stand',
   price: 6500,
+  prices: {
+    PK: [6500],
+    US: [Math.round(6500 * 0.0036)],
+  },
   description: 'Premium foldable metal stand for easy storage and gameplay at the perfect height.',
 };
 
 const CheckoutPage = () => {
   const dispatch = useDispatch();
+  const { formatCurrency, getLocalizedPrice } = useCurrency();
   const cartItems = useSelector(state => state.cart.items);
   const totalPrice = useSelector(state => state.cart.totalPrice);
   
@@ -44,15 +50,18 @@ const CheckoutPage = () => {
   };
 
   const handleAddStand = () => {
+    const localizedPrice = getLocalizedPrice(standProduct, 0);
     dispatch(addToCart({ 
       product: {
-        id: 'stand-01',
+        id: standProduct.id,
         name: standProduct.name,
         price: standProduct.price,
         image: standProductImage,
         description: standProduct.description,
+        prices: standProduct.prices,
       }, 
-      quantity: 1 
+      quantity: 1,
+      price: localizedPrice,
     }));
     setStandAdded(true);
   };
@@ -89,6 +98,7 @@ const CheckoutPage = () => {
         })),
         subtotal: totalPrice,
         total: totalPrice,
+        currency: currency, // Include currency info
       };
 
       // Send order to API
@@ -173,12 +183,12 @@ const CheckoutPage = () => {
             </div>
           )}
           
-          <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 mb-8">
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Order Total Paid</p>
-            <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22]">
-              Rs {totalPrice.toLocaleString()}
-            </p>
-          </div>
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 mb-8">
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Order Total Paid</p>
+              <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22]">
+                {formatCurrency(totalPrice)}
+              </p>
+            </div>
 
           <p className="text-sm text-slate-500 mb-8 px-4">
             A confirmation email with tracking details has been sent to <br/>
@@ -401,12 +411,12 @@ const CheckoutPage = () => {
                         <p className="text-xs text-slate-500 mt-1">Qty: {item.quantity}</p>
                       </div>
                       
-                      {/* Line Price */}
-                      <div className="py-1 text-right">
-                        <p className="text-sm font-bold text-slate-900">
-                          Rs {(item.price * item.quantity).toLocaleString()}
-                        </p>
-                      </div>
+                       {/* Line Price */}
+                       <div className="py-1 text-right">
+                         <p className="text-sm font-bold text-slate-900">
+                           {formatCurrency(item.price * item.quantity)}
+                         </p>
+                       </div>
                     </div>
                   ))}
                 </div>
@@ -425,9 +435,9 @@ const CheckoutPage = () => {
                         />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-[10px] font-bold text-amber-600 uppercase tracking-wider">Complete Your Setup</p>
-                        <p className="text-sm font-bold text-slate-900 truncate">{standProduct.name}</p>
-                        <p className="text-xs text-slate-500">Rs {standProduct.price.toLocaleString()}</p>
+                         <p className="text-xs font-bold text-amber-600 uppercase tracking-wider">Complete Your Setup</p>
+                         <p className="text-sm font-bold text-slate-900 truncate">{standProduct.name}</p>
+                         <p className="text-xs text-slate-500">{formatCurrency(getLocalizedPrice(standProduct, 0))}</p>
                       </div>
                       <button
                         onClick={handleAddStand}
@@ -440,27 +450,27 @@ const CheckoutPage = () => {
                   </div>
                 )}
 
-                {/* Totals Breakdown */}
-                <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-slate-500 text-sm font-medium">
-                    <span>Subtotal ({totalItems} items)</span>
-                    <span className="text-slate-900 font-bold">Rs {totalPrice.toLocaleString()}</span>
-                  </div>
-                  <div className="flex justify-between text-slate-500 text-sm font-medium">
-                    <span>Shipping Delivery</span>
-                    <span className="text-green-600 font-bold">FREE</span>
-                  </div>
-                </div>
+                 {/* Totals Breakdown */}
+                 <div className="space-y-3 mb-6">
+                   <div className="flex justify-between text-slate-500 text-sm font-medium">
+                     <span>Subtotal ({totalItems} items)</span>
+                     <span className="text-slate-900 font-bold">{formatCurrency(totalPrice)}</span>
+                   </div>
+                   <div className="flex justify-between text-slate-500 text-sm font-medium">
+                     <span>Shipping Delivery</span>
+                     <span className="text-green-600 font-bold">FREE</span>
+                   </div>
+                 </div>
 
-                {/* Grand Total */}
-                <div className="border-t border-slate-100 pt-6">
-                  <div className="flex items-end justify-between">
-                    <span className="text-lg font-bold text-slate-900">Total</span>
-                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
-                      Rs {finalTotal.toLocaleString()}
-                    </span>
-                  </div>
-                </div>
+                 {/* Grand Total */}
+                 <div className="border-t border-slate-100 pt-6">
+                   <div className="flex items-end justify-between">
+                     <span className="text-lg font-bold text-slate-900">Total</span>
+                     <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
+                       {formatCurrency(finalTotal)}
+                     </span>
+                   </div>
+                 </div>
 
                 {/* Unified Trust Badges */}
                 <div className="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 gap-3">

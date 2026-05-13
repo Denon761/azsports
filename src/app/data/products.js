@@ -46,6 +46,10 @@ export const accessories = [
     name: 'Premium Carrom Set',
     tag: 'Complete Set',
     price: 5500,
+    prices: {
+      PK: [5500],
+      US: [20],
+    },
     image: Image003,
     description: 'Complete carrom set with all pieces needed for a full game.',
     category: 'accessories',
@@ -68,6 +72,10 @@ export const accessories = [
     name: 'Pro Striker Set',
     tag: 'Pro Series',
     price: 3500,
+    prices: {
+      PK: [3500],
+      US: [13],
+    },
     image: Image004,
     description: 'Professional grade strikers for ultimate control and power.',
     category: 'accessories',
@@ -89,6 +97,10 @@ export const accessories = [
     name: 'Boric Powder 500g',
     tag: 'Essential',
     price: 1500,
+    prices: {
+      PK: [1500],
+      US: [5],
+    },
     image: Image002,
     description: 'High-quality boric powder for smooth board surface.',
     category: 'accessories',
@@ -118,11 +130,15 @@ export const products = [
     description: 'Perfect for beginners and casual players. Lightweight design with smooth matte finish.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [9000, 11500, 15000, 19500],
+      US: [90, 115, 150, 195],
+    },
     sizes: [
-      { size: '24"', price: 9990, specs: { size: '24" x 24"', ply: '4mm Standard', frame: '1" Softwood', weight: '5kg', boardThickness: '10mm' } },
-      { size: '32"', price: 12990, specs: { size: '29" x 29"', ply: '4mm Standard', frame: '1.5" Softwood', weight: '8kg', boardThickness: '12mm' } },
-      { size: '36"', price: 15990, specs: { size: '32" x 32"', ply: '6mm Standard', frame: '1.5" Softwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '42"', price: 19990, specs: { size: '36" x 36"', ply: '8mm Standard', frame: '2" Softwood', weight: '14kg', boardThickness: '16mm' } },
+      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '4mm Standard', frame: '1" Softwood', weight: '5kg', boardThickness: '10mm' } },
+      { size: '32"', price: 11500, specs: { size: '29" x 29"', ply: '4mm Standard', frame: '1.5" Softwood', weight: '8kg', boardThickness: '12mm' } },
+      { size: '36"', price: 15000, specs: { size: '32" x 32"', ply: '6mm Standard', frame: '1.5" Softwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '42"', price: 19500, specs: { size: '36" x 36"', ply: '8mm Standard', frame: '2" Softwood', weight: '14kg', boardThickness: '16mm' } },
     ],
     features: [
       'Lightweight design - easy to carry',
@@ -151,11 +167,15 @@ export const products = [
     description: 'Designed for intermediate players who want to take their game to the next level.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [9000, 11500, 15000, 19500],
+      US: [90, 115, 150, 195],
+    },
     sizes: [
-      { size: '24"', price: 12990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 17990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '36"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
-      { size: '42"', price: 27990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
+      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
+      { size: '32"', price: 11500, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '36"', price: 15000, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
+      { size: '42"', price: 19500, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
     ],
     features: [
       'Water-resistant construction',
@@ -185,11 +205,15 @@ export const products = [
     description: 'Professional tournament-grade board used by champions worldwide.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [9000, 11500, 15000, 19500],
+      US: [90, 115, 150, 195],
+    },
     sizes: [
-      { size: '24"', price: 22990, specs: { size: '24" x 24"', ply: '12mm English Birch', frame: '2" Kikar Wood', weight: '10kg', boardThickness: '16mm' } },
-      { size: '32"', price: 29990, specs: { size: '32" x 32"', ply: '14mm English Birch', frame: '2.5" Kikar Wood', weight: '15kg', boardThickness: '20mm' } },
-      { size: '36"', price: 34990, specs: { size: '35" x 35"', ply: '16mm English Birch', frame: '3" Kikar Wood', weight: '18kg', boardThickness: '22mm' } },
-      { size: '42"', price: 42990, specs: { size: '42" x 42"', ply: '18mm English Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
+      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '12mm English Birch', frame: '2" Kikar Wood', weight: '10kg', boardThickness: '16mm' } },
+      { size: '32"', price: 11500, specs: { size: '32" x 32"', ply: '14mm English Birch', frame: '2.5" Kikar Wood', weight: '15kg', boardThickness: '20mm' } },
+      { size: '36"', price: 15000, specs: { size: '35" x 35"', ply: '16mm English Birch', frame: '3" Kikar Wood', weight: '18kg', boardThickness: '22mm' } },
+      { size: '42"', price: 19500, specs: { size: '42" x 42"', ply: '18mm English Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
     ],
     features: [
       'Federation approved specifications',
@@ -220,11 +244,15 @@ export const products = [
     description: 'Elite professional board for serious competitive players seeking maximum performance.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [9000, 11500, 15000, 19500],
+      US: [90, 115, 150, 195],
+    },
     sizes: [
-      { size: '24"', price: 29990, specs: { size: '24" x 24"', ply: '14mm Premium Birch', frame: '2.5" Teak Wood', weight: '12kg', boardThickness: '18mm' } },
-      { size: '32"', price: 34990, specs: { size: '32" x 32"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '16kg', boardThickness: '20mm' } },
-      { size: '36"', price: 39990, specs: { size: '36" x 36"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '18kg', boardThickness: '22mm' } },
-      { size: '42"', price: 45990, specs: { size: '42" x 42"', ply: '18mm Premium Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
+      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '14mm Premium Birch', frame: '2.5" Teak Wood', weight: '12kg', boardThickness: '18mm' } },
+      { size: '32"', price: 11500, specs: { size: '32" x 32"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '16kg', boardThickness: '20mm' } },
+      { size: '36"', price: 15000, specs: { size: '36" x 36"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '18kg', boardThickness: '22mm' } },
+      { size: '42"', price: 19500, specs: { size: '42" x 42"', ply: '18mm Premium Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
     ],
     features: [
       'Premium engineered wood construction',
@@ -257,11 +285,15 @@ export const products = [
     description: 'Special USA edition board featuring iconic American design with premium quality construction.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'USA themed premium design',
@@ -290,11 +322,15 @@ export const products = [
     description: 'Special Canada edition board featuring iconic maple leaf design with premium quality.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'Canada themed premium design',
@@ -323,11 +359,15 @@ export const products = [
     description: 'Special Pakistan edition board featuring iconic crescent and star design with premium quality.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'Pakistan themed premium design',
@@ -356,11 +396,15 @@ export const products = [
     description: 'Special Afghanistan edition board featuring iconic national design with premium quality.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'Afghanistan themed premium design',
@@ -389,11 +433,15 @@ export const products = [
     description: 'Special Nepal edition board featuring iconic Himalayan design with premium quality.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'Nepal themed premium design',
@@ -422,11 +470,15 @@ export const products = [
     description: 'Special Sri Lanka edition board featuring iconic lion design with premium quality.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'Sri Lanka themed premium design',
@@ -455,11 +507,15 @@ export const products = [
     description: 'Special Bangladesh edition board featuring iconic design with premium quality.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'Bangladesh themed premium design',
@@ -488,11 +544,15 @@ export const products = [
     description: 'Special Maldives edition board featuring iconic island design with premium quality.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [17990, 22500, 28500, 35900],
+      US: [180, 225, 285, 359],
+    },
     sizes: [
       { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 24990, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 27990, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 34990, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
+      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
+      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
+      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
     ],
     features: [
       'Maldives themed premium design',
@@ -522,9 +582,13 @@ export const products = [
     description: 'Vibrant red special edition board with premium finish and bold design statement.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [15990, 19990, 24990, 31990],
+      US: [160, 200, 250, 320],
+    },
     sizes: [
       { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
       { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
       { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
     ],
@@ -555,9 +619,13 @@ export const products = [
     description: 'Elegant blue special edition board with premium finish and sophisticated design.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [15990, 19990, 24990, 31990],
+      US: [160, 200, 250, 320],
+    },
     sizes: [
       { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
       { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
       { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
     ],
@@ -588,9 +656,13 @@ export const products = [
     description: 'Clean white special edition board with premium finish and minimalist elegance.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [15990, 19990, 24990, 31990],
+      US: [160, 200, 250, 320],
+    },
     sizes: [
       { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
       { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
       { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
     ],
@@ -621,9 +693,13 @@ export const products = [
     description: 'Sleek black special edition board with premium matte finish and modern design.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [15990, 19990, 24990, 31990],
+      US: [160, 200, 250, 320],
+    },
     sizes: [
       { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 21990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
+      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
       { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
       { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
     ],
