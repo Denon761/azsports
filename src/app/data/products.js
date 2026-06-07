@@ -122,23 +122,21 @@ export const products = [
   {
     id: 1,
     slug: 'rs-01',
-    name: 'RS-01',
+    name: 'RS-1',
     tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: 'RS-01',
+    seriesNumber: 'RS-1',
     image: Image001,
     description: 'Perfect for beginners and casual players. Lightweight design with smooth matte finish.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [9000, 11500, 15000, 19500],
-      US: [90, 115, 150, 195],
+      PK: [9000, 11500],
+      US: [90, 115],
     },
     sizes: [
-      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '4mm Standard', frame: '1" Softwood', weight: '5kg', boardThickness: '10mm' } },
-      { size: '32"', price: 11500, specs: { size: '29" x 29"', ply: '4mm Standard', frame: '1.5" Softwood', weight: '8kg', boardThickness: '12mm' } },
-      { size: '36"', price: 15000, specs: { size: '32" x 32"', ply: '6mm Standard', frame: '1.5" Softwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '42"', price: 19500, specs: { size: '36" x 36"', ply: '8mm Standard', frame: '2" Softwood', weight: '14kg', boardThickness: '16mm' } },
+      { size: '26', price: 9000, specs: { 'Playing Area': '23 × 23 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
+      { size: '32', price: 11500, specs: { 'Playing Area': '29 × 29 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
     ],
     features: [
       'Lightweight design - easy to carry',
@@ -149,7 +147,7 @@ export const products = [
       '1-year warranty included'
     ],
     included: [
-      '1 RS-01 Board',
+      '1 RS-1 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '1 Striker',
@@ -159,23 +157,21 @@ export const products = [
   {
     id: 2,
     slug: 'rs-02',
-    name: 'RS-02',
+    name: 'RS-2',
     tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: 'RS-02',
+    seriesNumber: 'RS-2',
     image: Image002,
     description: 'Designed for intermediate players who want to take their game to the next level.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [9000, 11500, 15000, 19500],
-      US: [90, 115, 150, 195],
+      PK: [9000, 11500],
+      US: [90, 115],
     },
     sizes: [
-      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 11500, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '36"', price: 15000, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
-      { size: '42"', price: 19500, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
+      { size: '26', price: 9000, specs: { 'Playing Area': '23 × 23 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
+      { size: '32', price: 11500, specs: { 'Playing Area': '29 × 29 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
     ],
     features: [
       'Water-resistant construction',
@@ -186,91 +182,12 @@ export const products = [
       '2-year warranty included'
     ],
     included: [
-      '1 RS-02 Board',
+      '1 RS-2 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover',
       'Carrying Strap'
-    ]
-  },
-  {
-    id: 3,
-    slug: 'rs-03',
-    name: 'RS-03',
-    tag: 'Regular Series',
-    type: 'Regular Series',
-    seriesNumber: 'RS-03',
-    image: Image003,
-    description: 'Professional tournament-grade board used by champions worldwide.',
-    category: 'boards',
-    inStock: true,
-    prices: {
-      PK: [9000, 11500, 15000, 19500],
-      US: [90, 115, 150, 195],
-    },
-    sizes: [
-      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '12mm English Birch', frame: '2" Kikar Wood', weight: '10kg', boardThickness: '16mm' } },
-      { size: '32"', price: 11500, specs: { size: '32" x 32"', ply: '14mm English Birch', frame: '2.5" Kikar Wood', weight: '15kg', boardThickness: '20mm' } },
-      { size: '36"', price: 15000, specs: { size: '35" x 35"', ply: '16mm English Birch', frame: '3" Kikar Wood', weight: '18kg', boardThickness: '22mm' } },
-      { size: '42"', price: 19500, specs: { size: '42" x 42"', ply: '18mm English Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
-    ],
-    features: [
-      'Federation approved specifications',
-      'Zero vibration technology',
-      'Heavy-duty construction',
-      'Glass-like glazed surface',
-      'Professional 5x rebound',
-      '5-year warranty included'
-    ],
-    included: [
-      '1 RS-03 Board',
-      '19 Premium Carrom Men',
-      '1 Queen (Red)',
-      '2 Pro Strikers',
-      'Deluxe Board Cover',
-      'Premium Carrying Case',
-      'Official Rule Book'
-    ]
-  },
-  {
-    id: 4,
-    slug: 'rs-04',
-    name: 'RS-04',
-    tag: 'Regular Series',
-    type: 'Regular Series',
-    seriesNumber: 'RS-04',
-    image: Image004,
-    description: 'Elite professional board for serious competitive players seeking maximum performance.',
-    category: 'boards',
-    inStock: true,
-    prices: {
-      PK: [9000, 11500, 15000, 19500],
-      US: [90, 115, 150, 195],
-    },
-    sizes: [
-      { size: '24"', price: 9000, specs: { size: '24" x 24"', ply: '14mm Premium Birch', frame: '2.5" Teak Wood', weight: '12kg', boardThickness: '18mm' } },
-      { size: '32"', price: 11500, specs: { size: '32" x 32"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '16kg', boardThickness: '20mm' } },
-      { size: '36"', price: 15000, specs: { size: '36" x 36"', ply: '16mm Premium Birch', frame: '3" Teak Wood', weight: '18kg', boardThickness: '22mm' } },
-      { size: '42"', price: 19500, specs: { size: '42" x 42"', ply: '18mm Premium Birch', frame: '3.5" Teak Wood', weight: '22kg', boardThickness: '25mm' } },
-    ],
-    features: [
-      'Premium engineered wood construction',
-      'Ultra-smooth playing surface',
-      'Enhanced sound quality',
-      'Superior rebound control',
-      'Professional tournament specifications',
-      '5-year warranty included'
-    ],
-    included: [
-      '1 RS-04 Board',
-      '19 Premium Carrom Men',
-      '1 Queen (Red)',
-      '2 Pro Strikers',
-      'Deluxe Board Cover',
-      'Premium Carrying Case',
-      'Official Rule Book',
-      'Professional Coin Set'
     ]
   },
   // Country Edition
@@ -722,30 +639,33 @@ export const products = [
   {
     id: 17,
     slug: 'ps-01',
-    name: 'PS-01',
+    name: 'PS-1',
     tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PS-01',
+    seriesNumber: 'PS-1',
     image: Image001,
     description: 'Official tournament-grade board designed for competitive play. Features superior cushion and precise pocket placement.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [19990, 25990, 32990],
+      US: [200, 260, 330],
+    },
     sizes: [
-      { size: '24"', price: 14990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '2" Indian Rosewood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 19990, specs: { size: '29" x 29"', ply: '10mm Premium', frame: '2" Indian Rosewood', weight: '11kg', boardThickness: '14mm' } },
-      { size: '36"', price: 24990, specs: { size: '32" x 32"', ply: '12mm Premium', frame: '2.5" Indian Rosewood', weight: '13kg', boardThickness: '16mm' } },
-      { size: '42"', price: 32990, specs: { size: '36" x 36"', ply: '14mm Premium', frame: '3" Indian Rosewood', weight: '18kg', boardThickness: '18mm' } },
+      { size: '34', price: 19990, specs: { 'Playing Area': '29 × 29 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
+      { size: '41', price: 25990, specs: { 'Playing Area': '35 × 35 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
+      { size: '46', price: 32990, specs: { 'Playing Area': '41 × 41 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
     ],
     features: [
       'Official tournament specifications',
-      'Premium Indian Rosewood frame',
+      'Premium Sheesham wood frame',
       'Superior cushion for precise rebounds',
       'Professional playing surface',
       'FIA-approved design',
       '3-year warranty included'
     ],
     included: [
-      '1 PS-01 Board',
+      '1 PS-1 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Pro Strikers',
@@ -755,19 +675,22 @@ export const products = [
   {
     id: 18,
     slug: 'ps-02',
-    name: 'PS-02',
+    name: 'PS-2',
     tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PS-02',
+    seriesNumber: 'PS-2',
     image: Image002,
     description: 'The ultimate championship board for professional tournaments. Features hand-carved details and tournament-grade cushion.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [19990, 25990, 32990],
+      US: [200, 260, 330],
+    },
     sizes: [
-      { size: '24"', price: 18990, specs: { size: '24" x 24"', ply: '10mm Premium', frame: '2" Sheesham Wood', weight: '8kg', boardThickness: '14mm' } },
-      { size: '32"', price: 25990, specs: { size: '29" x 29"', ply: '12mm Premium', frame: '2.5" Sheesham Wood', weight: '12kg', boardThickness: '16mm' } },
-      { size: '36"', price: 32990, specs: { size: '32" x 32"', ply: '14mm Premium', frame: '2.5" Sheesham Wood', weight: '15kg', boardThickness: '18mm' } },
-      { size: '42"', price: 42990, specs: { size: '36" x 36"', ply: '16mm Premium', frame: '3" Sheesham Wood', weight: '20kg', boardThickness: '20mm' } },
+      { size: '34', price: 19990, specs: { 'Playing Area': '29 × 29 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
+      { size: '41', price: 25990, specs: { 'Playing Area': '35 × 35 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
+      { size: '46', price: 32990, specs: { 'Playing Area': '41 × 41 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
     ],
     features: [
       'Hand-carved traditional patterns',
@@ -778,7 +701,7 @@ export const products = [
       '5-year warranty included'
     ],
     included: [
-      '1 PS-02 Board',
+      '1 PS-2 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Championship Strikers',
@@ -789,19 +712,22 @@ export const products = [
   {
     id: 19,
     slug: 'ps-03',
-    name: 'PS-03',
+    name: 'PS-3',
     tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PS-03',
+    seriesNumber: 'PS-3',
     image: Image003,
-    description: 'Master craftsmanship meets modern engineering. The PS-03 is built for serious players who demand the best.',
+    description: 'Master craftsmanship meets modern engineering. The PS-3 is built for serious players who demand the best.',
     category: 'boards',
     inStock: true,
+    prices: {
+      PK: [19990, 25990, 32990],
+      US: [200, 260, 330],
+    },
     sizes: [
-      { size: '24"', price: 21990, specs: { size: '24" x 24"', ply: '12mm Tournament', frame: '2.5" Premium Hardwood', weight: '9kg', boardThickness: '16mm' } },
-      { size: '32"', price: 29990, specs: { size: '29" x 29"', ply: '14mm Tournament', frame: '2.5" Premium Hardwood', weight: '14kg', boardThickness: '18mm' } },
-      { size: '36"', price: 38990, specs: { size: '32" x 32"', ply: '16mm Tournament', frame: '3" Premium Hardwood', weight: '17kg', boardThickness: '20mm' } },
-      { size: '42"', price: 49990, specs: { size: '36" x 36"', ply: '18mm Tournament', frame: '3.5" Premium Hardwood', weight: '22kg', boardThickness: '22mm' } },
+      { size: '34', price: 19990, specs: { 'Playing Area': '29 × 29 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
+      { size: '41', price: 25990, specs: { 'Playing Area': '35 × 35 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
+      { size: '46', price: 32990, specs: { 'Playing Area': '41 × 41 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
     ],
     features: [
       'Master craftsmanship',
@@ -812,49 +738,13 @@ export const products = [
       'Lifetime warranty included'
     ],
     included: [
-      '1 PS-03 Board',
+      '1 PS-3 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Master Series Strikers',
       'Deluxe Carrying Case',
       'Premium Cleaning Kit',
       'Certificate of Authenticity'
-    ]
-  },
-  {
-    id: 20,
-    slug: 'ps-04',
-    name: 'PS-04',
-    tag: 'Professional Series',
-    type: 'Professional Series',
-    seriesNumber: 'PS-04',
-    image: Image004,
-    description: 'The pinnacle of carrom board craftsmanship. PS-04 features intricate inlay work and the finest materials.',
-    category: 'boards',
-    inStock: true,
-    sizes: [
-      { size: '24"', price: 27990, specs: { size: '24" x 24"', ply: '14mm Elite', frame: '3" Royal Teak', weight: '10kg', boardThickness: '18mm' } },
-      { size: '32"', price: 37990, specs: { size: '29" x 29"', ply: '16mm Elite', frame: '3" Royal Teak', weight: '15kg', boardThickness: '20mm' } },
-      { size: '36"', price: 47990, specs: { size: '32" x 32"', ply: '18mm Elite', frame: '3.5" Royal Teak', weight: '19kg', boardThickness: '22mm' } },
-      { size: '42"', price: 59990, specs: { size: '36" x 36"', ply: '20mm Elite', frame: '4" Royal Teak', weight: '25kg', boardThickness: '24mm' } },
-    ],
-    features: [
-      'Royal Teak wood construction',
-      'Intricate hand-inlay designs',
-      'Elite-grade cushion system',
-      'Museum-quality finish',
-      'Collectors item',
-      'Lifetime warranty with priority service'
-    ],
-    included: [
-      '1 PS-04 Board',
-      '19 Carrom Men (Black & White)',
-      '1 Queen (Red)',
-      '2 Royal Series Strikers',
-      'Mahogany Display Stand',
-      'Premium Leather Carrying Case',
-      'Engraved Certificate of Authenticity',
-      'Complimentary Annual Maintenance'
     ]
   }
 ];
