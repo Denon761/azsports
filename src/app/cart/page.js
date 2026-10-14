@@ -265,7 +265,7 @@ const CartPage = () => {
                       {[
                         { icon: Truck, title: "Free Delivery" },
                         { icon: Package, title: "Secure Package" },
-                        { icon: Shield, title: "2-Year Warranty" },
+                        { icon: Shield, title: "30-Day Warranty" },
                         { icon: Check, title: "7-Day Returns" },
                       ].map((badge, i) => (
                         <div key={i} className="flex flex-col items-center justify-center text-center p-3 bg-slate-50 rounded-xl border border-slate-100">

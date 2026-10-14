@@ -476,7 +476,7 @@ const CheckoutPage = () => {
                 <div className="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 gap-3">
                   {[
                     { icon: Truck, title: "Free Pakistan Delivery", sub: "On all orders today" },
-                    { icon: Shield, title: "2-Year Warranty", sub: "Premium coverage" },
+                    { icon: Shield, title: "30-Day Warranty", sub: "Manufacturing defects" },
                     { icon: RotateCcw, title: "7-Day Returns", sub: "Hassle-free policy" },
                   ].map((badge, i) => (
                     <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">

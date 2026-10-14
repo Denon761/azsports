@@ -18,8 +18,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "AZSports - Premium Carrom Boards",
-  description: "Premium carrom boards, stands, and accessories for professionals and enthusiasts",
+  metadataBase: new URL("https://azsports.pk"),
+  title: "AZ Sports – Handmade Carrom Boards from Sialkot, Pakistan",
+  description: "Handmade solid-wood carrom boards, stands and accessories from AZ Sports, Sialkot, Pakistan. Regular, Professional, Country and Special series.",
 };
 
 export default function RootLayout({ children }) {

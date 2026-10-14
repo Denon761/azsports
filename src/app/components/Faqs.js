@@ -5,7 +5,7 @@ import { HelpCircle, Plus } from 'lucide-react';
 export default function Faqs() {
   const faqs = [
     { q: "Do you ship internationally?", a: "Yes, we ship worldwide! Shipping costs will apply and are added at checkout." },
-    { q: "Can I return my order?", a: "We offer a 30-day return policy. Items must be unused and in their original packaging." },
+    { q: "Can I return my order?", a: "We offer a 7-day return policy. Items must be unused and in their original packaging." },
     { q: "Do you offer team/club discounts?", a: "Absolutely. If you are buying in bulk for a club, please contact our support team for a custom quote." },
     { q: "How long does shipping take?", a: "Domestic orders usually take 3-5 business days. International orders can take 7-14 days depending on the destination." }
   ];

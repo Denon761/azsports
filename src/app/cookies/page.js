@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Cookie Policy - AZSports',
-  description: 'AZSports Cookie Policy',
+  title: 'Cookie Policy | AZ Sports',
+  description: 'How AZ Sports uses cookies on this website.',
 };
 
 import { Cookie, Shield, Settings } from 'lucide-react';
@@ -38,7 +38,7 @@ export default function CookiesPage() {
 
             <h2 className="text-lg md:text-2xl font-black text-gray-900 mt-8 mb-4">How We Use Cookies</h2>
             <p className="text-gray-600 text-xs md:text-base leading-relaxed mb-6">
-              AZSports uses cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
+              AZ Sports uses cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
               Here are the types of cookies we use:
             </p>
 
@@ -138,7 +138,7 @@ export default function CookiesPage() {
               If you have any questions about our use of cookies, please contact us:
             </p>
             <ul className="list-none text-gray-600 text-sm md:text-base">
-              <li>Email: info@azsports.com</li>
+              <li>Email: support@azsports.com</li>
               <li>Address: Hakeem Ashraf Road, Opposite Janazagah, Rangpura , Sialkot Punjab</li>
             </ul>
           </div>

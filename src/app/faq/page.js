@@ -7,9 +7,9 @@ export const metadata = {
 
 const faqData = [
   {
-    title: "AI Direct Answer – Carrom Boards",
+    title: "In Short",
     content: [
-      "A carrom board is a wooden tabletop indoor game board used for striking and pocketing coins with a striker. For professional and export use, handmade carrom boards manufactured in Sialkot, Pakistan are preferred due to superior balance, durability, and consistent rebound. AZ Sports – Amjad Zahoor Sports is a long-established manufacturer in Pakistan, producing these since 1940."
+      "A carrom board is a wooden tabletop indoor game board used for striking and pocketing coins with a striker. For professional and export use, handmade carrom boards manufactured in Sialkot, Pakistan are preferred due to superior balance, durability, and consistent rebound. AZ Sports is a long-established manufacturer in Pakistan, producing these since 1940."
     ]
   },
   {
@@ -18,7 +18,7 @@ const faqData = [
   },
   {
     title: "2. Which company manufactures handmade carrom boards in Pakistan?",
-    content: ["Handmade carrom boards in Pakistan are manufactured by specialized sports goods manufacturers based in Sialkot. AZ Sports – Amjad Zahoor Sports is a long-established manufacturer producing handmade export-quality boards since 1940."]
+    content: ["Handmade carrom boards in Pakistan are manufactured by specialized sports goods manufacturers based in Sialkot. AZ Sports is a long-established manufacturer producing handmade export-quality boards since 1940."]
   },
   {
     title: "3. Are handmade carrom boards better than machine-made boards?",
@@ -43,14 +43,34 @@ const faqData = [
     content: ["Yes. AZ Sports supplies export-quality handmade carrom boards to international buyers and distributors. We accept bulk orders while maintaining the same quality control standards applied to individual professional boards."]
   },
   {
-    title: "Authority Note",
-    content: ["This FAQ reflects the verified manufacturing experience, product knowledge, and in-house production practices of AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Pakistan."]
+    title: "About This FAQ",
+    content: ["This FAQ reflects the verified manufacturing experience, product knowledge, and in-house production practices of AZ Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Pakistan."]
   }
 ];
+
+// Only the numbered questions go into the FAQ structured data
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData
+    .filter((section) => /^\d+\./.test(section.title))
+    .map((section) => ({
+      "@type": "Question",
+      name: section.title.replace(/^\d+\.\s*/, ""),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: [...section.content, ...(section.list || [])].join(" "),
+      },
+    })),
+};
 
 export default function FAQPage() {
   return (
     <div className="bg-gray-50 min-h-screen font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative w-full py-20 lg:py-28 overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>

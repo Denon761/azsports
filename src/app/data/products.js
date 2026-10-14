@@ -144,7 +144,7 @@ export const products = [
       'Includes complete coin set',
       'Smooth matte playing surface',
       'Beginner-friendly rebound',
-      '1-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 RS-1 Board',
@@ -179,7 +179,7 @@ export const products = [
       'Includes premium striker',
       'High rebound for competitive play',
       'Polished satin finish',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 RS-2 Board',
@@ -218,7 +218,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with patriotic accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 USA Edition Board',
@@ -255,7 +255,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with maple leaf accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Canada Edition Board',
@@ -292,7 +292,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with patriotic accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Pakistan Edition Board',
@@ -329,7 +329,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with patriotic accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Afghanistan Edition Board',
@@ -366,7 +366,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with patriotic accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Nepal Edition Board',
@@ -403,7 +403,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with patriotic accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Sri Lanka Edition Board',
@@ -440,7 +440,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with patriotic accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Bangladesh Edition Board',
@@ -477,7 +477,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Durable finish with patriotic accents',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Maldives Edition Board',
@@ -515,7 +515,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Metallic shine finish',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Red Special Edition Board',
@@ -552,7 +552,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Metallic shine finish',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Blue Special Edition Board',
@@ -589,7 +589,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Pearlescent shine finish',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 White Special Edition Board',
@@ -626,7 +626,7 @@ export const products = [
       'Professional playing surface',
       'Includes complete coin set',
       'Premium matte coating',
-      '2-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 Black Special Edition Board',
@@ -662,7 +662,7 @@ export const products = [
       'Superior cushion for precise rebounds',
       'Professional playing surface',
       'FIA-approved design',
-      '3-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 PS-1 Board',
@@ -698,7 +698,7 @@ export const products = [
       'Premium Sheesham wood construction',
       'Anti-warp technology',
       'Professional coin set included',
-      '5-year warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 PS-2 Board',
@@ -735,7 +735,7 @@ export const products = [
       'Multi-layer cushion system',
       'Hand-polished playing surface',
       'Precision pocket alignment',
-      'Lifetime warranty included'
+      '30-day warranty included'
     ],
     included: [
       '1 PS-3 Board',

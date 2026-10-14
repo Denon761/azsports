@@ -51,7 +51,7 @@ const Features = () => {
           
           <p className="text-base md:text-lg text-gray-600 animate-fade-in-up delay-200 max-w-2xl mx-auto leading-relaxed">
             Cheap particle board and uneven surfacing kill the game. 
-            Az SPORTS boards are engineered differently for champions.
+            AZ Sports boards are engineered differently for champions.
           </p>
         </div>
 

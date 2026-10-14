@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Board Maintenance - AZSports',
+  title: 'Board Maintenance | AZ Sports',
   description: 'Learn how to maintain your carrom board',
 };
 

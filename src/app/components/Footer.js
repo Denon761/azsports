@@ -13,11 +13,11 @@ const footerLinks = [
     title: "Shop",
     items: [
       // { label: "All Products", href: "/shop" },
-      { label: "Regular Series", href: "/shop?type=Regular Series" },
-      { label: "Professional Series", href: "/shop?type=Professional Series" },
-      { label: "Country Series", href: "/shop?type=Country Edition" },
-      { label: "Special Series", href: "/shop?type=Special Edition" },
-      { label: "Accessories", href: "/shop" },
+      { label: "Regular Series", href: "/shop?type=Regular%20Series" },
+      { label: "Professional Series", href: "/shop?type=Professional%20Series" },
+      { label: "Country Series", href: "/shop?type=Country%20Edition" },
+      { label: "Special Series", href: "/shop?type=Special%20Edition" },
+      { label: "Accessories", href: "/shop?category=accessories" },
     ]
   },
   {
@@ -25,7 +25,7 @@ const footerLinks = [
     items: [
       { label: "Official Rules", href: "/rules" },
       { label: "Board Maintenance", href: "/maintenance" },
-      { label: "About Az Sports", href: "/about" },
+      { label: "About AZ Sports", href: "/about" },
       { label: "Contact Us", href: "/contact" },
     ]
   },
@@ -161,7 +161,7 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
           
           <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 font-medium">
-            <span>© {new Date().getFullYear()} AZ SPORTS.</span>
+            <span>© {new Date().getFullYear()} AZ Sports.</span>
             <Link href="/privacy" className="hover:text-amber-600 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-amber-600 transition-colors">Terms of Service</Link>
             <Link href="/cookies" className="hover:text-amber-600 transition-colors">Cookies</Link>

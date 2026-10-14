@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import { ShoppingBag } from 'lucide-react';
 import { products, accessories } from '../data/products';
 import { useDispatch } from 'react-redux';
@@ -30,24 +29,12 @@ const categoryInfo = {
   },
 };
 
-function ShopPageContent() {
+function ShopPageContent({ type = 'all', category = 'all' }) {
   const dispatch = useDispatch();
   const { formatCurrency, getLocalizedPrice } = useCurrency();
-  const searchParams = useSearchParams();
-  
-  const [typeFilter, setTypeFilter] = useState('all');
-  const [categoryParam, setCategoryParam] = useState('all');
 
-  useEffect(() => {
-    const typeParam = searchParams.get('type');
-    const catParam = searchParams.get('category');
-    if (typeParam) {
-      setTypeFilter(typeParam);
-    }
-    if (catParam) {
-      setCategoryParam(catParam);
-    }
-  }, [searchParams]);
+  const typeFilter = type;
+  const categoryParam = category;
 
   const allProducts = [...products, ...accessories];
 
@@ -103,15 +90,12 @@ function ShopPageContent() {
             <div className="text-center py-20 bg-white rounded-2xl border border-slate-200">
               <h3 className="text-2xl font-bold text-slate-800 mb-3">No products found</h3>
               <p className="text-slate-500 mb-6">Try another category</p>
-              <button
-                onClick={() => {
-                  setTypeFilter('all');
-                  setCategoryParam('all');
-                }}
-                className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800"
+              <Link
+                href="/shop"
+                className="inline-block bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800"
               >
                 View All
-              </button>
+              </Link>
             </div>
           ) : (
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">

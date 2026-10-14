@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Rules of Carrom - AZSports',
+  title: 'Rules of Carrom | AZ Sports',
   description: 'Learn the official rules of carrom',
 };
 

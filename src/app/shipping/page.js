@@ -1,8 +1,8 @@
 import { ContentRenderer, PageHero } from "../components/SharedLayout";
 
 export const metadata = {
-  title: 'Shipping Policy | AZ Sports',
-  description: 'Domestic delivery procedures and international export coordination guidelines.',
+  title: 'Shipping, Returns & Warranty | AZ Sports',
+  description: 'AZ Sports shipping within Pakistan and worldwide, 7-day returns and 30-day warranty on handmade carrom boards.',
 };
 
 const shippingData = [
@@ -57,8 +57,31 @@ const shippingData = [
     ]
   },
   {
-    title: "Authority Note",
-    content: ["This Shipping Policy reflects the standard shipping, handling, and delivery coordination practices followed by AZ Sports – Amjad Zahoor Sports ensuring consistency and transparency across domestic and international shipments."],
+    title: "Returns & Refunds (7 Days)",
+    content: [
+      "You can request a return within 7 days of receiving your order.",
+      "To start a return, email support@azsports.com with your order number and photos of the item. Once the returned item is received and inspected, we will confirm your refund."
+    ],
+    list: [
+      "Items must be unused and in their original packaging.",
+      "Items damaged in transit or with a manufacturing defect are covered — please report these as soon as possible after delivery.",
+      "Return requests made after 7 days from delivery cannot be accepted."
+    ]
+  },
+  {
+    title: "Warranty (30 Days)",
+    content: [
+      "All AZ Sports carrom boards come with a 30-day warranty from the date of delivery, covering manufacturing defects.",
+      "If a covered defect appears within 30 days, email support@azsports.com with your order number and photos. We will repair or replace the item."
+    ],
+    list: [
+      "Covered: manufacturing defects in the frame, joints, playing surface and markings.",
+      "Not covered: damage from misuse, accidents, water or moisture exposure, improper storage, or normal wear."
+    ]
+  },
+  {
+    title: "About This Policy",
+    content: ["This policy reflects the standard shipping, handling, and delivery coordination practices followed by AZ Sports ensuring consistency and transparency across domestic and international shipments."],
     note: "Last updated: March 2026"
   }
 ];
@@ -73,10 +96,10 @@ export default function ShippingPolicyPage() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            Shipping Policy
+            Shipping, Returns &amp; Warranty
           </h1>
           <p className="text-gray-600 text-base md:text-lg">
-            Details on domestic shipping within Pakistan and worldwide export handling.
+            Shipping within Pakistan and worldwide, plus our 7-day returns and 30-day warranty.
           </p>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-   Menu, X, User, ShoppingBag, MessageCircle, ChevronDown
+   Menu, X, User, ShoppingBag, ChevronDown
  } from 'lucide-react';
  import { useSelector } from 'react-redux';
  import Link from 'next/link';
@@ -12,10 +12,10 @@ import {
 
 // --- DATA ARRAYS (CARROM THEME) ---
 const primaryLinks = [
-  { name: 'Regular Series', href: '/shop?type=Regular Series', query: 'type=Regular Series' },
-  { name: 'Professional Series', href: '/shop?type=Professional Series', query: 'type=Professional Series' },
-  { name: 'Country Series', href: '/shop?type=Country Edition', query: 'type=Country Edition' },
-  { name: 'Special Series', href: '/shop?type=Special Edition', query: 'type=Special Edition' },
+  { name: 'Regular Series', href: '/shop?type=Regular%20Series', query: 'type=Regular Series' },
+  { name: 'Professional Series', href: '/shop?type=Professional%20Series', query: 'type=Professional Series' },
+  { name: 'Country Series', href: '/shop?type=Country%20Edition', query: 'type=Country Edition' },
+  { name: 'Special Series', href: '/shop?type=Special%20Edition', query: 'type=Special Edition' },
   { name: 'Accessories', href: '/shop?category=accessories', query: 'category=accessories' },
 ];
 
@@ -26,7 +26,7 @@ const utilityLinks = [
   { name: 'Rules of Carrom', href: '/rules' },
   { name: 'Board Maintenance', href: '/maintenance' },
   { name: 'Faqs', href: '/faq' },
-  { name: 'Shipping & Delivery', href: '/shipping' },
+  { name: 'Shipping & Returns', href: '/shipping' },
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms & Conditions', href: '/terms' },
   { name: 'Cookies', href: '/cookies' },
@@ -67,7 +67,7 @@ const Header = () => {
             <div className="relative h-12 w-32 md:h-16 md:w-32">
               <Image 
                 src={logo} 
-                alt="Az Sports" 
+                alt="AZ Sports" 
                 fill
                 className="object-contain"
               />
@@ -79,11 +79,6 @@ const Header = () => {
             
             {/* Country Selector */}
             <CountrySelector />
-            
-            {/* WhatsApp Icon */}
-            <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100 hidden sm:block" title="Chat on WhatsApp">
-              <MessageCircle className="w-[22px] h-[22px]" />
-            </a>
             
             {/* User Icon */}
             <Link href="/account" className="text-gray-500 hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100 hidden sm:block">
@@ -127,7 +122,7 @@ const Header = () => {
             <div className="relative h-10 w-24">
               <Image 
                 src={logo} 
-                alt="Az Sports" 
+                alt="AZ Sports" 
                 fill
                 className="object-contain"
               />

@@ -7,13 +7,13 @@ export const metadata = {
 
 const privacyData = [
   {
-    content: ["This Privacy Policy explains how AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Punjab, Pakistan, collects, uses, and protects information provided by visitors and business contacts through this website."]
+    content: ["This Privacy Policy explains how AZ Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Punjab, Pakistan, collects, uses, and protects information provided by visitors and business contacts through this website."]
   },
   {
     title: "Business Information",
     content: ["This website does not operate as a consumer e-commerce store."],
     list: [
-      "Business Name: AZ Sports – Amjad Zahoor Sports",
+      "Business Name: AZ Sports",
       "Industry: Handmade Carrom Board Manufacturing",
       "Location: Sialkot, Punjab, Pakistan",
       "Nature of Website: Informational and business inquiry–based (manufacturing, export, and bulk orders)"
@@ -26,7 +26,7 @@ const privacyData = [
       "We do not intentionally collect sensitive personal data."
     ],
     list: [
-      "Name, email address, and phone number (via contact forms, email, or WhatsApp links)",
+      "Name, email address, and phone number (via contact forms or email)",
       "Company name, country, and inquiry details (for export, bulk, or dealership discussions)",
       "Basic technical information such as browser type, device type, and general usage data for website performance analysis"
     ]
@@ -72,7 +72,7 @@ const privacyData = [
   },
   {
     title: "Authority Note",
-    content: ["This Privacy Policy reflects the standard data handling, privacy protection, and information management practices followed by AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Pakistan, operating with transparency and consistency across all business communications."],
+    content: ["This Privacy Policy reflects the standard data handling, privacy protection, and information management practices followed by AZ Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Pakistan, operating with transparency and consistency across all business communications."],
     note: "Last updated: Feb 2026"
   }
 ];

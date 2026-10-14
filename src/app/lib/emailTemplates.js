@@ -48,8 +48,8 @@ export const generateOrderConfirmationEmail = (orderDetails) => {
           <!-- Header -->
           <tr>
             <td style="background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%); padding: 30px; text-align: center;">
-              <h1 style="margin: 0; color: #fff; font-size: 28px; font-weight: 900;">AZ SPORTS</h1>
-              <p style="margin: 5px 0 0; color: #fff; font-size: 14px;">Amjad Zahoor Sports - Since 1940</p>
+              <h1 style="margin: 0; color: #fff; font-size: 28px; font-weight: 900;">AZ Sports</h1>
+              <p style="margin: 5px 0 0; color: #fff; font-size: 14px;">Since 1940</p>
             </td>
           </tr>
           
@@ -139,7 +139,7 @@ export const generateOrderConfirmationEmail = (orderDetails) => {
                 Questions? Reply to this email or contact us at support@azsports.com
               </p>
               <p style="margin: 0; color: #71717a; font-size: 11px;">
-                AZ Sports - Amjad Zahoor Sports | Sialkot, Pakistan | Since 1940
+                AZ Sports | Sialkot, Pakistan | Since 1940
               </p>
             </td>
           </tr>
@@ -179,7 +179,7 @@ export const generateOrderReceivedEmail = (orderDetails) => {
         <table width="600" cellpadding="0" cellspacing="0" style="background-color: #18181b; border-radius: 12px; overflow: hidden;">
           <tr>
             <td style="background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%); padding: 30px; text-align: center;">
-              <h1 style="margin: 0; color: #fff; font-size: 28px; font-weight: 900;">AZ SPORTS</h1>
+              <h1 style="margin: 0; color: #fff; font-size: 28px; font-weight: 900;">AZ Sports</h1>
               <p style="margin: 5px 0 0; color: #fff; font-size: 14px;">New Order Received!</p>
             </td>
           </tr>

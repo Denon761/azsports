@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'About Us | AZ Sports – Amjad Zahoor Sports',
+  title: 'About Us | AZ Sports',
   description: 'AZ Sports is a leading handmade carrom board manufacturer in Sialkot, Pakistan, producing professional and export-quality wooden carrom boards since 1940.',
 };
 
