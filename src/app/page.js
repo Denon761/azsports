@@ -7,6 +7,7 @@ import Faqs from "./components/Faqs";
 import CtaBanner from "./components/CtaBanner";
 import TrustedStrip from "./components/TrustedStrip";
 import SeriesGrid from "./components/SeriesGrid";
+import HomeContent from "./components/HomeContent";
 
 export default function Home() {
   return (
@@ -31,6 +32,9 @@ export default function Home() {
 
       {/* Final Call to Action before the footer */}
       {/* <CtaBanner /> */}
+
+      {/* Brand story, collections and closing call to action */}
+      <HomeContent />
 
     </main>
   );
