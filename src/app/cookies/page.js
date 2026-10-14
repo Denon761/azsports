@@ -138,7 +138,7 @@ export default function CookiesPage() {
               If you have any questions about our use of cookies, please contact us:
             </p>
             <ul className="list-none text-gray-600 text-sm md:text-base">
-              <li>Email: support@azsports.com</li>
+              <li>Email: info@azsports.pk</li>
               <li>Address: Hakeem Ashraf Road, Opposite Janazagah, Rangpura , Sialkot Punjab</li>
             </ul>
           </div>

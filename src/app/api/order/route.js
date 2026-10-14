@@ -2,18 +2,27 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { generateOrderConfirmationEmail, generateOrderReceivedEmail } from '../../lib/emailTemplates';
 
-// Configure your email transporter
-// Hostinger SMTP: smtp.hostinger.com
-const createTransporter = () => {
-  return nodemailer.createTransport({
-    host: process.env.EMAIL_HOST || 'smtp.hostinger.com',
-    port: parseInt(process.env.EMAIL_PORT || '587'),
-    secure: false,
-    auth: {
-      user: process.env.EMAIL_USER || 'info@azsports.pk',
-      pass: process.env.EMAIL_PASS || '[O*m+@vM2:',
+// Mail settings come from environment variables (.env.local locally, host settings in production).
+// Hostinger SMTP: smtp.hostinger.com, port 587 (STARTTLS) or 465 (SSL).
+const getMailConfig = () => {
+  const { EMAIL_HOST, EMAIL_USER, EMAIL_PASS } = process.env;
+  if (!EMAIL_HOST || !EMAIL_USER || !EMAIL_PASS) {
+    return null;
+  }
+  const port = parseInt(process.env.EMAIL_PORT || '587');
+  return {
+    transport: {
+      host: EMAIL_HOST,
+      port,
+      secure: port === 465,
+      auth: { user: EMAIL_USER, pass: EMAIL_PASS },
     },
-  });
+    // Hostinger only accepts a sender that belongs to the mailbox we log in with,
+    // so always send from EMAIL_USER and keep EMAIL_FROM's address as the reply-to.
+    from: `AZ Sports <${EMAIL_USER}>`,
+    replyTo: process.env.EMAIL_FROM || EMAIL_USER,
+    adminEmail: process.env.ADMIN_EMAIL || EMAIL_USER,
+  };
 };
 
 export async function POST(request) {
@@ -71,33 +80,44 @@ export async function POST(request) {
       currency: currency,
     });
 
-    const transporter = createTransporter();
+    const mail = getMailConfig();
+    if (!mail) {
+      console.error('Order email is not configured: set EMAIL_HOST, EMAIL_USER and EMAIL_PASS.');
+      return NextResponse.json({ error: 'Email is not configured' }, { status: 500 });
+    }
 
-    // Email configuration
-    const emailFrom = process.env.EMAIL_FROM || 'AZ Sports <info@azsports.pk>';
-    const adminEmail = process.env.ADMIN_EMAIL || 'info@azsports.pk';
+    const transporter = nodemailer.createTransport(mail.transport);
 
-    // Send confirmation email to customer
+    // The admin email is the only record of the order, so it must succeed.
     await transporter.sendMail({
-      from: emailFrom,
-      to: customerEmail,
-      subject: `Order Confirmed #${orderNum} - AZ Sports`,
-      html: customerEmailHtml,
-    });
-
-    // Send notification to admin
-    await transporter.sendMail({
-      from: emailFrom,
-      to: adminEmail,
+      from: mail.from,
+      to: mail.adminEmail,
+      replyTo: customerEmail,
       subject: `New Order Received #${orderNum} - AZ Sports`,
       html: adminEmailHtml,
     });
 
+    // The customer confirmation is best effort (a mistyped address must not lose the order).
+    let customerEmailSent = true;
+    try {
+      await transporter.sendMail({
+        from: mail.from,
+        to: customerEmail,
+        replyTo: mail.replyTo,
+        subject: `Order Confirmed #${orderNum} - AZ Sports`,
+        html: customerEmailHtml,
+      });
+    } catch (customerError) {
+      customerEmailSent = false;
+      console.error('Customer confirmation email failed:', customerError.message);
+    }
+
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Order confirmation emails sent',
-        orderNumber: orderNum 
+      {
+        success: true,
+        message: customerEmailSent ? 'Order confirmation emails sent' : 'Order received, customer email failed',
+        orderNumber: orderNum,
+        customerEmailSent,
       },
       { status: 200 }
     );
@@ -105,7 +125,7 @@ export async function POST(request) {
   } catch (error) {
     console.error('Email sending error:', error);
     return NextResponse.json(
-      { error: 'Failed to send email', details: error.message },
+      { error: 'Failed to send email' },
       { status: 500 }
     );
   }

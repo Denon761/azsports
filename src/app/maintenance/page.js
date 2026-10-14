@@ -68,7 +68,7 @@ export default function MaintenancePage() {
               <p className="text-white/80 mb-4">
                 If your board needs professional maintenance or repairs, contact our support team.
               </p>
-              <a href="mailto:support@azsports.com" className="inline-block bg-white text-amber-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition-colors">
+              <a href="mailto:info@azsports.pk" className="inline-block bg-white text-amber-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition-colors">
                 Contact Support
               </a>
             </div>

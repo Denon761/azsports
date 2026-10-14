@@ -12,19 +12,42 @@ export default function ContactPageContent() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    }, 3000);
+    setSending(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      }, 5000);
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setError('Sorry, your message could not be sent. Please try again or email us at info@azsports.pk.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -134,12 +157,17 @@ export default function ContactPageContent() {
                     />
                   </div>
 
+                  {error && (
+                    <p role="alert" className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3">{error}</p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-4 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all flex items-center justify-center gap-2"
+                    disabled={sending}
+                    className="w-full disabled:opacity-70 disabled:cursor-not-allowed bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-4 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all flex items-center justify-center gap-2"
                   >
                     <Send className="w-5 h-5" />
-                    Send Message
+                    {sending ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}
@@ -157,7 +185,7 @@ export default function ContactPageContent() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900">Email Us</h3>
-                      <p className="text-gray-600">support@azsports.com</p>
+                      <a href="mailto:info@azsports.pk" className="text-gray-600 hover:text-amber-600 transition-colors">info@azsports.pk</a>
                       <p className="text-gray-500 text-xs">We reply within 24 hours</p>
                     </div>
                   </div>

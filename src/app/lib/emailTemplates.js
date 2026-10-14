@@ -136,7 +136,7 @@ export const generateOrderConfirmationEmail = (orderDetails) => {
           <tr>
             <td style="background-color: #27272a; padding: 30px; text-align: center;">
               <p style="margin: 0 0 10px; color: #a1a1aa; font-size: 12px;">
-                Questions? Reply to this email or contact us at support@azsports.com
+                Questions? Reply to this email or contact us at info@azsports.pk
               </p>
               <p style="margin: 0; color: #71717a; font-size: 11px;">
                 AZ Sports | Sialkot, Pakistan | Since 1940

@@ -123,21 +123,39 @@ const CheckoutPage = () => {
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        alert('Failed to place order. Please try again.');
+        alert('We could not place your order. Please try again, or contact us at info@azsports.pk.');
       }
     } catch (error) {
+      // Don't show a fake success: the order email is our only record of the order.
       console.error('Order error:', error);
-      // Still allow order to proceed even if email fails
-      setOrderNumber(`AZS-${Date.now()}`);
-      setOrderPlaced(true);
-      dispatch(clearCart());
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      alert('We could not place your order. Please check your connection and try again.');
     } finally {
       setIsLoading(false);
     }
   };
 
   // ── EMPTY CART STATE ──
+  const renderSubmitButton = (visibilityClass) => (
+    <button
+      type="submit"
+      form="checkout-form"
+      disabled={isLoading}
+      className={`${visibilityClass} w-full items-center justify-center gap-3 bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-5 rounded-2xl font-bold text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed`}
+    >
+      {isLoading ? (
+        <>
+          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+          Processing...
+        </>
+      ) : (
+        <>
+          <Lock className="w-5 h-5" />
+          Place Order (COD)
+        </>
+      )}
+    </button>
+  );
+
   if (cartItems.length === 0 && !orderPlaced) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center font-sans px-4">
@@ -235,7 +253,7 @@ const CheckoutPage = () => {
             
             {/* Left Column: Form Forms */}
             <div className="lg:col-span-7 xl:col-span-8">
-              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+              <form id="checkout-form" onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 
                 {/* 1. Shipping Information */}
                 <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-8 shadow-sm">
@@ -364,24 +382,8 @@ const CheckoutPage = () => {
                   </div>
                 </div>
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-5 rounded-2xl font-bold text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      Processing...
-                    </>
-                  ) : (
-                    <>
-                      <Lock className="w-5 h-5" />
-                      Place Order (COD)
-                    </>
-                  )}
-                </button>
+                {/* Submit Button (desktop: after the form, mobile: after the order summary) */}
+                {renderSubmitButton('hidden lg:flex')}
               </form>
             </div>
 
@@ -491,6 +493,11 @@ const CheckoutPage = () => {
                   ))}
                 </div>
 
+              </div>
+
+              {/* Mobile: Place Order after the order summary */}
+              <div className="mt-6 lg:hidden">
+                {renderSubmitButton('flex')}
               </div>
             </div>
             

@@ -60,7 +60,7 @@ const shippingData = [
     title: "Returns & Refunds (7 Days)",
     content: [
       "You can request a return within 7 days of receiving your order.",
-      "To start a return, email support@azsports.com with your order number and photos of the item. Once the returned item is received and inspected, we will confirm your refund."
+      "To start a return, email info@azsports.pk with your order number and photos of the item. Once the returned item is received and inspected, we will confirm your refund."
     ],
     list: [
       "Items must be unused and in their original packaging.",
@@ -72,7 +72,7 @@ const shippingData = [
     title: "Warranty (30 Days)",
     content: [
       "All AZ Sports carrom boards come with a 30-day warranty from the date of delivery, covering manufacturing defects.",
-      "If a covered defect appears within 30 days, email support@azsports.com with your order number and photos. We will repair or replace the item."
+      "If a covered defect appears within 30 days, email info@azsports.pk with your order number and photos. We will repair or replace the item."
     ],
     list: [
       "Covered: manufacturing defects in the frame, joints, playing surface and markings.",

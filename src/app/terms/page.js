@@ -137,7 +137,7 @@ export default function TermsPage() {
               <ul className="list-none text-gray-600 text-sm md:text-base space-y-1">
                 <li>AZ Sports</li>
                 <li>Hakeem Ashraf Road, Opposite Janazagah, Rangpura, Sialkot, Pakistan</li>
-                <li>Email: support@azsports.com</li>
+                <li>Email: info@azsports.pk</li>
               </ul>
               <p className="text-gray-600 text-sm md:text-base leading-relaxed mt-4">
                 See also our{' '}
