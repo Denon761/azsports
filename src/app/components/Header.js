@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-   Menu, X, User, ShoppingBag, ChevronDown
+   Menu, X, ShoppingBag, ChevronDown
  } from 'lucide-react';
  import { useSelector } from 'react-redux';
  import Link from 'next/link';
@@ -79,11 +79,6 @@ const Header = () => {
             
             {/* Country Selector */}
             <CountrySelector />
-            
-            {/* User Icon */}
-            <Link href="/account" className="text-gray-500 hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100 hidden sm:block">
-              <User className="w-[22px] h-[22px]" />
-            </Link>
             
             {/* Cart Icon */}
             <Link href="/cart" className="text-gray-500 relative hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100">
