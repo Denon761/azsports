@@ -25,13 +25,15 @@ const standProduct = {
 
 const CheckoutPage = () => {
   const dispatch = useDispatch();
-  const { formatCurrency, getLocalizedPrice } = useCurrency();
+  const { formatCurrency, getLocalizedPrice, currency } = useCurrency();
   const cartItems = useSelector(state => state.cart.items);
   const totalPrice = useSelector(state => state.cart.totalPrice);
   
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [orderNumber, setOrderNumber] = useState('');
+  const [placedTotal, setPlacedTotal] = useState(0);
+  const [customerEmailSent, setCustomerEmailSent] = useState(true);
   const [standAdded, setStandAdded] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -110,11 +112,15 @@ const CheckoutPage = () => {
         body: JSON.stringify(orderData),
       });
 
-      const result = await response.json();
+      // The server may return a non-JSON error page, so don't let parsing crash the handler
+      const result = await response.json().catch(() => ({}));
 
       if (result.success) {
         // Set order number from response
         setOrderNumber(result.orderNumber);
+        // The cart is cleared below, so keep the total for the confirmation screen
+        setPlacedTotal(totalPrice);
+        setCustomerEmailSent(result.customerEmailSent !== false);
         
         // Place order
         setOrderPlaced(true);
@@ -202,16 +208,22 @@ const CheckoutPage = () => {
           )}
           
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 mb-8">
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Order Total Paid</p>
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Order Total (Pay on Delivery)</p>
               <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22]">
-                {formatCurrency(totalPrice)}
+                {formatCurrency(placedTotal)}
               </p>
             </div>
 
-          <p className="text-sm text-slate-500 mb-8 px-4">
-            A confirmation email with tracking details has been sent to <br/>
-            <strong className="text-slate-800">{formData.email}</strong>
-          </p>
+          {customerEmailSent ? (
+            <p className="text-sm text-slate-500 mb-8 px-4">
+              A confirmation email has been sent to <br/>
+              <strong className="text-slate-800">{formData.email}</strong>
+            </p>
+          ) : (
+            <p className="text-sm text-slate-500 mb-8 px-4">
+              We have received your order, but could not email a confirmation to <strong className="text-slate-800">{formData.email}</strong>. Please keep your order number and contact us at info@azsports.pk if you have questions.
+            </p>
+          )}
 
           <Link href="/" className="flex items-center justify-center w-full bg-slate-900 text-white py-4 md:py-5 rounded-2xl font-bold text-lg hover:shadow-lg hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-0.5">
             Return to Homepage
