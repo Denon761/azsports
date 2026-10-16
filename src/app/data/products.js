@@ -2,7 +2,6 @@
 import Image001 from '../assets/products/001.jpeg';
 import Image002 from '../assets/products/002.jpeg';
 import Image003 from '../assets/products/003.jpeg';
-import Image004 from '../assets/products/004.jpeg';
 import ImageUSA from '../assets/products/usa.jpeg';
 import ImageCanada from '../assets/products/canada.jpeg';
 import ImagePK from '../assets/products/pk.jpeg';
@@ -38,84 +37,6 @@ export const standProduct = {
     foldable: 'Yes'
   }
 };
-
-export const accessories = [
-  {
-    id: 101,
-    slug: 'premium-carrom-set',
-    name: 'Premium Carrom Set',
-    tag: 'Complete Set',
-    price: 5500,
-    prices: {
-      PK: [5500],
-      US: [20],
-    },
-    image: Image003,
-    description: 'Complete carrom set with all pieces needed for a full game.',
-    category: 'accessories',
-    features: [
-      '19mm Carrom Men (Black & White)',
-      '1 Queen (Red)',
-      '1 Striker',
-      '4 Corner Pockets',
-      'Printed Board Lines'
-    ],
-    specs: {
-      pieces: '21 pieces',
-      material: 'Plastic',
-      weight: '500g'
-    }
-  },
-  {
-    id: 102,
-    slug: 'pro-striker-set',
-    name: 'Pro Striker Set',
-    tag: 'Pro Series',
-    price: 3500,
-    prices: {
-      PK: [3500],
-      US: [13],
-    },
-    image: Image004,
-    description: 'Professional grade strikers for ultimate control and power.',
-    category: 'accessories',
-    features: [
-      'Balanced weight distribution',
-      'Smooth gliding surface',
-      'Durable construction',
-      'Available in multiple weights'
-    ],
-    specs: {
-      weight: '15g each',
-      quantity: '2 strikers',
-      material: 'ABS Plastic'
-    }
-  },
-  {
-    id: 103,
-    slug: 'boric-powder-500g',
-    name: 'Boric Powder 500g',
-    tag: 'Essential',
-    price: 1500,
-    prices: {
-      PK: [1500],
-      US: [5],
-    },
-    image: Image002,
-    description: 'High-quality boric powder for smooth board surface.',
-    category: 'accessories',
-    features: [
-      'Fine grain consistency',
-      'Non-toxic formula',
-      'Long-lasting effect',
-      'Protects board surface'
-    ],
-    specs: {
-      weight: '500g',
-      type: 'Food grade boric acid'
-    }
-  }
-];
 
 export const products = [
   // Regular Series
@@ -746,21 +667,19 @@ export const products = [
       'Premium Cleaning Kit',
       'Certificate of Authenticity'
     ]
-  }
+  },
+  standProduct,
 ];
 
 export const getProductBySlug = (slug) => {
-  const allProducts = [...products, ...accessories, standProduct];
-  return allProducts.find(product => product.slug === slug);
+  return products.find(product => product.slug === slug);
 };
 
 export const getProductById = (id) => {
-  const allProducts = [...products, ...accessories, standProduct];
-  return allProducts.find(product => product.id === parseInt(id) || product.id === id);
+  return products.find(product => product.id === parseInt(id) || product.id === id);
 };
 
 export const getProductsByCategory = (category) => {
   if (category === 'all') return products;
-  if (category === 'accessories') return accessories;
   return products.filter(product => product.category === category);
 };

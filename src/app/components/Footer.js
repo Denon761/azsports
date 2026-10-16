@@ -17,7 +17,6 @@ const footerLinks = [
       { label: "Professional Series", href: "/shop?type=Professional%20Series" },
       { label: "Country Series", href: "/shop?type=Country%20Edition" },
       { label: "Special Series", href: "/shop?type=Special%20Edition" },
-      { label: "Accessories", href: "/shop?category=accessories" },
     ]
   },
   {
@@ -26,6 +25,7 @@ const footerLinks = [
       { label: "Official Rules", href: "/rules" },
       { label: "Board Maintenance", href: "/maintenance" },
       { label: "About AZ Sports", href: "/about" },
+      { label: "Founder's Legacy", href: "/founders-legacy" },
       { label: "Contact Us", href: "/contact" },
     ]
   },
@@ -33,7 +33,7 @@ const footerLinks = [
     title: "Support",
     items: [
       // { label: "Track Order", href: "/track-order" },
-      { label: "Shipping & Returns", href: "/shipping" },
+      { label: "Shipping Policy", href: "/shipping" },
       { label: "Bulk / Club Orders", href: "/contact" },
       // { label: "FAQs", href: "/contact" },
     ]
@@ -70,13 +70,13 @@ const Footer = () => {
           {/* Brand + short desc (Takes up 2 columns on desktop) */}
           <div className="col-span-2 md:col-span-2 pr-0 md:pr-8">
             <Link href="/" className="inline-block mb-4">
-              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-gray-900 group font-heading">
+              <h2 className="text-base md:text-base font-black tracking-tight text-gray-900 group font-heading">
                 AZ <span className="text-[#241b14] group-hover:text-[#3d2e22] transition-all duration-300">SPORTS</span>
               </h2>
             </Link>
             
-            <p className="text-gray-600 leading-relaxed text-sm max-w-sm mb-8">
-              Engineered for champions. Premium carrom boards & accessories built for precision, rebound, and lifelong durability.
+            <p className="text-gray-600 leading-relaxed text-xs max-w-sm mb-8">
+              Engineered for champions. Premium carrom boards built for precision, rebound, and lifelong durability.
             </p>
 
             {/* Social icons */}
@@ -88,7 +88,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="bg-white border border-gray-200 p-3 rounded-xl hover:bg-gray-100 hover:border-amber-500/50 hover:text-amber-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(245,158,11,0.15)] text-gray-600"
+                  className="bg-white border border-gray-200 p-3 rounded-md hover:bg-gray-100 hover:border-amber-500/50 hover:text-amber-600 transition-all duration-300 hover:-translate-y-1 text-gray-600"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -99,10 +99,10 @@ const Footer = () => {
           {/* Link columns */}
           {footerLinks.map((group) => (
             <div key={group.title} className="col-span-1">
-              <h3 className="font-bold text-gray-900 uppercase tracking-wider text-sm mb-6">
+              <h3 className="font-bold text-gray-900 uppercase tracking-wider text-xs mb-6">
                 {group.title}
               </h3>
-              <ul className="space-y-3.5 text-gray-600 text-sm">
+              <ul className="space-y-3.5 text-gray-600 text-xs">
                 {group.items.map((item) => (
                   <li key={item.label}>
                     <Link
@@ -123,18 +123,18 @@ const Footer = () => {
         </div>
 
         {/* ── Newsletter Section (Wide Card) ── */}
-        {/* <div className="mt-16 bg-white p-8 md:p-10 rounded-[2rem] border border-gray-200 hover:border-amber-500/30 transition-all duration-500 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden group shadow-sm">
+        {/* <div className="mt-16 bg-white p-8 md:p-10 rounded-lg border border-gray-200 hover:border-amber-500/30 transition-all duration-500 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden group">
           
           <div className="absolute right-0 bottom-0 w-[300px] h-[300px] bg-amber-500/5 rounded-full blur-[80px] mix-blend-screen pointer-events-none group-hover:bg-amber-500/10 transition-colors duration-700"></div>
 
           <div className="flex-1 z-10 w-full text-center lg:text-left">
             <div className="inline-flex items-center gap-2 mb-3">
               <Mail className="w-5 h-5 text-amber-500" />
-              <h4 className="font-bold uppercase tracking-wider text-sm text-gray-900">
+              <h4 className="font-bold uppercase tracking-wider text-xs text-gray-900">
                 Join the Champions Club
               </h4>
             </div>
-            <p className="text-gray-600 text-sm md:text-base max-w-md mx-auto lg:mx-0">
+            <p className="text-gray-600 text-xs md:text-xs max-w-md mx-auto lg:mx-0">
               Get exclusive tips, tournament updates &{' '}
               <strong className="text-[#241b14] font-bold">10% off</strong>{' '}
               your first striker.
@@ -145,12 +145,12 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Your email address"
-              className="bg-gray-50 text-gray-900 px-5 py-4 rounded-xl border border-gray-300 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all flex-1 text-sm placeholder:text-gray-400 shadow-inner"
+              className="bg-gray-50 text-gray-900 px-5 py-4 rounded-md border border-gray-300 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all flex-1 text-xs placeholder:text-gray-400"
               required
             />
             <button
               type="submit"
-              className="bg-[#241b14] text-white font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(36,27,20,0.4)] transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap transform hover:-translate-y-0.5"
+              className="bg-[#241b14] text-white font-bold px-8 py-4 rounded-md transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap transform hover:-translate-y-0.5"
             >
               Subscribe <ArrowRight className="w-4 h-4" />
             </button>
@@ -158,7 +158,7 @@ const Footer = () => {
         </div> */}
 
         {/* ── Bottom Bar ── */}
-        <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
+        <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-500">
           
           <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 font-medium">
             <span>© {new Date().getFullYear()} AZ Sports.</span>
@@ -171,7 +171,7 @@ const Footer = () => {
             {['VISA', 'Mastercard', 'PayPal', 'COD'].map((method) => (
               <span 
                 key={method} 
-                className="text-[10px] md:text-xs font-bold tracking-wider border border-gray-200 bg-gray-100 text-gray-500 px-3 py-1.5 rounded-lg uppercase"
+                className="text-[10px] md:text-xs font-bold tracking-wider border border-gray-200 bg-gray-100 text-gray-500 px-3 py-1.5 rounded-md uppercase"
               >
                 {method}
               </span>

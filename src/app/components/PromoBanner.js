@@ -10,7 +10,7 @@ export default function PromoBanner() {
         Uses deep zinc/carbon colors with a subtle glowing border effect.
         overflow-hidden keeps the ambient glowing orbs contained.
       */}
-      <div className="relative bg-white rounded-[2rem] md:rounded-[2.5rem] border border-gray-200 shadow-xl overflow-hidden group">
+      <div className="relative bg-white rounded-lg md:rounded-lg border border-gray-200 overflow-hidden group">
         
         {/* --- AMBIENT BACKGROUND EFFECTS --- */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[100px] mix-blend-screen pointer-events-none group-hover:bg-amber-500/15 transition-all duration-700"></div>
@@ -27,11 +27,11 @@ export default function PromoBanner() {
             </div>
             
             {/* Headline with High-Contrast Gradient */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 leading-tight tracking-tight font-heading">
+            <h2 className="text-base md:text-lg lg:text-lg font-black text-gray-900 mb-4 leading-tight tracking-tight font-heading">
               Get <span className="text-[#241b14]">20% Off</span> Your First Order
             </h2>
             
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-lg">
+            <p className="text-gray-600 text-xs md:text-xs leading-relaxed max-w-lg">
               Experience championship-level rebound and smooth glides. Join thousands of satisfied professionals and upgrade your carrom gear today.
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function PromoBanner() {
             {/* Primary CTA (Using Link since 'Shop the Sale' should route the user) */}
             <Link 
               href="/shop"
-              className="w-full md:w-auto bg-[#241b14] text-white px-8 md:px-10 py-4 rounded-xl font-bold md:text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(36,27,20,0.4)] transition-all duration-300 transform hover:-translate-y-1"
+              className="w-full md:w-auto bg-[#241b14] text-white px-8 md:px-10 py-4 rounded-md font-bold md:text-sm flex items-center justify-center gap-2 transition-all duration-300 transform hover:-translate-y-1"
             >
               <Tag className="w-5 h-5" />
               Claim Offer

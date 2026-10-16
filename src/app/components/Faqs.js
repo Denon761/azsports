@@ -24,11 +24,11 @@ export default function Faqs() {
           {/* Tagline Badge */}
         
 
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight tracking-tight font-heading">
+          <h2 className="text-base md:text-lg font-black text-gray-900 mb-4 leading-tight tracking-tight font-heading">
             Frequently Asked <span className="text-[#241b14]">Questions</span>
           </h2>
           
-          <p className="text-base md:text-lg text-gray-600">
+          <p className="text-xs md:text-sm text-gray-600">
             Everything you need to know about our products, shipping, and services.
           </p>
         </div>
@@ -38,10 +38,10 @@ export default function Faqs() {
           {faqs.map((faq, index) => (
             <details 
               key={index} 
-              className="group border border-gray-200 rounded-2xl bg-white hover:bg-gray-50 hover:border-amber-500/30 transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:border-amber-500/50 open:shadow-[0_0_30px_-10px_rgba(245,158,11,0.15)]"
+              className="group border border-gray-200 rounded-lg bg-white hover:bg-gray-50 hover:border-amber-500/30 transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:border-amber-500/50"
             >
               <summary className="flex cursor-pointer items-center justify-between gap-4 p-6 text-gray-900 font-bold select-none outline-none group-open:text-amber-600 transition-colors duration-300">
-                <h3 className="text-sm md:text-base leading-snug">{faq.q}</h3>
+                <h3 className="text-xs md:text-xs leading-snug">{faq.q}</h3>
                 
                 {/* Icon Container that rotates on open */}
                 <span className="shrink-0 rounded-full bg-gray-100 border border-gray-200 p-2 text-gray-500 group-hover:text-amber-600 group-hover:bg-amber-50 group-open:rotate-45 group-open:text-amber-600 group-open:bg-amber-50 group-open:border-amber-200 transition-all duration-300">
@@ -49,7 +49,7 @@ export default function Faqs() {
                 </span>
               </summary>
               
-              <div className="px-6 pb-6 text-gray-600 leading-relaxed text-sm md:text-base border-t border-gray-200 pt-4 mt-2 group-open:animate-fade-in-down">
+              <div className="px-6 pb-6 text-gray-600 leading-relaxed text-xs md:text-xs border-t border-gray-200 pt-4 mt-2 group-open:animate-fade-in-down">
                 {faq.a}
               </div>
             </details>

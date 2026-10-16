@@ -1,143 +1,158 @@
-import { ContentRenderer, PageHero } from "../components/SharedLayout";
-
 export const metadata = {
-  title: 'Shipping, Returns & Warranty | AZ Sports',
-  description: 'AZ Sports shipping within Pakistan and worldwide, 7-day returns and 30-day warranty on handmade carrom boards.',
+  title: 'Shipping Policy | AZ Sports',
+  description: 'How AZ Sports – Amjad Zahoor Sports manages shipping, dispatch, and delivery coordination for domestic and international carrom board orders.',
 };
-
-const shippingData = [
-  {
-    title: "Shipping Overview",
-    content: [
-      "AZ Sports manufactures handmade carrom boards at its in-house facility in Sialkot, Pakistan. Shipping is arranged after order confirmation and coordination with the buyer regarding destination, quantity, packaging requirements, and preferred delivery method.",
-      "This policy applies to domestic shipments within Pakistan and international export orders."
-    ]
-  },
-  {
-    title: "Order Processing & Dispatch",
-    content: ["Final dispatch timelines are confirmed during order coordination."],
-    list: [
-      "Carrom boards are prepared and dispatched after order confirmation.",
-      "Orders may be produced on a made-to-order or bulk basis.",
-      "Production and dispatch timelines vary depending on board specifications, order volume, and manufacturing schedules."
-    ]
-  },
-  {
-    title: "Domestic Shipping (Pakistan)",
-    content: ["For orders within Pakistan:", "AZ Sports does not guarantee fixed delivery times, as transit is managed by independent service providers."],
-    list: [
-      "Shipping is coordinated through third-party courier or logistics providers.",
-      "Delivery timelines depend on destination and carrier availability.",
-      "Buyers are informed once orders are dispatched."
-    ]
-  },
-  {
-    title: "International Shipping",
-    content: ["For export and international orders:", "Unless otherwise agreed in writing, customs clearance, import duties, taxes, and destination regulations are the responsibility of the buyer."],
-    list: [
-      "Shipping is arranged in coordination with the buyer or the buyer's nominated freight forwarder.",
-      "Orders may be shipped via sea freight, air freight, or land transport depending on destination and order size.",
-      "Export documentation and packaging are prepared according to shipment requirements."
-    ]
-  },
-  {
-    title: "Shipping Terms, Packages & Handling",
-    content: [
-      "Where applicable, international shipments may be coordinated under commonly used trade terms (such as EXW, FOB, or CFR), as mutually agreed during order confirmation.",
-      "Carrom boards are prepared with protective handling and packaging considerations to help maintain surface integrity, frame alignment, and finish during transportation."
-    ]
-  },
-  {
-    title: "Damages, Loss & Transit Issues",
-    content: ["Buyers are advised to:", "Transit-related claims are subject to carrier policies and procedures. Responsibility for goods transfers to the buyer once the shipment is handed over to the carrier, subject to agreed shipping terms."],
-    list: [
-      "Inspect shipments upon receipt",
-      "Report visible damage or discrepancies to the carrier immediately",
-      "Inform AZ Sports promptly with relevant details and documentation"
-    ]
-  },
-  {
-    title: "Returns & Refunds (7 Days)",
-    content: [
-      "You can request a return within 7 days of receiving your order.",
-      "To start a return, email info@azsports.pk with your order number and photos of the item. Once the returned item is received and inspected, we will confirm your refund."
-    ],
-    list: [
-      "Items must be unused and in their original packaging.",
-      "Items damaged in transit or with a manufacturing defect are covered — please report these as soon as possible after delivery.",
-      "Return requests made after 7 days from delivery cannot be accepted."
-    ]
-  },
-  {
-    title: "Warranty (30 Days)",
-    content: [
-      "All AZ Sports carrom boards come with a 30-day warranty from the date of delivery, covering manufacturing defects.",
-      "If a covered defect appears within 30 days, email info@azsports.pk with your order number and photos. We will repair or replace the item."
-    ],
-    list: [
-      "Covered: manufacturing defects in the frame, joints, playing surface and markings.",
-      "Not covered: damage from misuse, accidents, water or moisture exposure, improper storage, or normal wear."
-    ]
-  },
-  {
-    title: "About This Policy",
-    content: ["This policy reflects the standard shipping, handling, and delivery coordination practices followed by AZ Sports ensuring consistency and transparency across domestic and international shipments."],
-    note: "Last updated: March 2026"
-  }
-];
 
 export default function ShippingPolicyPage() {
   return (
-    <div className="bg-gray-50 min-h-screen font-sans">
-      {/* Hero Section */}
-      <section className="relative w-full py-20 lg:py-28 overflow-hidden">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            Shipping, Returns &amp; Warranty
-          </h1>
-          <p className="text-gray-600 text-base md:text-lg">
-            Shipping within Pakistan and worldwide, plus our 7-day returns and 30-day warranty.
+    <div className="bg-white min-h-screen font-sans">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-6">
+        <div>
+          <h1 className="text-lg font-black text-gray-900">Shipping Policy</h1>
+        </div>
+
+        <p className="text-gray-600 text-xs leading-relaxed">
+          This Shipping Policy explains how AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Punjab, Pakistan, manages shipping, dispatch, and delivery coordination for domestic and international orders.
+        </p>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Shipping Overview</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports manufactures handmade carrom boards at its in-house facility in Sialkot, Pakistan. Shipping is arranged after order confirmation and coordination with the buyer regarding destination, quantity, packaging requirements, and preferred delivery method.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            This policy applies to domestic shipments within Pakistan and international export orders.
           </p>
         </div>
-      </section>
 
-      {/* Content */}
-      <section className="py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 space-y-8 shadow-sm">
-            {shippingData.map((section, index) => (
-              <div key={index} className="space-y-4">
-                {section.title && (
-                  <h2 className="text-lg md:text-2xl font-black text-gray-900 border-b border-gray-200 pb-2 font-heading">
-                    {section.title}
-                  </h2>
-                )}
-                
-                {section.content && section.content.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="text-gray-600 text-xs md:text-base leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-
-                {section.list && section.list.length > 0 && (
-                  <ul className="list-disc pl-5 space-y-2 text-xs md:text-base text-gray-600 mt-4">
-                    {section.list.map((item, lIdx) => (
-                      <li key={lIdx}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-                
-                {section.note && (
-                  <p className="text-xs text-gray-500 italic mt-2">{section.note}</p>
-                )}
-              </div>
-            ))}
-          </div>
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Order Processing &amp; Dispatch</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>Carrom boards are prepared and dispatched after order confirmation.</li>
+            <li>Orders may be produced on a made-to-order or bulk basis.</li>
+            <li>Production and dispatch timelines vary depending on board specifications, order volume, and manufacturing schedules.</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            Final dispatch timelines are confirmed during order coordination.
+          </p>
         </div>
-      </section>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Domestic Shipping (Pakistan)</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">For orders within Pakistan:</p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Shipping is coordinated through third-party courier or logistics providers.</li>
+            <li>Delivery timelines depend on destination and carrier availability.</li>
+            <li>Buyers are informed once orders are dispatched.</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            AZ Sports does not guarantee fixed delivery times, as transit is managed by independent service providers.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">International Shipping</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">For export and international orders:</p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Shipping is arranged in coordination with the buyer or the buyer&rsquo;s nominated freight forwarder.</li>
+            <li>Orders may be shipped via sea freight, air freight, or land transport depending on destination and order size.</li>
+            <li>Export documentation and packaging are prepared according to shipment requirements.</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            Unless otherwise agreed in writing, customs clearance, import duties, taxes, and destination regulations are the responsibility of the buyer.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Shipping Terms (Incoterms)</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            Where applicable, international shipments may be coordinated under commonly used trade terms (such as EXW, FOB, or CFR), as mutually agreed during order confirmation. Final shipping terms are documented before dispatch.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Packaging &amp; Handling</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            Carrom boards are prepared with protective handling and packaging considerations to help maintain surface integrity, frame alignment, and finish during transportation.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            Packaging methods may vary based on shipment size, destination, and mode of transport.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Shipping Charges</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>Shipping costs are not included in product prices unless explicitly stated.</li>
+            <li>Charges are calculated based on destination, shipment size, and carrier rates.</li>
+            <li>All shipping costs are communicated during order confirmation.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Delivery Timelines</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">Delivery timelines depend on:</p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Order quantity and specifications</li>
+            <li>Manufacturing schedule</li>
+            <li>Shipping method and destination</li>
+            <li>Carrier performance and customs procedures</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            AZ Sports aims to dispatch orders within agreed timelines but is not responsible for delays caused by carriers, customs authorities, port congestion, or other logistical factors beyond its control.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Damages, Loss &amp; Transit Issues</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">Buyers are advised to:</p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Inspect shipments upon receipt</li>
+            <li>Report visible damage or discrepancies to the carrier immediately</li>
+            <li>Inform AZ Sports promptly with relevant details and documentation</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            Transit-related claims are subject to carrier policies and procedures.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Transfer of Responsibility</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            Responsibility for goods transfers to the buyer once the shipment is handed over to the carrier, subject to agreed shipping terms.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Force Majeure (Logistics)</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports shall not be held responsible for delays or non-performance caused by events beyond reasonable control, including but not limited to natural disasters, strikes, port disruptions, regulatory changes, or transportation interruptions.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Shipping Queries</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            For questions related to shipping, dispatch, or delivery coordination, buyers may contact AZ Sports through the website&rsquo;s official communication channels.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Policy Updates</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports reserves the right to update this Shipping Policy to reflect changes in shipping practices, logistics partners, or regulatory requirements. Any updates will be published on this page.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Authority Note</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            This Shipping Policy reflects the standard shipping, handling, and delivery coordination practices followed by AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Pakistan, ensuring consistency and transparency across domestic and international shipments.
+          </p>
+        </div>
+
+        <p className="text-gray-500 text-xs italic">Last updated: March 2026</p>
+      </div>
     </div>
   );
 }

@@ -16,17 +16,17 @@ const primaryLinks = [
   { name: 'Professional Series', href: '/shop?type=Professional%20Series', query: 'type=Professional Series' },
   { name: 'Country Series', href: '/shop?type=Country%20Edition', query: 'type=Country Edition' },
   { name: 'Special Series', href: '/shop?type=Special%20Edition', query: 'type=Special Edition' },
-  { name: 'Accessories', href: '/shop?category=accessories', query: 'category=accessories' },
 ];
 
 const utilityLinks = [
   // { name: 'My Account', href: '/account' },
   { name: 'About Us', href: '/about' },
+  { name: "Founder's Legacy", href: '/founders-legacy' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'Rules of Carrom', href: '/rules' },
   { name: 'Board Maintenance', href: '/maintenance' },
   { name: 'Faqs', href: '/faq' },
-  { name: 'Shipping & Returns', href: '/shipping' },
+  { name: 'Shipping Policy', href: '/shipping' },
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms & Conditions', href: '/terms' },
   { name: 'Cookies', href: '/cookies' },
@@ -49,17 +49,17 @@ const Header = () => {
   return (
     <>
       {/* ── MAIN NAVIGATION BAR ── */}
-      <nav className="relative w-full bg-white backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50 font-sans shadow-sm">
+      <nav className="relative w-full bg-white backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50 font-sans">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
           
           {/* Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(true)}
-            className="group flex items-center gap-2 text-gray-700 hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100"
+            className="group flex items-center gap-2 text-gray-700 hover:text-amber-600 transition-colors p-2 rounded-md hover:bg-gray-100"
           >
             <Menu className="w-6 h-6 group-hover:scale-110 transition-transform" />
-            <span className="hidden sm:block font-bold text-xs md:text-sm uppercase tracking-wider">Menu</span>
+            <span className="hidden sm:block font-bold text-xs md:text-xs uppercase tracking-wider">Menu</span>
           </button>
 
           {/* Center Brand Logo */}
@@ -81,17 +81,17 @@ const Header = () => {
             <CountrySelector />
             
             {/* Cart Icon */}
-            <Link href="/cart" className="text-gray-500 relative hover:text-amber-600 transition-colors p-2 rounded-xl hover:bg-gray-100">
+            <Link href="/cart" className="text-gray-500 relative hover:text-amber-600 transition-colors p-2 rounded-md hover:bg-gray-100">
               <ShoppingBag className="w-[22px] h-[22px]" />
               {cartItems > 0 && (
-                <span className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-[#241b14] text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shadow-[0_0_10px_rgba(211,177,87,0.5)]">
+                <span className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-[#241b14] text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold">
                   {cartItems}
                 </span>
               )}
             </Link>
 
             {/* Checkout Button */}
-            <Link href="/checkout" className="hidden md:flex bg-[#241b14] text-white px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm tracking-wide hover:shadow-[0_0_15px_rgba(211,177,87,0.4)] transition-all duration-300 transform hover:-translate-y-0.5 ml-2">
+            <Link href="/checkout" className="hidden md:flex bg-[#241b14] text-white px-5 py-2.5 rounded-md font-bold text-xs md:text-xs tracking-wide transition-all duration-300 transform hover:-translate-y-0.5 ml-2">
               CHECKOUT
             </Link>
           </div>
@@ -107,7 +107,7 @@ const Header = () => {
       />
 
       {/* ── SLIDE-OUT DRAWER ── */}
-      <div className={`fixed top-0 left-0 h-full w-full sm:w-[420px] bg-white border-r border-gray-200 z-[60] shadow-2xl transform transition-transform duration-500 ease-in-out flex flex-col font-sans ${
+      <div className={`fixed top-0 left-0 h-full w-full sm:w-[420px] bg-white border-r border-gray-200 z-[60] transform transition-transform duration-500 ease-in-out flex flex-col font-sans ${
         isMenuOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
         
@@ -138,7 +138,7 @@ const Header = () => {
                 key={link.name} 
                 href={link.href} 
                 onClick={() => setIsMenuOpen(false)} 
-                className="px-6 py-3 text-base font-bold text-gray-700 hover:text-amber-600 hover:bg-gray-50 border-l-4 border-transparent hover:border-amber-500 transition-all duration-300"
+                className="px-6 py-3 text-xs font-bold text-gray-700 hover:text-amber-600 hover:bg-gray-50 border-l-4 border-transparent hover:border-amber-500 transition-all duration-300"
               >
                 {link.name}
               </Link>
@@ -154,7 +154,7 @@ const Header = () => {
                 key={link.name} 
                 href={link.href} 
                 onClick={() => setIsMenuOpen(false)} 
-                className="px-6 py-2.5 text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium flex items-center group"
+                className="px-6 py-2.5 text-xs text-gray-600 hover:text-gray-900 transition-colors font-medium flex items-center group"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
@@ -167,8 +167,8 @@ const Header = () => {
           {/* Location Selector */}
           {/* <div className="px-6">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Location</p>
-            <button className="w-full border border-gray-300 rounded-xl py-3.5 px-4 flex items-center justify-between bg-gray-50 text-gray-700 hover:border-amber-500/50 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300">
-              <span className="font-semibold text-sm">Pakistan</span>
+            <button className="w-full border border-gray-300 rounded-md py-3.5 px-4 flex items-center justify-between bg-gray-50 text-gray-700 hover:border-amber-500/50 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300">
+              <span className="font-semibold text-xs">Pakistan</span>
               <ChevronDown className="w-4 h-4" />
             </button>
           </div> */}

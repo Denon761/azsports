@@ -38,11 +38,11 @@ const TrustedStrip = () => {
                   alt={`${loc.name} flag`}
                   loading="lazy"
                   /* h-auto + w-auto + object-contain stops any weird stretching */
-                  className="h-4 md:h-[18px] w-auto object-contain shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-[2px] transform group-hover:scale-110 transition-transform duration-300"
+                  className="h-4 md:h-[18px] w-auto object-contain rounded-[2px] transform group-hover:scale-110 transition-transform duration-300"
                 />
                 
                 {/* Text is darker by default now since flags are fully colored */}
-                <span className="text-xs md:text-sm font-black text-zinc-700 tracking-wider group-hover:text-amber-600 transition-colors duration-300">
+                <span className="text-xs md:text-xs font-black text-zinc-700 tracking-wider group-hover:text-amber-600 transition-colors duration-300">
                   {loc.name}
                 </span>
 

@@ -42,14 +42,14 @@ const Features = () => {
             Premium Engineering
           </div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight font-heading animate-fade-in-up">
+          <h2 className="text-base md:text-lg lg:text-lg font-black text-gray-900 mb-6 leading-tight tracking-tight font-heading animate-fade-in-up">
             Why most boards don't play{' '}
             <span className="text-[#241b14]">
               like they look
             </span>
           </h2>
           
-          <p className="text-base md:text-lg text-gray-600 animate-fade-in-up delay-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs md:text-sm text-gray-600 animate-fade-in-up delay-200 max-w-2xl mx-auto leading-relaxed">
             Cheap particle board and uneven surfacing kill the game. 
             AZ Sports boards are engineered differently for champions.
           </p>
@@ -63,21 +63,21 @@ const Features = () => {
             return (
                <div
                 key={index}
-                className="group flex flex-col items-center text-center p-8 rounded-[2rem] bg-white border border-gray-200 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]"
+                className="group flex flex-col items-center text-center p-8 rounded-lg bg-white border border-gray-200 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Icon Container with Glow Effect */}
                 <div
-                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/10 to-orange-600/10 border border-amber-500/20 flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 group-hover:text-amber-400 group-hover:border-amber-400/40 transition-all duration-500"
+                  className="w-16 h-16 rounded-lg bg-gradient-to-br from-amber-500/10 to-orange-600/10 border border-amber-500/20 flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 group-hover:text-amber-400 group-hover:border-amber-400/40 transition-all duration-500"
                 >
                   <Icon className="w-8 h-8" strokeWidth={1.5} />
                 </div>
 
                 {/* Text Content */}
-                <h3 className="font-bold text-gray-900 text-xl mb-3 group-hover:text-amber-600 transition-colors duration-300">
+                <h3 className="font-bold text-gray-900 text-sm mb-3 group-hover:text-amber-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-xs leading-relaxed">
                   {feature.description}
                 </p>
               </div>

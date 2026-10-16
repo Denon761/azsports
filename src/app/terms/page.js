@@ -1,154 +1,143 @@
-import Link from 'next/link';
-
 export const metadata = {
   title: 'Terms & Conditions | AZ Sports',
-  description: 'Terms and conditions for ordering handmade carrom boards and accessories from AZ Sports, Sialkot, Pakistan.',
+  description: 'Terms and conditions governing the use of this website and business communications with AZ Sports – Amjad Zahoor Sports, Sialkot, Pakistan.',
 };
-
-const termsData = [
-  {
-    title: "1. About These Terms",
-    content: [
-      "These Terms & Conditions apply to your use of this website and to all orders placed with AZ Sports, a family-run handmade carrom board manufacturer based in Sialkot, Punjab, Pakistan.",
-      "By using this website or placing an order, you agree to these terms. If you do not agree, please do not use the website or place an order."
-    ]
-  },
-  {
-    title: "2. Products & Descriptions",
-    content: ["Our carrom boards are handmade from natural wood."],
-    list: [
-      "Small variations in wood grain, colour and finish are natural and are not defects.",
-      "Product photos are for illustration; the final product may differ slightly in appearance.",
-      "Sizes, specifications and availability may change without notice."
-    ]
-  },
-  {
-    title: "3. Prices & Payment",
-    content: [
-      "Prices are shown in Pakistani Rupees (PKR) for customers in Pakistan and in US Dollars (USD) for international customers, based on the country selected on the website.",
-      "Payment for orders within Pakistan is by Cash on Delivery (COD). Payment arrangements for international and bulk orders are confirmed with the buyer before dispatch.",
-      "If a product is listed at an incorrect price due to an error, we will contact you before dispatch, and you may confirm the order at the correct price or cancel it."
-    ]
-  },
-  {
-    title: "4. Orders & Confirmation",
-    content: ["Placing an order is an offer to buy. An order is accepted once we confirm it with you."],
-    list: [
-      "We may contact you by email or phone to confirm your order and delivery details.",
-      "We may decline or cancel an order if product details, pricing or delivery information cannot be confirmed.",
-      "Bulk and export orders are subject to separately agreed quantities, timelines and terms."
-    ]
-  },
-  {
-    title: "5. Shipping & Delivery",
-    content: [
-      "Shipping is handled as described in our Shipping, Returns & Warranty policy. Delivery times are estimates and depend on the courier and destination.",
-      "For international orders, customs clearance, import duties and taxes are the buyer's responsibility unless agreed otherwise in writing."
-    ]
-  },
-  {
-    title: "6. Returns & Refunds",
-    content: ["You may request a return within 7 days of receiving your order."],
-    list: [
-      "Items must be unused and in their original packaging.",
-      "Items damaged in transit or with a manufacturing defect are covered — please report these as soon as possible after delivery.",
-      "Refunds are confirmed after the returned item is received and inspected."
-    ]
-  },
-  {
-    title: "7. Warranty",
-    content: [
-      "All AZ Sports carrom boards come with a 30-day warranty from the date of delivery, covering manufacturing defects. Covered items will be repaired or replaced.",
-      "The warranty does not cover damage from misuse, accidents, water or moisture exposure, improper storage, or normal wear."
-    ]
-  },
-  {
-    title: "8. Use of This Website",
-    content: ["All content on this website, including text, photos, logos and designs, belongs to AZ Sports. You may not:"],
-    list: [
-      "Copy, reproduce or resell website content or product images without written permission",
-      "Use the website for any unlawful or fraudulent purpose",
-      "Attempt to interfere with the website's operation or security"
-    ]
-  },
-  {
-    title: "9. Limitation of Liability",
-    content: [
-      "To the extent permitted by law, AZ Sports is not liable for indirect or consequential losses arising from the use of this website or our products. Our total liability for any order is limited to the amount paid for that order.",
-      "Nothing in these terms limits any rights you have under the applicable consumer protection laws of Pakistan."
-    ]
-  },
-  {
-    title: "10. Changes to These Terms",
-    content: ["We may update these terms from time to time. The version published on this page at the time you place an order applies to that order."]
-  },
-  {
-    title: "11. Governing Law",
-    content: ["These terms are governed by the laws of Pakistan. Any dispute will be subject to the jurisdiction of the courts of Sialkot, Punjab, Pakistan."]
-  },
-];
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
-      {/* Hero Section */}
-      <section className="relative w-full py-20 lg:py-28 overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
+    <div className="bg-white min-h-screen font-sans">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-6">
+        <div>
+          <h1 className="text-lg font-black text-gray-900">Terms &amp; Conditions</h1>
+        </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            Terms & Conditions
-          </h1>
-          <p className="text-gray-600 text-base md:text-lg">
-            Last updated: October 2026
+        <p className="text-gray-600 text-xs leading-relaxed">
+          These Terms &amp; Conditions govern the use of this website and all business communications with AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Punjab, Pakistan.
+        </p>
+        <p className="text-gray-600 text-xs leading-relaxed">
+          By accessing or using this website, you agree to be bound by these Terms &amp; Conditions.
+        </p>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Business Nature</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports – Amjad Zahoor Sports operates as a handmade carrom board manufacturer.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            This website is intended for informational purposes and business inquiries, including manufacturing details, export discussions, and bulk order coordination.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            This website does not function as a consumer e-commerce store.
           </p>
         </div>
-      </section>
 
-      {/* Content */}
-      <section className="py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 space-y-8 shadow-sm">
-            {termsData.map((section) => (
-              <div key={section.title}>
-                <h2 className="text-lg md:text-2xl font-black text-gray-900 mb-4 font-heading">{section.title}</h2>
-                {section.content.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="text-gray-600 text-sm md:text-base leading-relaxed mb-3">
-                    {paragraph}
-                  </p>
-                ))}
-                {section.list && (
-                  <ul className="list-disc list-inside text-gray-600 text-sm md:text-base space-y-2">
-                    {section.list.map((item, lIdx) => (
-                      <li key={lIdx}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-
-            <div>
-              <h2 className="text-lg md:text-2xl font-black text-gray-900 mb-4 font-heading">Contact Us</h2>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
-                If you have any questions about these Terms & Conditions, please contact us:
-              </p>
-              <ul className="list-none text-gray-600 text-sm md:text-base space-y-1">
-                <li>AZ Sports</li>
-                <li>Hakeem Ashraf Road, Opposite Janazagah, Rangpura, Sialkot, Pakistan</li>
-                <li>Email: info@azsports.pk</li>
-              </ul>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed mt-4">
-                See also our{' '}
-                <Link href="/shipping" className="text-amber-600 font-bold hover:underline">Shipping, Returns &amp; Warranty</Link>
-                {' '}and{' '}
-                <Link href="/privacy" className="text-amber-600 font-bold hover:underline">Privacy Policy</Link>.
-              </p>
-            </div>
-          </div>
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Website Use</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>Users agree to use this website for lawful purposes only.</li>
+            <li>Content is provided for general information regarding manufacturing capabilities, products, and services.</li>
+            <li>Any misuse, unauthorized access, or attempt to disrupt website functionality is prohibited.</li>
+          </ul>
         </div>
-      </section>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Product Information</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>Product descriptions, specifications, images, and content are provided for general reference only.</li>
+            <li>As products are handmade, minor variations in appearance, finish, size, or material characteristics may occur.</li>
+            <li>Final specifications, quantities, and requirements are confirmed during direct order coordination.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Orders &amp; Manufacturing</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>All carrom boards are manufactured using traditional handmade processes.</li>
+            <li>Orders may be produced on a made-to-order or bulk supply basis.</li>
+            <li>Manufacturing timelines depend on specifications, quantities, and production schedules.</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            No fixed manufacturing or delivery timelines are guaranteed unless explicitly agreed in writing.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Pricing &amp; Payments</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>Pricing is communicated directly during inquiry or order discussions.</li>
+            <li>Payment terms, currency, and payment methods are agreed upon prior to order confirmation.</li>
+            <li>Prices do not include shipping costs, customs duties, taxes, or other charges unless explicitly stated.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Shipping &amp; Delivery</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>Shipping, dispatch, and delivery are governed by the Shipping Policy published on this website.</li>
+            <li>Transit times, customs clearance, and carrier delays are outside the control of AZ Sports.</li>
+            <li>Responsibility for goods transfers according to agreed shipping terms.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Returns &amp; Refunds</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            As products are handmade and often manufactured to order, returns or refunds are not generally applicable unless otherwise agreed in writing before order confirmation.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Intellectual Property</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            All content on this website, including text, images, logos, designs, and branding, is the intellectual property of AZ Sports – Amjad Zahoor Sports unless otherwise stated.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            Unauthorized copying, reproduction, distribution, or use is prohibited.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Limitation of Liability</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports shall not be liable for any indirect, incidental, or consequential damages arising from:
+          </p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Use of this website</li>
+            <li>Business communications or inquiries</li>
+            <li>Third-party logistics, carriers, or external service providers</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Third-Party Links</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            This website may contain links to third-party websites. AZ Sports is not responsible for the content, accuracy, or practices of external websites.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Governing Law &amp; Jurisdiction</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            These Terms &amp; Conditions are governed by and interpreted in accordance with the laws of Pakistan. Any disputes shall be subject to the jurisdiction of courts in Pakistan.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Updates to Terms</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports reserves the right to update or modify these Terms &amp; Conditions at any time. Continued use of the website constitutes acceptance of the updated terms.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Authority Note</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            These Terms &amp; Conditions reflect the standard business practices, manufacturing model, and operational policies of AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturing company based in Sialkot, Pakistan.
+          </p>
+        </div>
+
+        <p className="text-gray-500 text-xs italic">Last updated: March 2026</p>
+      </div>
     </div>
   );
 }

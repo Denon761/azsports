@@ -15,39 +15,39 @@ export default function CookiesPage() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Cookie className="w-16 h-16 mx-auto mb-6" />
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
+          <h1 className="text-base md:text-lg lg:text-xl font-black text-gray-900 mb-4 tracking-tight font-heading">
             Cookie Policy
           </h1>
-          <p className="text-gray-600 text-base md:text-lg">Understanding how we use cookies</p>
+          <p className="text-gray-600 text-xs md:text-sm">Understanding how we use cookies</p>
         </div>
       </section>
 
       {/* Content */}
       <section className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 mb-8 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-10 mb-8">
             <p className="text-gray-600 mb-6">
               Last updated: {new Date().toLocaleDateString()}
             </p>
 
-            <h2 className="text-lg md:text-2xl font-black text-gray-900 mt-8 mb-4">What Are Cookies?</h2>
-            <p className="text-gray-600 text-xs md:text-base leading-relaxed mb-6">
+            <h2 className="text-sm md:text-base font-black text-gray-900 mt-8 mb-4">What Are Cookies?</h2>
+            <p className="text-gray-600 text-xs md:text-xs leading-relaxed mb-6">
               Cookies are small text files that are placed on your computer or mobile device when you visit a website. 
               They are widely used to make websites work more efficiently and provide information to website owners.
             </p>
 
-            <h2 className="text-lg md:text-2xl font-black text-gray-900 mt-8 mb-4">How We Use Cookies</h2>
-            <p className="text-gray-600 text-xs md:text-base leading-relaxed mb-6">
+            <h2 className="text-sm md:text-base font-black text-gray-900 mt-8 mb-4">How We Use Cookies</h2>
+            <p className="text-gray-600 text-xs md:text-xs leading-relaxed mb-6">
               AZ Sports uses cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
               Here are the types of cookies we use:
             </p>
 
             <div className="space-y-6">
               {/* Essential Cookies */}
-              <div className="p-6 bg-gray-50 border border-gray-200 rounded-xl">
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-md">
                 <div className="flex items-center gap-3 mb-3">
                   <Shield className="w-6 h-6 text-green-500" />
-                  <h3 className="text-lg font-bold text-gray-900">Essential Cookies</h3>
+                  <h3 className="text-sm font-bold text-gray-900">Essential Cookies</h3>
                 </div>
                 <p className="text-gray-600 text-xs">
                   These cookies are necessary for the website to function properly. They enable basic features like 
@@ -57,10 +57,10 @@ export default function CookiesPage() {
               </div>
 
               {/* Analytics Cookies */}
-              <div className="p-6 bg-gray-50 border border-gray-200 rounded-xl">
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-md">
                 <div className="flex items-center gap-3 mb-3">
                   <Settings className="w-6 h-6 text-blue-500" />
-                  <h3 className="text-lg font-bold text-gray-900">Analytics Cookies</h3>
+                  <h3 className="text-sm font-bold text-gray-900">Analytics Cookies</h3>
                 </div>
                 <p className="text-gray-600 text-xs">
                   These cookies help us understand how visitors interact with our website by collecting and reporting 
@@ -69,10 +69,10 @@ export default function CookiesPage() {
               </div>
 
               {/* Marketing Cookies */}
-              <div className="p-6 bg-gray-50 border border-gray-200 rounded-xl">
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-md">
                 <div className="flex items-center gap-3 mb-3">
                   <Cookie className="w-6 h-6 text-purple-500" />
-                  <h3 className="text-lg font-bold text-gray-900">Marketing Cookies</h3>
+                  <h3 className="text-sm font-bold text-gray-900">Marketing Cookies</h3>
                 </div>
                 <p className="text-gray-600 text-xs">
                   These cookies are used to track visitors across websites. The intention is to display ads that 
@@ -81,20 +81,20 @@ export default function CookiesPage() {
               </div>
             </div>
 
-            <h2 className="text-lg md:text-2xl font-black text-gray-900 mt-8 mb-4">Managing Your Cookies</h2>
-            <p className="text-gray-600 text-xs md:text-base leading-relaxed mb-6">
+            <h2 className="text-sm md:text-base font-black text-gray-900 mt-8 mb-4">Managing Your Cookies</h2>
+            <p className="text-gray-600 text-xs md:text-xs leading-relaxed mb-6">
               You have the right to decide whether to accept or reject cookies. You can manage your cookie preferences 
               in various ways:
             </p>
-            <ul className="list-disc list-inside text-gray-600 text-xs md:text-base space-y-2 ml-4 mb-6">
+            <ul className="list-disc list-inside text-gray-600 text-xs md:text-xs space-y-2 ml-4 mb-6">
               <li>Browser Settings: Most web browsers allow you to control cookies through their settings</li>
               <li>Cookie Consent Banner: You can change your preferences using our cookie consent tool</li>
               <li>Third-Party Tools: You can opt out of specific third-party cookies</li>
             </ul>
 
-            <h2 className="text-lg md:text-2xl font-black text-gray-900 mt-8 mb-4">Specific Cookies We Use</h2>
+            <h2 className="text-sm md:text-base font-black text-gray-900 mt-8 mb-4">Specific Cookies We Use</h2>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-sm">
+              <table className="w-full text-left text-xs">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="py-3 font-bold text-gray-900">Cookie Name</th>
@@ -127,17 +127,17 @@ export default function CookiesPage() {
               </table>
             </div>
 
-            <h2 className="text-lg md:text-2xl font-black text-gray-900 mt-8 mb-4">Updates to This Policy</h2>
-            <p className="text-gray-600 text-xs md:text-base leading-relaxed mb-6">
+            <h2 className="text-sm md:text-base font-black text-gray-900 mt-8 mb-4">Updates to This Policy</h2>
+            <p className="text-gray-600 text-xs md:text-xs leading-relaxed mb-6">
               We may update this Cookie Policy from time to time to reflect changes in our practices or for operational, 
               legal, or regulatory reasons. We will post any changes on this page and update the "Last updated" date.
             </p>
 
-            <h2 className="text-lg md:text-2xl font-black text-gray-900 mt-8 mb-4">Contact Us</h2>
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+            <h2 className="text-sm md:text-base font-black text-gray-900 mt-8 mb-4">Contact Us</h2>
+            <p className="text-gray-600 text-xs md:text-xs leading-relaxed mb-4">
               If you have any questions about our use of cookies, please contact us:
             </p>
-            <ul className="list-none text-gray-600 text-sm md:text-base">
+            <ul className="list-none text-gray-600 text-xs md:text-xs">
               <li>Email: info@azsports.pk</li>
               <li>Address: Hakeem Ashraf Road, Opposite Janazagah, Rangpura , Sialkot Punjab</li>
             </ul>

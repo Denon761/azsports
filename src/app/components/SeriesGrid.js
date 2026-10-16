@@ -43,7 +43,7 @@ export default function SeriesGrid({ layout = '1x4', showTitle = true }) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12">
       {showTitle && (
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+        <h2 className="text-base md:text-base font-bold text-slate-900 mb-6">
           Shop by Series
         </h2>
       )}
@@ -58,7 +58,7 @@ export default function SeriesGrid({ layout = '1x4', showTitle = true }) {
           <Link
             key={series.id}
             href={`/shop?type=${encodeURIComponent(series.url)}`}
-            className="group relative overflow-hidden rounded-2xl bg-slate-100 block"
+            className="group relative overflow-hidden rounded-lg bg-slate-100 block"
           >
             <div className={`relative overflow-hidden bg-slate-200 ${
               is1x4 
@@ -77,7 +77,7 @@ export default function SeriesGrid({ layout = '1x4', showTitle = true }) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                <h3 className="text-sm md:text-base font-bold text-white">
+                <h3 className="text-xs md:text-xs font-bold text-white">
                   {series.name}
                 </h3>
               </div>

@@ -7,10 +7,10 @@ export function PageHero({ title, description }) {
   return (
     <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-12 md:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <h1 className="text-2xl md:text-4xl font-black mb-4 tracking-tighter font-heading">
+        <h1 className="text-base md:text-lg font-black mb-4 tracking-tighter font-heading">
           {title}
         </h1>
-        <p className="text-gray-200 text-sm md:text-base font-medium max-w-2xl mx-auto">
+        <p className="text-gray-200 text-xs md:text-xs font-medium max-w-2xl mx-auto">
           {description}
         </p>
       </div>
@@ -28,21 +28,21 @@ export function ContentRenderer({ sections }) {
         {sections.map((section, index) => (
           <div key={index} className="space-y-4">
             {section.title && (
-              <h2 className="text-xl md:text-2xl font-black text-primary border-b pb-2 font-heading">
+              <h2 className="text-sm md:text-base font-black text-primary border-b pb-2 font-heading">
                 {section.title}
               </h2>
             )}
             
             {/* Map over paragraph strings */}
             {section.content && section.content.map((paragraph, pIdx) => (
-              <p key={pIdx} className="text-gray-700 text-sm md:text-base leading-relaxed">
+              <p key={pIdx} className="text-gray-700 text-xs md:text-xs leading-relaxed">
                 {paragraph}
               </p>
             ))}
 
             {/* Map over bullet lists if they exist */}
             {section.list && section.list.length > 0 && (
-              <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-700 mt-4">
+              <ul className="list-disc pl-5 space-y-2 text-xs md:text-xs text-gray-700 mt-4">
                 {section.list.map((item, lIdx) => (
                   <li key={lIdx}>{item}</li>
                 ))}

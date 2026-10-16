@@ -20,7 +20,7 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://azsports.pk"),
   title: "AZ Sports – Handmade Carrom Boards from Sialkot, Pakistan",
-  description: "Handmade solid-wood carrom boards, stands and accessories from AZ Sports, Sialkot, Pakistan. Regular, Professional, Country and Special series.",
+  description: "Handmade solid-wood carrom boards and stands from AZ Sports, Sialkot, Pakistan. Regular, Professional, Country and Special series.",
 };
 
 export default function RootLayout({ children }) {

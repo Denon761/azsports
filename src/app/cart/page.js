@@ -63,8 +63,8 @@ const CartPage = () => {
       {/* Top Navigation Bar */}
       <section className="bg-white border-b border-slate-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-          <Link href="/shop" className="group flex items-center gap-2 text-slate-500 hover:text-orange-600 transition-colors w-fit font-semibold text-sm">
-            <div className="bg-slate-100 p-1.5 rounded-lg group-hover:bg-orange-100 transition-colors">
+          <Link href="/shop" className="group flex items-center gap-2 text-slate-500 hover:text-orange-600 transition-colors w-fit font-semibold text-xs">
+            <div className="bg-slate-100 p-1.5 rounded-md group-hover:bg-orange-100 transition-colors">
               <ArrowLeft className="w-4 h-4" />
             </div>
             Continue Shopping
@@ -74,7 +74,7 @@ const CartPage = () => {
 
       {/* Page Header */}
       <section className="pt-10 pb-6 max-w-7xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight font-heading">Shopping Cart</h1>
+        <h1 className="text-base md:text-lg font-black text-slate-900 tracking-tight font-heading">Shopping Cart</h1>
         <p className="text-slate-500 mt-2 font-medium">
           You have {cartItems.length} {cartItems.length === 1 ? 'item' : 'items'} in your cart
         </p>
@@ -86,13 +86,13 @@ const CartPage = () => {
           {cartItems.length === 0 ? (
             
             /* Empty State */
-            <div className="bg-white border border-slate-200 rounded-[2rem] p-12 md:p-20 text-center shadow-sm max-w-3xl mx-auto mt-8">
-              <div className="w-24 h-24 bg-orange-50 text-orange-500 rounded-[2rem] flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white border border-slate-200 rounded-lg p-12 md:p-20 text-center max-w-3xl mx-auto mt-8">
+              <div className="w-24 h-24 bg-orange-50 text-orange-500 rounded-lg flex items-center justify-center mx-auto mb-6">
                 <ShoppingBag className="w-10 h-10" strokeWidth={2.5} />
               </div>
-              <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-4 tracking-tight">Your cart is empty</h2>
+              <h2 className="text-base md:text-base font-black text-slate-900 mb-4 tracking-tight">Your cart is empty</h2>
               <p className="text-slate-500 mb-8 max-w-sm mx-auto">Looks like you haven't added any premium carrom gear to your cart yet.</p>
-              <Link href="/shop" className="inline-flex bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md">
+              <Link href="/shop" className="inline-flex bg-slate-900 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-0.5">
                 Start Shopping
               </Link>
             </div>
@@ -106,14 +106,14 @@ const CartPage = () => {
               <div className="lg:col-span-7 xl:col-span-8 space-y-6">
                 
                 {/* Items Card */}
-                <div className="bg-white border border-slate-200 rounded-[2rem] overflow-hidden shadow-sm">
+                <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
                   {cartItems.map((item, index) => (
                     <div 
                       key={`${item.id}-${item.size || 'default'}`}
                       className={`p-6 md:p-8 flex flex-col sm:flex-row gap-6 ${index !== cartItems.length - 1 ? 'border-b border-slate-100' : ''}`}
                     >
                       {/* Product Image */}
-                      <div className="w-24 h-24 sm:w-32 sm:h-32 bg-slate-50 rounded-2xl overflow-hidden shrink-0 border border-slate-200 flex items-center justify-center relative group">
+                      <div className="w-24 h-24 sm:w-32 sm:h-32 bg-slate-50 rounded-lg overflow-hidden shrink-0 border border-slate-200 flex items-center justify-center relative group">
                         <img 
                           src={item.image} 
                           alt={item.name}
@@ -127,7 +127,7 @@ const CartPage = () => {
                         {/* Header: Title & Delete */}
                         <div className="flex items-start justify-between gap-4">
                           <div>
-                            <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-1">{item.name}</h3>
+                            <h3 className="text-sm md:text-sm font-bold text-slate-900 mb-1">{item.name}</h3>
                             {/* {item.tag && (
                               <div className="inline-flex items-center gap-1 bg-orange-100 text-orange-600 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">
                                 {item.tag}
@@ -137,7 +137,7 @@ const CartPage = () => {
                           
                           <button 
                             onClick={() => handleRemove(item.id, item.size)}
-                            className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all"
+                            className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-md transition-all"
                             title="Remove item"
                           >
                             <Trash2 className="w-5 h-5" />
@@ -145,7 +145,7 @@ const CartPage = () => {
                         </div>
 
                         {item.description && (
-                          <p className="text-sm text-slate-500 mt-2 line-clamp-1">{item.description}</p>
+                          <p className="text-xs text-slate-500 mt-2 line-clamp-1">{item.description}</p>
                         )}
 
                         {/* Price & Quantity Controls */}
@@ -153,17 +153,17 @@ const CartPage = () => {
                           
                          {/* Price Block */}
                          <div>
-                           <p className="text-2xl font-black text-slate-900 tracking-tight">
+                           <p className="text-base font-black text-slate-900 tracking-tight">
                              {formatCurrency(item.price * item.quantity)}
                            </p>
                          </div>
 
                           {/* Quantity Control */}
                           <div className="grid grid-cols-2 gap-2 w-full">
-                            <div className="flex items-center bg-slate-100 border border-slate-200 rounded-xl px-2 py-1.5 h-12">
+                            <div className="flex items-center bg-slate-100 border border-slate-200 rounded-md px-2 py-1.5 h-12">
                               <button 
                                 onClick={() => handleQuantityChange(item.id, item.size, item.quantity - 1)}
-                                className="w-8 h-full flex items-center justify-center bg-white text-slate-600 rounded-lg shadow-sm hover:text-orange-600 disabled:opacity-50 disabled:hover:text-slate-600 transition-all px-2"
+                                className="w-8 h-full flex items-center justify-center bg-white text-slate-600 rounded-md hover:text-orange-600 disabled:opacity-50 disabled:hover:text-slate-600 transition-all px-2"
                                 disabled={item.quantity <= 1}
                               >
                                 <Minus className="w-4 h-4" />
@@ -171,13 +171,13 @@ const CartPage = () => {
                               <span className="font-bold text-slate-900 w-10 text-center">{item.quantity}</span>
                               <button 
                                 onClick={() => handleQuantityChange(item.id, item.size, item.quantity + 1)}
-                                className="w-8 h-full flex items-center justify-center bg-white text-slate-600 rounded-lg shadow-sm hover:text-orange-600 transition-all px-2"
+                                className="w-8 h-full flex items-center justify-center bg-white text-slate-600 rounded-md hover:text-orange-600 transition-all px-2"
                               >
                                 <Plus className="w-4 h-4" />
                               </button>
                             </div>
                             {item.size && (
-                              <div className="flex items-center justify-center bg-[#241b14] text-white px-3 rounded-xl text-sm font-bold">
+                              <div className="flex items-center justify-center bg-[#241b14] text-white px-3 rounded-md text-xs font-bold">
                                 {item.size}"
                               </div>
                             )}
@@ -191,9 +191,9 @@ const CartPage = () => {
 
                 {/* Stand Suggestion Card */}
                 {cartItems.length > 0 && !hasStand && !standAdded && (
-                  <div className="mt-6 bg-gradient-to-r from-gray-50 to-gray-50 border border-gray-200 rounded-2xl p-6">
+                  <div className="mt-6 bg-gradient-to-r from-gray-50 to-gray-50 border border-gray-200 rounded-lg p-6">
                     <div className="flex flex-col sm:flex-row gap-4 items-center">
-                      <div className="w-20 h-20 bg-white rounded-xl overflow-hidden border border-gray-200 shrink-0">
+                      <div className="w-20 h-20 bg-white rounded-md overflow-hidden border border-gray-200 shrink-0">
                         <Image
                           src={standProductImage}
                           alt={standProduct.name}
@@ -204,14 +204,14 @@ const CartPage = () => {
                       </div>
                       <div className="flex-1 text-center sm:text-left">
                         <p className="text-xs font-bold text-black-600 uppercase tracking-wider mb-1">Complete Your Setup</p>
-                        <h3 className="text-lg font-bold text-slate-900">{standProduct.name}</h3>
-                        <p className="text-sm text-slate-500">{standProduct.description}</p>
+                        <h3 className="text-sm font-bold text-slate-900">{standProduct.name}</h3>
+                        <p className="text-xs text-slate-500">{standProduct.description}</p>
                       </div>
                        <div className="text-center sm:text-right shrink-0">
-                         <p className="text-xl font-bold text-slate-900">{formatCurrency(getLocalizedPrice(standProduct, 0))}</p>
+                         <p className="text-sm font-bold text-slate-900">{formatCurrency(getLocalizedPrice(standProduct, 0))}</p>
                          <button
                            onClick={handleAddStand}
-                           className="mt-2 flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-gray-700 transition-colors"
+                           className="mt-2 flex items-center gap-2 text-xs font-bold text-gray-600 hover:text-gray-700 transition-colors"
                          >
                            <PlusCircle className="w-4 h-4" />
                            Add to Cart
@@ -225,17 +225,17 @@ const CartPage = () => {
 
               {/* Right Column: Order Summary (Sticky) */}
               <div className="lg:col-span-5 xl:col-span-4">
-                <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-8 shadow-sm sticky top-24">
+                <div className="bg-white border border-slate-200 rounded-lg p-6 md:p-8 sticky top-24">
                    
-                  <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">Order Summary</h2>
+                  <h2 className="text-base font-black text-slate-900 mb-6 tracking-tight">Order Summary</h2>
 
                    {/* Pricing Breakdown */}
                    <div className="space-y-4 mb-6 pb-6 border-b border-slate-100">
-                     <div className="flex justify-between text-slate-500 font-medium text-sm md:text-base">
+                     <div className="flex justify-between text-slate-500 font-medium text-xs md:text-xs">
                        <span>Subtotal ({cartItems.reduce((sum, item) => sum + item.quantity, 0)} items)</span>
                        <span className="text-slate-900 font-bold">{formatCurrency(totalPrice)}</span>
                      </div>
-                     <div className="flex justify-between text-slate-500 font-medium text-sm md:text-base">
+                     <div className="flex justify-between text-slate-500 font-medium text-xs md:text-xs">
                        <span>Shipping Delivery</span>
                        <span className="text-green-600 font-bold">FREE</span>
                      </div>
@@ -243,18 +243,18 @@ const CartPage = () => {
 
                    {/* Total Amount */}
                    <div className="flex justify-between items-end mb-8">
-                     <span className="text-lg font-bold text-slate-900">Total</span>
-                     <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
+                     <span className="text-sm font-bold text-slate-900">Total</span>
+                     <span className="text-base font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
                        {formatCurrency(totalPrice)}
                      </span>
                    </div>
 
                   {/* Action Buttons */}
                   <div className="space-y-3">
-                    <Link href="/checkout" className="flex items-center justify-center w-full bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5">
+                    <Link href="/checkout" className="flex items-center justify-center w-full bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-4 md:py-5 rounded-lg font-bold text-xs md:text-sm transition-all duration-300 transform hover:-translate-y-0.5">
                       Proceed to Checkout
                     </Link>
-                    <Link href="/shop" className="flex items-center justify-center w-full bg-slate-50 text-slate-600 border border-slate-200 py-4 rounded-2xl font-bold text-sm hover:bg-slate-100 hover:text-slate-900 transition-all duration-300">
+                    <Link href="/shop" className="flex items-center justify-center w-full bg-slate-50 text-slate-600 border border-slate-200 py-4 rounded-lg font-bold text-xs hover:bg-slate-100 hover:text-slate-900 transition-all duration-300">
                       Continue Shopping
                     </Link>
                   </div>
@@ -268,7 +268,7 @@ const CartPage = () => {
                         { icon: Shield, title: "30-Day Warranty" },
                         { icon: Check, title: "7-Day Returns" },
                       ].map((badge, i) => (
-                        <div key={i} className="flex flex-col items-center justify-center text-center p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <div key={i} className="flex flex-col items-center justify-center text-center p-3 bg-slate-50 rounded-md border border-slate-100">
                           <badge.icon className="w-5 h-5 text-orange-500 mb-1.5" />
                           <span className="text-[10px] md:text-xs font-bold text-slate-600">{badge.title}</span>
                         </div>

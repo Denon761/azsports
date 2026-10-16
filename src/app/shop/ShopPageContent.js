@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShoppingBag } from 'lucide-react';
-import { products, accessories } from '../data/products';
+import { products } from '../data/products';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
 import SeriesGrid from '../components/SeriesGrid';
@@ -29,23 +29,18 @@ const categoryInfo = {
   },
 };
 
-function ShopPageContent({ type = 'all', category = 'all' }) {
+function ShopPageContent({ type = 'all' }) {
   const dispatch = useDispatch();
   const { formatCurrency, getLocalizedPrice } = useCurrency();
 
   const typeFilter = type;
-  const categoryParam = category;
 
-  const allProducts = [...products, ...accessories];
+  const allProducts = products;
 
-  const isFiltered = typeFilter !== 'all' || categoryParam !== 'all';
+  const isFiltered = typeFilter !== 'all';
   const currentCategory = typeFilter !== 'all' ? categoryInfo[typeFilter] : null;
 
   let filteredProducts = allProducts;
-
-  if (categoryParam !== 'all') {
-    filteredProducts = filteredProducts.filter(p => p.category === categoryParam);
-  }
 
   if (typeFilter !== 'all') {
     filteredProducts = filteredProducts.filter(p => p.type === typeFilter);
@@ -62,19 +57,19 @@ function ShopPageContent({ type = 'all', category = 'all' }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16 text-center">
           {currentCategory ? (
             <>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4 font-heading">
+              <h1 className="text-lg md:text-lg font-black text-slate-900 tracking-tight mb-4 font-heading">
                 {currentCategory.name}
               </h1>
-              <p className="text-slate-600 text-sm font-bold max-w-3xl mx-auto">
+              <p className="text-slate-600 text-xs font-bold max-w-3xl mx-auto">
               Hand-crafting carrom boards | Since 1940.
               </p>
             </>
           ) : (
             <>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4 font-heading">
+              <h1 className="text-lg md:text-lg font-black text-slate-900 tracking-tight mb-4 font-heading">
                 Premium Carrom Collection
               </h1>
-              <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto">
+              <p className="text-slate-600 text-sm md:text-sm max-w-3xl mx-auto">
               Hand-crafting carrom boards | Since 1940.
               </p>
             </>
@@ -87,12 +82,12 @@ function ShopPageContent({ type = 'all', category = 'all' }) {
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {filteredProducts.length === 0 ? (
-            <div className="text-center py-20 bg-white rounded-2xl border border-slate-200">
-              <h3 className="text-2xl font-bold text-slate-800 mb-3">No products found</h3>
+            <div className="text-center py-20 bg-white rounded-lg border border-slate-200">
+              <h3 className="text-base font-bold text-slate-800 mb-3">No products found</h3>
               <p className="text-slate-500 mb-6">Try another category</p>
               <Link
                 href="/shop"
-                className="inline-block bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800"
+                className="inline-block bg-slate-900 text-white px-8 py-4 rounded-md font-bold hover:bg-slate-800"
               >
                 View All
               </Link>
@@ -102,7 +97,7 @@ function ShopPageContent({ type = 'all', category = 'all' }) {
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all group hover:shadow-lg hover:border-slate-400"
+                  className="bg-white border border-slate-200 rounded-lg overflow-hidden transition-all group hover:border-slate-400"
                 >
                   <Link href={`/shop/${product.slug}`} className="relative overflow-hidden bg-slate-50 aspect-square block">
                     <Image
@@ -126,25 +121,25 @@ function ShopPageContent({ type = 'all', category = 'all' }) {
 
                   <div className="p-4 flex flex-col">
                     <Link href={`/shop/${product.slug}`}>
-                      <h3 className="text-sm sm:text-xl font-bold text-slate-900 hover:text-slate-700">
+                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 hover:text-slate-700">
                         {product.name}
                       </h3>
                       <div>
-                        <p className="text-sm sm:text-xl font-bold text-green-800 mb-2">
+                        <p className="text-xs sm:text-sm font-bold text-green-800 mb-2">
                           {formatCurrency(getLocalizedPrice(product, 0))}
                         </p>
                         {product.specs?.size && (
-                          <p className="text-sm text-slate-500">{product.specs.size}</p>
+                          <p className="text-xs text-slate-500">{product.specs.size}</p>
                         )}
                       </div>
                     </Link>
-                    {/* <p className="text-slate-600 text-sm mb-4 line-clamp-2">{product.description}</p> */}
+                    {/* <p className="text-slate-600 text-xs mb-4 line-clamp-2">{product.description}</p> */}
 
                     <div className="mt-auto flex items-center justify-between">
                       
                       <Link
                         href={`/shop/${product.slug}`}
-                        className="bg-slate-900 text-white px-5 py-2.5 rounded-xl w-full text-center text-xs font-medium hover:bg-slate-800"
+                        className="bg-slate-900 text-white px-5 py-2.5 rounded-md w-full text-center text-xs font-medium hover:bg-slate-800"
                       >
                         Buy Now
                       </Link>

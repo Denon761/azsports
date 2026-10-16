@@ -26,11 +26,11 @@ export default function Reviews() {
             Testimonials
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight font-heading">
+          <h2 className="text-base md:text-lg lg:text-lg font-black text-gray-900 mb-6 leading-tight tracking-tight font-heading">
             What Our <span className="text-[#241b14]">Champions</span> Say
           </h2>
           
-          <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
+          <p className="text-xs md:text-sm text-gray-600 max-w-xl mx-auto">
             Trusted by professional athletes and carrom clubs worldwide.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <div 
               key={index} 
-              className="group flex flex-col p-8 rounded-[2rem] bg-white border border-gray-200 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]"
+              className="group flex flex-col p-8 rounded-lg bg-white border border-gray-200 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2"
             >
               
               {/* Star Rating */}
@@ -56,7 +56,7 @@ export default function Reviews() {
               </div>
 
               {/* Review Text */}
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8 flex-grow">
+              <p className="text-gray-700 text-xs md:text-xs leading-relaxed mb-8 flex-grow">
                 "{review.text}"
               </p>
 
@@ -64,12 +64,12 @@ export default function Reviews() {
               <div className="flex items-center gap-4 mt-auto pt-6 border-t border-gray-200 group-hover:border-amber-500/20 transition-colors duration-500">
                 
                 {/* Initial Avatar */}
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300 flex items-center justify-center font-bold text-amber-600 shadow-inner">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300 flex items-center justify-center font-bold text-amber-600">
                   {review.name.charAt(0)}
                 </div>
                 
                 <div>
-                  <p className="font-bold text-gray-900 text-sm">{review.name}</p>
+                  <p className="font-bold text-gray-900 text-xs">{review.name}</p>
                   <p className="text-xs text-gray-500 font-medium uppercase tracking-wider mt-0.5">{review.role}</p>
                 </div>
 

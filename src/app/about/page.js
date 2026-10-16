@@ -1,161 +1,204 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'About Us | AZ Sports',
-  description: 'AZ Sports is a leading handmade carrom board manufacturer in Sialkot, Pakistan, producing professional and export-quality wooden carrom boards since 1940.',
+  description: 'AZ Sports – Amjad Zahoor Sports is a handmade carrom board manufacturer in Sialkot, Pakistan, producing professional and export-quality wooden carrom boards since 1940.',
 };
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
-      {/* Hero Section - Matching Home Page Style */}
-      <section className="relative w-full py-20 lg:py-28 overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            AZ <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d2e22] via-[#4a3b2d] to-[#5a4a3a]">SPORTS</span>
-          </h1>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
-            Handmade Carrom Board Manufacturer in Sialkot, Pakistan Since 1940
+    <div className="bg-white min-h-screen font-sans">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-6">
+        <div>
+          <h1 className="text-lg font-black text-gray-900">About Us</h1>
+          <p className="text-gray-600 text-xs mt-1">AZ Sports – Amjad Zahoor Sports</p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Handmade Carrom Board Manufacturer in Pakistan Since 1940</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports – Amjad Zahoor Sports is a long-established handmade carrom board manufacturer in Pakistan, based in Sialkot, the global center of sports goods manufacturing. Since 1940, the company has been producing professional, tournament, and export-quality wooden carrom boards using traditional handmade techniques refined over generations.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            AZ Sports specializes exclusively in handmade carrom boards. Unlike mass-production factories or trading companies, the brand focuses on a single product category, allowing complete control over material selection, craftsmanship precision, and long-term performance. Every board is produced using solid wood, hand-painted playing lines, and disciplined manufacturing practices to ensure consistent rebound, balance, and professional gameplay.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            For decades, AZ Sports has remained committed to authentic manufacturing, earning trust through reliability, precision, and consistency rather than volume or marketing claims.
           </p>
         </div>
-      </section>
 
-      {/* Origin & Overview Section */}
-      <section className="py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 font-heading">Our Origin & Foundation</h2>
-              <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
-                AZ Sports was founded in 1940 by the <strong className="text-gray-900">Late Mirza Zahoor Ellahi</strong>, a pioneer of Pakistan's sports manufacturing industry and a founding member of The Pakistan Sports Cooperative Industrial Society Limited. 
-              </p>
-              <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
-                After returning from the United States, <strong className="text-gray-900">Mirza Muhammad Amjad</strong> continued his father's mission. Today, AZ Sports operates exclusively as a family-run company from our in-house facility in Sialkot, maintaining an uncompromised dedication to authentic, handmade manufacturing.
-              </p>
-              <ul className="text-gray-600 text-sm md:text-base space-y-3 mt-6">
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                  <span><strong className="text-gray-900">100% In-House & Handmade</strong> production</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                  <span><strong className="text-gray-900">Exclusively focused</strong> on wooden carrom boards</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                  <span><strong className="text-gray-900">Zero outsourcing</strong> or private labeling</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-3xl p-6 flex flex-col items-center justify-center text-center border border-gray-200 shadow-sm">
-               <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden mb-6">
-                <Image 
-                  src="/assets/products/003.jpeg"
-                  alt="AZ Sports Manufacturing Heritage"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <p className="text-amber-500 font-bold text-sm italic">
-                A recognized legacy in Pakistan's sports goods heritage.
-              </p>
-            </div>
-          </div>
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Quick Facts</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>Company Name: AZ Sports – Amjad Zahoor Sports</li>
+            <li>Industry: Sports Goods Manufacturing</li>
+            <li>Specialization: Handmade Wooden Carrom Boards</li>
+            <li>Established: 1940</li>
+            <li>Location: Sialkot, Punjab, Pakistan</li>
+            <li>Manufacturing Type: 100% In-House &amp; Handmade</li>
+            <li>Markets Served: Pakistan &amp; International</li>
+          </ul>
         </div>
-      </section>
 
-      {/* Core Manufacturing Values Section */}
-      <section className="py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 text-center font-heading">Why Handmade Matters Today</h2>
-          <p className="text-center text-gray-600 text-sm mb-12 max-w-2xl mx-auto">
-            Unlike industrial factories that prioritize mass output, our traditional craftsmanship emphasizes balance, durability, and long-term professional performance.
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Why AZ Sports Is Known for Carrom Boards</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            For more than eight decades, AZ Sports has focused on a single craft: manufacturing handmade carrom boards. This dedicated specialization has allowed the company to refine every detail involved in professional board making.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {[
-              {
-                title: 'Premium Materials',
-                description: 'We carefully select full solid wood (no recycled/jointed waste). Woods undergo natural seasoning to resist humidity and prevent warping.'
-              },
-              {
-                title: 'Authentic Craftsmanship',
-                description: 'Precision cutting utilizes original England-imported machines. Experienced craftsmen accurately apply hand-painted playing lines.'
-              },
-              {
-                title: 'Quality & Sustainability',
-                description: 'Each board goes through rigorous quality control for surface smoothness and rebound consistency.'
-              }
-            ].map((value, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 text-center hover:border-amber-500/50 transition-colors shadow-sm">
-                <h3 className="text-lg md:text-xl font-black text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 text-sm">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Legacy & Timeline Section */}
-      <section className="py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-12 text-center font-heading">Manufacturing Legacy Timeline</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { year: '1940', text: 'Foundation of AZ Sports by Late Mirza Zahoor Ellahi in Sialkot.' },
-              { year: '1950s-1980s', text: 'Decades spent strictly refining handmade carrom board craftsmanship.' },
-              { year: '1990s-2000s', text: 'Expansion of facilities into professional and globally-exported production.' },
-              { year: 'Present Day', text: 'Family-run in-house operations merging tradition with modern quality standards.' }
-            ].map((milestone, i) => (
-              <div key={i} className="text-center flex flex-col items-center">
-                <div className="mb-4 bg-gradient-to-br from-[#241b14] to-[#3d2e22] rounded-full w-24 h-24 flex items-center justify-center mx-auto overflow-hidden shadow-lg">
-                   <span className="font-black text-white text-sm">{milestone.year}</span>
-                </div>
-                <h3 className="text-md font-bold text-gray-900 mb-2">{milestone.year}</h3>
-                <p className="text-gray-600 text-xs">{milestone.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Facts & Application Target Market Section */}
-      <section className="py-16 bg-gray-50">
-         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-             <h2 className="text-xl font-black text-gray-900 mb-6 text-center border-b border-gray-200 pb-4">Our Professional Reach</h2>
-             <p className="text-gray-600 text-sm text-center mb-8 max-w-2xl mx-auto">
-               From individual professional boards to bulk export consignments, we service both local Pakistan markets and international clients worldwide. Every order receives the exact same precision and quality control.
-             </p>
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-               <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl"><span className="text-sm font-bold text-gray-900">Pro Players & Clubs</span></div>
-               <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl"><span className="text-sm font-bold text-gray-900">Sports Academies</span></div>
-               <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl"><span className="text-sm font-bold text-gray-900">Importers & Distributors</span></div>
-               <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl"><span className="text-sm font-bold text-gray-900">Retailers & International</span></div>
-             </div>
-           </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Matching Home Page Style */}
-      <section className="py-16 lg:py-20 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-6 font-heading">Work With Us</h2>
-          <p className="text-gray-600 text-sm md:text-base mb-8 max-w-2xl mx-auto">
-            AZ Sports is not just a brand; it is a legacy of craftsmanship—built to perform and made to last for generations. For product inquiries, export orders, or dealership opportunities, we welcome you to contact our team.
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            Unlike industrial factories that prioritize mass output, AZ Sports follows traditional craftsmanship that emphasizes balance, durability, and long-term performance.
           </p>
-          <Link href="/contact" className="inline-block bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white px-8 py-3 rounded-full font-bold hover:shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all">
-            Contact Our Team
-          </Link>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">Key reasons AZ Sports is trusted for carrom boards worldwide:</p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Continuous handmade manufacturing since 1940</li>
+            <li>Based in Sialkot, Pakistan, the heart of global sports goods production</li>
+            <li>Use of full solid wood (no jointed, recycled, or waste materials)</li>
+            <li>Hand-painted playing lines instead of screen printing</li>
+            <li>Natural seasoning to resist humidity and sea moisture</li>
+            <li>Consistent quality for professional, tournament, and export use</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            As a handmade carrom board manufacturer in Pakistan, AZ Sports is recognized for craftsmanship and stability rather than mass production.
+          </p>
         </div>
-      </section>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Our Origin &amp; Foundation</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports was founded by Late Mirza Zahoor Ellahi, a pioneer of Pakistan&rsquo;s sports manufacturing industry and a founding member of The Pakistan Sports Cooperative Industrial Society Limited.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            This cooperative was established during the early years of Pakistan to support local manufacturers at a time when importing essential raw materials such as wood and plywood was extremely difficult. His vision laid the foundation for a company built on discipline, integrity, and traditional craftsmanship values that continue to guide AZ Sports today.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">A Legacy Continued in Sialkot</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports is a family-run manufacturing company where expertise has been passed down through generations.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            After returning from the United States, Mirza Muhammad Amjad continued his father&rsquo;s mission, ensuring AZ Sports remained dedicated to authentic handmade manufacturing and uncompromised quality.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            The company continues to operate under the name AZ Sports – Amjad Zahoor Sports in honor of the founding family and its generational legacy.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            In recognition of this contribution, the Sialkot Chamber of Commerce &amp; Industry displayed a handmade AZ Sports carrom board as a tribute to the company&rsquo;s role in Pakistan&rsquo;s sports goods heritage.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Manufacturing Legacy Timeline</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>1940 – Foundation of AZ Sports in Sialkot.</li>
+            <li>1950s–1980s – Refinement of handmade carrom board craftsmanship.</li>
+            <li>1990s–2000s – Expansion into professional and export-grade production.</li>
+            <li>Present Day – Family-run in-house manufacturing combining tradition with modern quality control.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">How AZ Sports Carrom Boards Are Made</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports follows traditional manufacturing methods that very few companies maintain today:
+          </p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Careful selection of properly seasoned solid wood.</li>
+            <li>Precision cutting using original England-imported cutter machines.</li>
+            <li>Accurate hand-painted carrom lines by experienced craftsmen.</li>
+            <li>Natural seasoning to prevent warping and deformation.</li>
+            <li>Final polishing for smooth, balanced, and professional gameplay.</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            Each board is engineered to perform reliably in competitive play and international environments.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Quality Control &amp; Inspection</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            Every AZ Sports carrom board undergoes multiple inspection stages before approval. These checks include surface smoothness, rebound consistency, frame alignment, polish durability, and overall balance to ensure compliance with professional and export-grade performance requirements.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Manufacturing Standards &amp; Transparency</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports operates from its own in-house manufacturing facility in Sialkot, Pakistan. All production is carried out under direct family supervision.
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            The company does not engage in private labeling, third-party manufacturing, or outsourced production. This ensures authenticity, accountability, and consistent quality across all handmade boards.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Why Handmade Still Matters Today</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            In an era dominated by mass production, handmade carrom boards offer superior balance, rebound accuracy, and long-term stability. Traditional craftsmanship allows precise control over materials, seasoning, and finishing qualities essential for professional, tournament, and competitive play.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Professional Use &amp; Applications</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">AZ Sports manufactures handmade carrom boards for:</p>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-1">
+            <li>Professional players and clubs</li>
+            <li>Sports academies and institutions</li>
+            <li>Importers and distributors</li>
+            <li>Retailers and international buyers</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">
+            From individual professional boards to bulk export consignments, every order receives the same level of precision and quality control.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Sustainability &amp; Responsible Manufacturing</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            AZ Sports follows responsible manufacturing practices by using properly seasoned solid wood and minimizing waste through controlled handcrafted production. Traditional methods extend product life cycles, reducing the need for frequent replacement and supporting sustainable manufacturing values.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Our Commitment</h2>
+          <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1">
+            <li>100% Handmade Carrom Boards</li>
+            <li>Premium Solid Wood Selection</li>
+            <li>Traditional Hand-Painted Precision</li>
+            <li>Export-Grade Strength &amp; Stability</li>
+            <li>Proudly Made in Sialkot, Pakistan Since 1940</li>
+          </ul>
+          <p className="text-gray-600 text-xs leading-relaxed mt-2">AZ Sports is not just a brand.</p>
+          <p className="text-gray-600 text-xs leading-relaxed">It is a legacy of craftsmanship—built to perform and made to last for generations.</p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Frequently Asked Question</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            <strong>Q: Who is a leading handmade carrom board manufacturer in Pakistan?</strong>
+          </p>
+          <p className="text-gray-600 text-xs leading-relaxed mt-1">
+            A: AZ Sports – Amjad Zahoor Sports is a leading handmade carrom board manufacturer in Pakistan, based in Sialkot, producing professional and export-quality carrom boards since 1940.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">Authority Note</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            This page reflects the verified manufacturing history, legacy, and in-house production practices of AZ Sports – Amjad Zahoor Sports, a family-run handmade carrom board manufacturer based in Sialkot, Pakistan, with continuous operations since 1940.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-black text-gray-900 mb-2">📩 Work With Us</h2>
+          <p className="text-gray-600 text-xs leading-relaxed">
+            For product inquiries, export orders, or dealership opportunities, we welcome you to{' '}
+            <Link href="/contact" className="text-amber-600 font-bold hover:underline">contact our team</Link>
+            {' '}and become part of a tradition trusted since 1940.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -39,19 +39,19 @@ const Hero = () => {
                     <Star key={i} fill="currentColor" className="w-3.5 h-3.5" />
                   ))}
                 </div>
-                <span className="text-xs md:text-sm font-medium text-gray-700">
+                <span className="text-xs md:text-xs font-medium text-gray-700">
                   Trusted by 2,000+ Pro Players
                 </span>
               </div>
 
               {/* Huge Premium Headline */}
-              <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1] mb-4 font-heading drop-shadow-lg">
+              <h1 className="text-lg sm:text-lg font-bold text-white tracking-tight leading-[1.1] mb-4 font-heading drop-shadow-lg">
                 Hand-crafting carrom boards<br />
                 <span className="text-amber-300">| Since 1940.</span>
               </h1>
 
               {/* Description */}
-              <p className="text-base sm:text-lg text-white/90 max-w-xl leading-relaxed mb-6 drop-shadow-md">
+              <p className="text-xs sm:text-sm text-white/90 max-w-xl leading-relaxed mb-6 drop-shadow-md">
                 Experience the glass-like glide, razor-sharp accuracy, and 
                 legendary rebound of championship-grade carrom boards.
               </p>
@@ -66,26 +66,26 @@ const Hero = () => {
                     <Star key={i} fill="currentColor" className="w-3.5 h-3.5" />
                   ))}
                 </div>
-                <span className="text-xs md:text-sm font-medium text-gray-700">
+                <span className="text-xs md:text-xs font-medium text-gray-700">
                   Trusted by 2,000+ Pro Players
                 </span>
               </div>
 
               {/* Huge Premium Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6 font-heading">
+              <h1 className="text-lg sm:text-lg lg:text-xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6 font-heading">
                 Hand-crafting carrom boards<br />
                 | Since 1940.
               </h1>
 
               {/* Description */}
-              <p className="text-base sm:text-lg text-gray-600 max-w-xl leading-relaxed mb-8">
+              <p className="text-xs sm:text-sm text-gray-600 max-w-xl leading-relaxed mb-8">
                 Experience the glass-like glide, razor-sharp accuracy, and 
                 legendary rebound of championship-grade carrom boards. Handcrafted in Pakistan since 1940.
               </p>
             </div>
 
             {/* Quick Value Props - Desktop only */}
-            {/* <ul className="hidden lg:flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 text-sm font-medium text-gray-700">
+            {/* <ul className="hidden lg:flex flex-col sm:flex-row gap-4 sm:gap-6 mb-10 text-xs font-medium text-gray-700">
               <li className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-amber-500" />
                 100% Solid Wood
@@ -100,13 +100,13 @@ const Hero = () => {
             {/* <div className="hidden lg:flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
               <Link 
                 href="/shop" 
-                className="bg-[#241b14] text-white px-7 py-3 md:py-3.5 rounded-lg text-sm md:text-base font-semibold hover:shadow-[0_0_20px_rgba(36,27,20,0.35)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-0.5"
+                className="bg-[#241b14] text-white px-7 py-3 md:py-3.5 rounded-md text-xs md:text-xs font-semibold transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-0.5"
               >
                 Shop Pro Boards <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </Link>
               <Link 
                 href="/shop" 
-                className="bg-transparent text-gray-900 border border-gray-300 px-7 py-3 md:py-3.5 rounded-lg text-sm md:text-base font-medium hover:bg-gray-100 hover:border-gray-400 transition-all flex items-center justify-center w-full sm:w-auto"
+                className="bg-transparent text-gray-900 border border-gray-300 px-7 py-3 md:py-3.5 rounded-md text-xs md:text-xs font-medium hover:bg-gray-100 hover:border-gray-400 transition-all flex items-center justify-center w-full sm:w-auto"
               >
                 Browse Collection
               </Link>
@@ -125,7 +125,7 @@ const Hero = () => {
               
               {/* Note: A transparent PNG of an isolated carrom board looks best here. */}
               {/* I've added some inline border & shadow styling so even standard JPGs look like an physical frame */}
-              <div className="relative rounded-lg overflow-hidden">
+              <div className="relative rounded-md overflow-hidden">
                 <img 
                   src="https://ts1xw1iyvq.ufs.sh/f/vW3Htblq8C7mqjdSc4TyFE6ZCTekbHqgdOzjvnyYolr7fVcI" 
                   alt="Championship Carrom Board" 
@@ -134,12 +134,12 @@ const Hero = () => {
               </div>
 
               {/* Floating Element - Gives depth to the layout */}
-              <div className="absolute -bottom-8 -left-8 bg-white border border-gray-200 p-4 rounded-xl shadow-lg flex items-center gap-3 transform translate-y-4 lg:group-hover:-translate-y-2 transition-transform duration-700">
+              <div className="absolute -bottom-8 -left-8 bg-white border border-gray-200 p-4 rounded-md flex items-center gap-3 transform translate-y-4 lg:group-hover:-translate-y-2 transition-transform duration-700">
                 <div className="w-10 h-10 bg-amber-500/10 rounded-full flex items-center justify-center border border-amber-500/30">
                   <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
                 </div>
                 <div>
-                  <p className="text-gray-900 font-semibold text-sm">Craftsmanship</p>
+                  <p className="text-gray-900 font-semibold text-xs">Craftsmanship</p>
                   <p className="text-gray-500 text-xs">Since 1940</p>
                 </div>
               </div>

@@ -8,14 +8,7 @@ const seriesTitles = {
 };
 
 export async function generateMetadata({ searchParams }) {
-  const { type, category } = await searchParams;
-
-  if (category === 'accessories') {
-    return {
-      title: 'Carrom Accessories – Strikers, Coins & Powder | AZ Sports',
-      description: 'Carrom accessories from AZ Sports, Sialkot: carrom sets, strikers and boric powder.',
-    };
-  }
+  const { type } = await searchParams;
 
   if (type && seriesTitles[type]) {
     return {
@@ -26,12 +19,12 @@ export async function generateMetadata({ searchParams }) {
 
   return {
     title: 'Shop Handmade Carrom Boards | AZ Sports',
-    description: 'Browse handmade solid-wood carrom boards and accessories made in Sialkot, Pakistan. Regular, Professional, Country and Special series.',
+    description: 'Browse handmade solid-wood carrom boards made in Sialkot, Pakistan. Regular, Professional, Country and Special series.',
   };
 }
 
 export default async function ShopPage({ searchParams }) {
-  const { type, category } = await searchParams;
+  const { type } = await searchParams;
 
-  return <ShopPageContent type={type || 'all'} category={category || 'all'} />;
+  return <ShopPageContent type={type || 'all'} />;
 }

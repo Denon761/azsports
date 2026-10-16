@@ -146,7 +146,7 @@ const CheckoutPage = () => {
       type="submit"
       form="checkout-form"
       disabled={isLoading}
-      className={`${visibilityClass} w-full items-center justify-center gap-3 bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-5 rounded-2xl font-bold text-lg hover:shadow-[0_10px_20px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed`}
+      className={`${visibilityClass} w-full items-center justify-center gap-3 bg-gradient-to-r from-[#241b14] to-[#3d2e22] text-white py-5 rounded-lg font-bold text-sm transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed`}
     >
       {isLoading ? (
         <>
@@ -165,13 +165,13 @@ const CheckoutPage = () => {
   if (cartItems.length === 0 && !orderPlaced) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center font-sans px-4">
-        <div className="bg-white border border-slate-200 rounded-[2rem] p-12 md:p-16 text-center shadow-sm max-w-xl w-full">
-          <div className="w-24 h-24 bg-orange-50 text-orange-500 rounded-[2rem] flex items-center justify-center mx-auto mb-8">
+        <div className="bg-white border border-slate-200 rounded-lg p-12 md:p-16 text-center max-w-xl w-full">
+          <div className="w-24 h-24 bg-orange-50 text-orange-500 rounded-lg flex items-center justify-center mx-auto mb-8">
             <ShoppingBag className="w-10 h-10" strokeWidth={2.5} />
           </div>
-          <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-4 tracking-tight">No items to checkout</h2>
+          <h2 className="text-base md:text-base font-black text-slate-900 mb-4 tracking-tight">No items to checkout</h2>
           <p className="text-slate-500 mb-8 max-w-sm mx-auto leading-relaxed">Your cart is currently empty. Add some premium carrom boards to your cart before proceeding!</p>
-          <Link href="/shop" className="inline-flex items-center justify-center w-full sm:w-auto bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md">
+          <Link href="/shop" className="inline-flex items-center justify-center w-full sm:w-auto bg-slate-900 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-0.5">
             <ArrowLeft className="w-5 h-5 mr-2" /> Continue Shopping
           </Link>
         </div>
@@ -187,45 +187,45 @@ const CheckoutPage = () => {
         {/* Ambient glow behind success card */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div className="bg-white border border-slate-200 rounded-[2rem] p-8 md:p-14 text-center shadow-lg max-w-lg w-full relative z-10 mt-12">
+        <div className="bg-white border border-slate-200 rounded-lg p-8 md:p-14 text-center max-w-lg w-full relative z-10 mt-12">
           
           <div className="flex justify-center mb-8 relative">
             <div className="absolute inset-0 bg-green-500/20 rounded-full blur-xl scale-150 animate-pulse-subtle"></div>
             <CheckCircle className="w-20 h-20 text-green-500 relative z-10" strokeWidth={2} />
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight font-heading">Order Confirmed!</h2>
+          <h2 className="text-base md:text-lg font-black text-slate-900 mb-4 tracking-tight font-heading">Order Confirmed!</h2>
           
           <p className="text-slate-500 mb-6 leading-relaxed">
             Thank you for your purchase. Your premium carrom gear is being prepared and will be shipped shortly.
           </p>
 
           {orderNumber && (
-            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 mb-8">
+            <div className="bg-slate-50 border border-slate-100 rounded-lg p-4 mb-8">
               <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Order Number</p>
-              <p className="text-xl font-black text-slate-800">{orderNumber}</p>
+              <p className="text-sm font-black text-slate-800">{orderNumber}</p>
             </div>
           )}
           
-            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 mb-8">
+            <div className="bg-slate-50 border border-slate-100 rounded-lg p-5 mb-8">
               <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Order Total (Pay on Delivery)</p>
-              <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22]">
+              <p className="text-base font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22]">
                 {formatCurrency(placedTotal)}
               </p>
             </div>
 
           {customerEmailSent ? (
-            <p className="text-sm text-slate-500 mb-8 px-4">
+            <p className="text-xs text-slate-500 mb-8 px-4">
               A confirmation email has been sent to <br/>
               <strong className="text-slate-800">{formData.email}</strong>
             </p>
           ) : (
-            <p className="text-sm text-slate-500 mb-8 px-4">
+            <p className="text-xs text-slate-500 mb-8 px-4">
               We have received your order, but could not email a confirmation to <strong className="text-slate-800">{formData.email}</strong>. Please keep your order number and contact us at info@azsports.pk if you have questions.
             </p>
           )}
 
-          <Link href="/" className="flex items-center justify-center w-full bg-slate-900 text-white py-4 md:py-5 rounded-2xl font-bold text-lg hover:shadow-lg hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-0.5">
+          <Link href="/" className="flex items-center justify-center w-full bg-slate-900 text-white py-4 md:py-5 rounded-lg font-bold text-sm hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-0.5">
             Return to Homepage
           </Link>
         </div>
@@ -243,8 +243,8 @@ const CheckoutPage = () => {
       {/* Top Navigation Bar */}
       <section className="bg-white border-b border-slate-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-          <Link href="/cart" className="group flex items-center gap-2 text-slate-500 hover:text-orange-600 transition-colors w-fit font-semibold text-sm">
-            <div className="bg-slate-100 p-1.5 rounded-lg group-hover:bg-orange-100 transition-colors">
+          <Link href="/cart" className="group flex items-center gap-2 text-slate-500 hover:text-orange-600 transition-colors w-fit font-semibold text-xs">
+            <div className="bg-slate-100 p-1.5 rounded-md group-hover:bg-orange-100 transition-colors">
               <ArrowLeft className="w-4 h-4" />
             </div>
             Back to Cart
@@ -254,7 +254,7 @@ const CheckoutPage = () => {
 
       {/* Page Header */}
       <section className="pt-10 pb-6 max-w-7xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight font-heading">Secure Checkout</h1>
+        <h1 className="text-base md:text-lg font-black text-slate-900 tracking-tight font-heading">Secure Checkout</h1>
         <p className="text-slate-500 mt-2 font-medium">Complete your order details below</p>
       </section>
 
@@ -268,9 +268,9 @@ const CheckoutPage = () => {
               <form id="checkout-form" onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 
                 {/* 1. Shipping Information */}
-                <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-8 shadow-sm">
-                  <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                    <div className="bg-orange-50 text-orange-500 p-2 rounded-xl">
+                <div className="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                  <h2 className="text-sm md:text-base font-black text-slate-900 mb-6 flex items-center gap-3">
+                    <div className="bg-orange-50 text-orange-500 p-2 rounded-md">
                       <Truck className="w-6 h-6" />
                     </div>
                     Shipping Information
@@ -284,7 +284,7 @@ const CheckoutPage = () => {
                         placeholder="First Name *"
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
+                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
                         required
                       />
                       <input
@@ -293,7 +293,7 @@ const CheckoutPage = () => {
                         placeholder="Last Name *"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
+                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
                         required
                       />
                     </div>
@@ -304,7 +304,7 @@ const CheckoutPage = () => {
                       placeholder="Email Address *"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
+                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
                       required
                     />
 
@@ -314,7 +314,7 @@ const CheckoutPage = () => {
                       placeholder="Phone Number (Optional)"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
+                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
                     />
 
                     <input
@@ -323,7 +323,7 @@ const CheckoutPage = () => {
                       placeholder="Street Address *"
                       value={formData.address}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
+                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
                       required
                     />
 
@@ -334,7 +334,7 @@ const CheckoutPage = () => {
                         placeholder="City"
                         value={formData.city}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
+                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
                       />
                       <input
                         type="text"
@@ -342,7 +342,7 @@ const CheckoutPage = () => {
                         placeholder="Postal Code *"
                         value={formData.postcode}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
+                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 placeholder:text-slate-400"
                         required
                       />
                     </div>
@@ -351,7 +351,7 @@ const CheckoutPage = () => {
                       name="country"
                       value={formData.country}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 appearance-none"
+                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-slate-900 appearance-none"
                     >
                       <option>Pakistan</option>
                       <option>United Kingdom</option>
@@ -364,25 +364,25 @@ const CheckoutPage = () => {
                 </div>
 
                 {/* 2. Cash on Delivery (COD) */}
-                <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-8 shadow-sm">
+                <div className="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
                    
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-                    <h2 className="text-xl md:text-2xl font-black text-slate-900 flex items-center gap-3">
-                      <div className="bg-orange-50 text-orange-500 p-2 rounded-xl">
+                    <h2 className="text-sm md:text-base font-black text-slate-900 flex items-center gap-3">
+                      <div className="bg-orange-50 text-orange-500 p-2 rounded-md">
                         <CreditCard className="w-6 h-6" />
                       </div>
                       Payment Method
                     </h2>
                   </div>
 
-                  <div className="bg-green-50 border border-green-200 rounded-2xl p-5">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-5">
                     <div className="flex items-center gap-3">
-                      <div className="bg-green-100 p-2 rounded-lg">
+                      <div className="bg-green-100 p-2 rounded-md">
                         <Package className="w-6 h-6 text-green-600" />
                       </div>
                       <div>
-                        <p className="text-base font-bold text-green-800">Cash on Delivery (COD)</p>
-                        <p className="text-sm text-green-600">Pay when you receive your order</p>
+                        <p className="text-xs font-bold text-green-800">Cash on Delivery (COD)</p>
+                        <p className="text-xs text-green-600">Pay when you receive your order</p>
                       </div>
                     </div>
                   </div>
@@ -401,33 +401,33 @@ const CheckoutPage = () => {
 
             {/* Right Column: Order Summary (Sticky) */}
             <div className="lg:col-span-5 xl:col-span-4 mt-8 lg:mt-0">
-              <div className="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-8 shadow-sm sticky top-24">
+              <div className="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
                 
-                <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-6 tracking-tight">Order Summary</h2>
+                <h2 className="text-sm md:text-base font-black text-slate-900 mb-6 tracking-tight">Order Summary</h2>
 
                 {/* Items List */}
                 <div className="space-y-4 mb-6 pb-6 border-b border-slate-100 max-h-[320px] overflow-y-auto pr-2 custom-scrollbar">
                   {cartItems.map((item) => (
-                    <div key={`${item.id}-${item.addStand}`} className="flex gap-4 p-3 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div key={`${item.id}-${item.addStand}`} className="flex gap-4 p-3 bg-slate-50 rounded-lg border border-slate-100">
                       
                       {/* Thumbnail */}
-                      <div className="w-16 h-16 bg-white rounded-xl border border-slate-200 p-1 shrink-0 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white rounded-md border border-slate-200 p-1 shrink-0 flex items-center justify-center">
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className="w-full h-full object-cover rounded-lg"
+                          className="w-full h-full object-cover rounded-md"
                         />
                       </div>
                       
                       {/* Details */}
                       <div className="flex-1 py-1">
-                        <p className="text-sm font-bold text-slate-900 leading-tight">{item.name}</p>
+                        <p className="text-xs font-bold text-slate-900 leading-tight">{item.name}</p>
                         <p className="text-xs text-slate-500 mt-1">Qty: {item.quantity}</p>
                       </div>
                       
                        {/* Line Price */}
                        <div className="py-1 text-right">
-                         <p className="text-sm font-bold text-slate-900">
+                         <p className="text-xs font-bold text-slate-900">
                            {formatCurrency(item.price * item.quantity)}
                          </p>
                        </div>
@@ -437,9 +437,9 @@ const CheckoutPage = () => {
 
                 {/* Stand Suggestion Card */}
                 {cartItems.length > 0 && !hasStand && !standAdded && (
-                  <div className="mt-4 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4">
+                  <div className="mt-4 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-4">
                     <div className="flex gap-3 items-center">
-                      <div className="w-14 h-14 bg-white rounded-lg overflow-hidden border border-amber-200 shrink-0">
+                      <div className="w-14 h-14 bg-white rounded-md overflow-hidden border border-amber-200 shrink-0">
                         <Image
                           src={standProductImage}
                           alt={standProduct.name}
@@ -450,7 +450,7 @@ const CheckoutPage = () => {
                       </div>
                       <div className="flex-1 min-w-0">
                          <p className="text-xs font-bold text-amber-600 uppercase tracking-wider">Complete Your Setup</p>
-                         <p className="text-sm font-bold text-slate-900 truncate">{standProduct.name}</p>
+                         <p className="text-xs font-bold text-slate-900 truncate">{standProduct.name}</p>
                          <p className="text-xs text-slate-500">{formatCurrency(getLocalizedPrice(standProduct, 0))}</p>
                       </div>
                       <button
@@ -466,11 +466,11 @@ const CheckoutPage = () => {
 
                  {/* Totals Breakdown */}
                  <div className="space-y-3 mb-6">
-                   <div className="flex justify-between text-slate-500 text-sm font-medium">
+                   <div className="flex justify-between text-slate-500 text-xs font-medium">
                      <span>Subtotal ({totalItems} items)</span>
                      <span className="text-slate-900 font-bold">{formatCurrency(totalPrice)}</span>
                    </div>
-                   <div className="flex justify-between text-slate-500 text-sm font-medium">
+                   <div className="flex justify-between text-slate-500 text-xs font-medium">
                      <span>Shipping Delivery</span>
                      <span className="text-green-600 font-bold">FREE</span>
                    </div>
@@ -479,8 +479,8 @@ const CheckoutPage = () => {
                  {/* Grand Total */}
                  <div className="border-t border-slate-100 pt-6">
                    <div className="flex items-end justify-between">
-                     <span className="text-lg font-bold text-slate-900">Total</span>
-                     <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
+                     <span className="text-sm font-bold text-slate-900">Total</span>
+                     <span className="text-base font-black text-transparent bg-clip-text bg-gradient-to-r from-[#241b14] to-[#3d2e22] tracking-tight">
                        {formatCurrency(finalTotal)}
                      </span>
                    </div>
@@ -493,8 +493,8 @@ const CheckoutPage = () => {
                     { icon: Shield, title: "30-Day Warranty", sub: "Manufacturing defects" },
                     { icon: RotateCcw, title: "7-Day Returns", sub: "Hassle-free policy" },
                   ].map((badge, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                      <div className="bg-orange-50 p-2 rounded-lg text-orange-500 shrink-0">
+                    <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-md border border-slate-100">
+                      <div className="bg-orange-50 p-2 rounded-md text-orange-500 shrink-0">
                         <badge.icon className="w-5 h-5" />
                       </div>
                       <div>

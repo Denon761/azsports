@@ -1,4 +1,4 @@
-import { products, accessories, standProduct } from './data/products';
+import { products } from './data/products';
 
 const BASE_URL = 'https://azsports.pk';
 
@@ -6,6 +6,7 @@ const staticPages = [
   { path: '', priority: 1.0, changeFrequency: 'weekly' },
   { path: '/shop', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/about', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/founders-legacy', priority: 0.5, changeFrequency: 'yearly' },
   { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.5, changeFrequency: 'monthly' },
   { path: '/rules', priority: 0.5, changeFrequency: 'yearly' },
@@ -26,7 +27,7 @@ export default function sitemap() {
     priority,
   }));
 
-  const productPages = [...products, ...accessories, standProduct].map((product) => ({
+  const productPages = products.map((product) => ({
     url: `${BASE_URL}/shop/${product.slug}`,
     lastModified,
     changeFrequency: 'monthly',

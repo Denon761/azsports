@@ -2,7 +2,7 @@ import ContactPageContent from './ContactPageContent';
 
 export const metadata = {
   title: 'Contact Us | AZ Sports',
-  description: 'Contact AZ Sports in Sialkot, Pakistan for carrom board orders, bulk and export enquiries, and product questions.',
+  description: 'Contact AZ Sports – Amjad Zahoor Sports in Sialkot, Pakistan for product inquiries, manufacturing details, export coordination, and bulk orders.',
 };
 
 export default function ContactPage() {
