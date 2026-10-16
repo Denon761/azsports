@@ -89,7 +89,7 @@ const ProductGrid = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 lg:mb-12 gap-6">
           <div className="max-w-2xl text-left">
             <h2 className="text-base sm:text-lg md:text-lg font-black text-zinc-950 tracking-tight mb-4 leading-tight font-heading">
-              Select Your <span className="text-black block sm:inline">Champion's Board.</span>
+              Select Your <span className="text-black block sm:inline">Champion&apos;s Board.</span>
             </h2>
           </div>
 
@@ -106,16 +106,6 @@ const ProductGrid = () => {
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-        </div>
-
-        {/* Mobile View All Button */}
-        <div className="mt-8 flex justify-center md:hidden">
-          <Link 
-            href="/shop" 
-            className="w-full inline-flex justify-center items-center gap-2 bg-white border border-zinc-200 font-bold text-xs text-zinc-900 rounded-md px-6 py-4"
-          >
-            Explore All Products <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
 
       </div>

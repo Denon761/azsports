@@ -108,11 +108,6 @@ export default function HomeContent() {
               </Link>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link href="/shop" className={primaryButton}>
-              Explore All Carrom Boards <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </section>
 

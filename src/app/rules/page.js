@@ -1,78 +1,174 @@
 export const metadata = {
-  title: 'Rules of Carrom | AZ Sports',
-  description: 'Learn the official rules of carrom',
+  title: 'Official Rules of Carrom: Queen, Fouls and Scoring | AZ Sports',
+  description: 'Learn how to play carrom, including board setup, queen rules, fouls, scoring and winning conditions.',
 };
 
 export default function RulesPage() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      {/* Hero Section */}
-      <section className="relative w-full py-20 lg:py-28 overflow-hidden">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-lg md:text-lg lg:text-xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            Official Rules of Carrom
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+          <h1 className="text-xl md:text-2xl font-black text-gray-900 mb-4 font-heading">
+            Official Rules of Carrom: How to Play, Queen Rules, Fouls and Scoring
           </h1>
-          <p className="text-gray-600 text-xs md:text-sm">Learn how to play the game properly</p>
+          <p className="text-gray-600 leading-relaxed">
+            Carrom is a popular indoor board game that combines skill, precision, strategy and concentration. Whether you are a beginner learning how to play or an experienced player preparing for a competitive match, understanding the rules of carrom helps you play fairly and confidently.
+          </p>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            This guide explains the basic rules of carrom, including board setup, striker placement, queen covering, fouls, scoring and winning conditions. For official tournament play, always consult the latest regulations issued by the relevant carrom governing body.
+          </p>
         </div>
-      </section>
+      </header>
 
-      {/* Content */}
-      <section className="py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="space-y-6">
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h2 className="text-sm md:text-base font-black text-gray-900 mb-4 font-heading">1. The Board and Pieces</h2>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>The carrom board is a 29" × 29" square wooden board</li>
-                <li>Nine black carrommen (pieces) and nine white carrommen</li>
-                <li>One red carromman (queen)</li>
-                <li>One striker per player</li>
-              </ul>
-            </div>
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <article className="space-y-10 text-sm leading-relaxed text-gray-700">
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">1. What Is Carrom?</h2>
+            <p>Carrom is a tabletop game played using a striker to pocket smaller playing pieces, known as carrom men, into four corner pockets. The game is commonly played in singles by two players or in doubles by four players divided into two teams.</p>
+            <p className="mt-3">The standard set includes nine white carrom men, nine black carrom men and one red piece called the queen.</p>
+            <p className="mt-3">The objective is to pocket your assigned carrom men and finish the board according to the applicable rules.</p>
+          </section>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h2 className="text-sm md:text-base font-black text-gray-900 mb-4 font-heading">2. Objective</h2>
-              <p className="text-gray-600 leading-relaxed">
-                The objective is to pocket all your assigned pieces (either black or white) 
-                and the queen before your opponent does the same with their pieces.
-              </p>
-            </div>
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">2. Carrom Board and Equipment</h2>
+            <p>A standard carrom game requires:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-2">
+              <li><strong>Carrom board:</strong> A square playing surface with four corner pockets, marked baselines and a smooth finish.</li>
+              <li><strong>Carrom men:</strong> Nine white and nine black playing pieces.</li>
+              <li><strong>Queen:</strong> One red playing piece.</li>
+              <li><strong>Striker:</strong> A larger disc used to strike the carrom men.</li>
+              <li><strong>Carrom powder:</strong> A permitted powder used to improve the movement of pieces across the playing surface.</li>
+            </ul>
+            <p className="mt-3">For competitive play, the board and playing equipment should meet the specifications of the relevant governing body.</p>
+          </section>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h2 className="text-sm md:text-base font-black text-gray-900 mb-4 font-heading">3. Starting the Game</h2>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>The striker is flicked using the finger</li>
-                <li>The striker must hit at least one carromman</li>
-                <li>The opening shot is from the baseline</li>
-                <li>Players alternate turns</li>
-              </ul>
-            </div>
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">3. How to Set Up a Carrom Game</h2>
+            <p>Arrange the carrom men in the prescribed formation inside the centre circle, with the queen positioned in the middle.</p>
+            <p className="mt-3">In singles, the two players sit opposite each other. In doubles, teammates sit opposite one another.</p>
+            <p className="mt-3">The first break is determined according to the applicable rules. Before shooting, the player must position the striker correctly within the permitted baseline area.</p>
+          </section>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h2 className="text-sm md:text-base font-black text-gray-900 mb-4 font-heading">4. Fouls</h2>
-              <p className="text-gray-600 mb-4">Common fouls include:</p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Pocketing the striker</li>
-                <li>Failing to hit your own piece first</li>
-                <li>The striker leaving the board</li>
-                <li>Playing out of turn</li>
-              </ul>
-            </div>
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">4. How to Play Carrom</h2>
+            <p>Players take turns using a finger to strike the striker and pocket their assigned carrom men.</p>
+            <p className="mt-3">The basic playing principles are:</p>
+            <ol className="list-decimal pl-5 mt-2 space-y-2">
+              <li>Place the striker within the permitted shooting area.</li>
+              <li>Strike it with a legal finger movement rather than pushing it.</li>
+              <li>Aim to pocket your assigned carrom men.</li>
+              <li>Continue your turn when permitted by the rules.</li>
+              <li>Avoid illegal contact with pieces and other fouls.</li>
+              <li>Follow the prescribed playing position and shooting procedure.</li>
+            </ol>
+            <p className="mt-3">Successful carrom playing requires accurate aiming, controlled force and an understanding of rebounds and angles.</p>
+          </section>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h2 className="text-sm md:text-base font-black text-gray-900 mb-4 font-heading">5. Winning the Game</h2>
-              <p className="text-gray-600 leading-relaxed">
-                The first player to pocket all their carrommen and then pocket the queen wins the game. 
-                If the queen is not pocketed before a player pockets their last carromman, 
-                that player cannot win.
-              </p>
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">5. Queen Rules in Carrom</h2>
+            <p>The red playing piece is known as the queen. Under standard competitive rules, the queen is worth three points, subject to the applicable scoring conditions.</p>
+            <p className="mt-3">A player may pocket the queen after pocketing at least one of their own carrom men. The queen must then be covered by pocketing one of the player&apos;s own carrom men in the same or the immediately subsequent stroke, as prescribed by the applicable rules.</p>
+            <p className="mt-3">If the queen is not legally covered, it is returned to the board according to the rules.</p>
+            <p className="mt-3">The queen cannot be treated as an ordinary carrom man. Its successful covering and the circumstances in which it is pocketed can affect the result and score of a board.</p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">6. Common Carrom Fouls</h2>
+            <p>A foul occurs when a player violates a playing rule. Common examples include:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-2">
+              <li>Pocketing the striker.</li>
+              <li>Making an illegal stroke or pushing the striker.</li>
+              <li>Placing the striker incorrectly.</li>
+              <li>Touching or moving carrom men improperly.</li>
+              <li>Violating the prescribed playing position or procedure.</li>
+            </ul>
+            <p className="mt-3">The penalty depends on the specific infringement. Depending on the applicable rule, a player may have to return a pocketed piece, place a due or penalty piece on the board, or lose their turn.</p>
+            <p className="mt-3">Tournament players should consult the official laws for the exact penalty associated with each foul.</p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">7. Carrom Scoring Rules</h2>
+            <p>Under the scoring system published in the Indian Carrom Federation&apos;s laws:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-2">
+              <li>Each carrom man remaining on the board for the losing player contributes one point to the winner&apos;s score.</li>
+              <li>The queen is worth three additional points when the winner is entitled to receive them under the rules.</li>
+              <li>The queen&apos;s additional points are subject to the prescribed score limits.</li>
+              <li>The game is played to the specified target or board limit under the applicable format.</li>
+            </ul>
+            <p className="mt-3">In the cited rules, a game consists of 25 points or eight boards, whichever occurs first. Competition organisers should confirm the current rules and format for their event.</p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">8. How to Win a Game of Carrom</h2>
+            <p>A player wins an individual board by legally pocketing all their own carrom men first, subject to the queen and other applicable rules.</p>
+            <p className="mt-3">In a match, the overall winner is determined by the prescribed scoring system and competition format. Some competitions use multiple boards, point limits or match-specific regulations.</p>
+            <p className="mt-3">A player should never assume that pocketing the final carrom man automatically guarantees a win: the position of the queen and any fouls or outstanding penalties may affect the result.</p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">9. Tips for Better Carrom Playing</h2>
+            <p>Players can improve their technique through regular practice and correct equipment use.</p>
+            <ul className="list-disc pl-5 mt-2 space-y-2">
+              <li>Practise straight shots to develop accuracy.</li>
+              <li>Learn how rebounds and angles affect the striker.</li>
+              <li>Control the force of each shot.</li>
+              <li>Keep the playing surface clean and use permitted powder.</li>
+              <li>Plan shots to pocket your own pieces while limiting your opponent&apos;s opportunities.</li>
+              <li>Use a stable, level board with a smooth playing surface.</li>
+            </ul>
+            <p className="mt-3">Consistent practice helps develop better control, positioning and shot selection.</p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">10. Choosing a Carrom Board for Practice and Competition</h2>
+            <p>A good carrom board should have a smooth playing surface, accurate markings, a stable frame and carefully finished playing areas.</p>
+            <p className="mt-3">When choosing a board for home use, clubs, sports academies or competitive play, consider its construction, intended use and compliance with the relevant tournament specifications.</p>
+            <p className="mt-3">AZ Sports – Amjad Zahoor Sports is a handmade wooden carrom board manufacturer based in Sialkot, Pakistan. The company focuses on traditional craftsmanship and produces carrom boards for players, retailers and international buyers.</p>
+            <p className="mt-3">Explore AZ Sports to learn more about its handmade carrom boards and manufacturing heritage.</p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-black text-gray-900 mb-4 font-heading">Frequently Asked Questions About Carrom Rules</h2>
+            <div className="divide-y divide-gray-200 border-y border-gray-200">
+              <details className="py-4">
+                <summary className="font-bold text-gray-900 cursor-pointer">How many players can play carrom?</summary>
+                <p className="mt-2">Carrom is commonly played by two players in singles or four players in doubles.</p>
+              </details>
+              <details className="py-4">
+                <summary className="font-bold text-gray-900 cursor-pointer">How many carrom men are used in a standard game?</summary>
+                <p className="mt-2">A standard set contains nine white and nine black carrom men, plus one red queen.</p>
+              </details>
+              <details className="py-4">
+                <summary className="font-bold text-gray-900 cursor-pointer">What is the queen in carrom?</summary>
+                <p className="mt-2">The queen is the red playing piece. Under standard competitive rules, it must be legally covered after being pocketed, subject to the applicable rules.</p>
+              </details>
+              <details className="py-4">
+                <summary className="font-bold text-gray-900 cursor-pointer">What happens if the striker goes into a pocket?</summary>
+                <p className="mt-2">Pocketing the striker is generally a foul. The precise penalty depends on the circumstances and the applicable rules.</p>
+              </details>
+              <details className="py-4">
+                <summary className="font-bold text-gray-900 cursor-pointer">How many points is the queen worth?</summary>
+                <p className="mt-2">Under the cited Indian Carrom Federation scoring rules, the queen is worth three points when the player is eligible to receive them.</p>
+              </details>
+              <details className="py-4">
+                <summary className="font-bold text-gray-900 cursor-pointer">Where can I find the official laws of carrom?</summary>
+                <p className="mt-2">
+                  Read the published <a className="font-semibold text-orange-700 underline underline-offset-2" href="https://www.indiancarrom.co.in/laws-of-carrom/" target="_blank" rel="noreferrer">Laws of Carrom from the Carrom Federation</a>. For international events, consult the relevant governing body and the current tournament regulations.
+                </p>
+              </details>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+          <section className="border-t border-gray-200 pt-8">
+            <h2 className="text-base font-black text-gray-900 mb-3 font-heading">About AZ Sports – Amjad Zahoor Sports</h2>
+            <p>AZ Sports – Amjad Zahoor Sports is a handmade wooden carrom board manufacturer based in Sialkot, Pakistan. The company has a manufacturing heritage dating back to 1940.</p>
+            <p className="mt-3">Through its focus on carrom board craftsmanship, AZ Sports serves players, clubs, retailers and international buyers seeking handmade wooden boards.</p>
+            <p className="mt-3">Visit AZSports.pk to explore the company&apos;s products and manufacturing heritage.</p>
+            <p className="mt-5 font-bold text-gray-900">AZ Sports – Amjad Zahoor Sports</p>
+            <p className="text-gray-600">Handmade Carrom Boards | Sialkot, Pakistan | Established 1940</p>
+          </section>
+        </article>
+      </main>
     </div>
   );
 }

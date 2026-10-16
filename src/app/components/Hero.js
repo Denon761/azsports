@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, ShieldCheck, Zap } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -32,18 +31,6 @@ const Hero = () => {
             
             {/* Mobile wrapper - centers content and ensures readability with bg overlay */}
             <div className="lg:hidden w-full mb-auto">
-              {/* Social Proof Badge */}
-              <div className="inline-flex items-center gap-2.5 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-amber-50/90 border border-amber-200 backdrop-blur-md mb-6">
-                <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} fill="currentColor" className="w-3.5 h-3.5" />
-                  ))}
-                </div>
-                <span className="text-xs md:text-xs font-medium text-gray-700">
-                  Trusted by 2,000+ Pro Players
-                </span>
-              </div>
-
               {/* Huge Premium Headline */}
               <h1 className="text-lg sm:text-lg font-bold text-white tracking-tight leading-[1.1] mb-4 font-heading drop-shadow-lg">
                 Hand-crafting carrom boards<br />
@@ -59,18 +46,6 @@ const Hero = () => {
 
             {/* Desktop content - hidden on mobile */}
             <div className="hidden lg:block">
-              {/* Social Proof Badge */}
-              <div className="inline-flex items-center gap-2.5 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-amber-50 border border-amber-200 backdrop-blur-md mb-8">
-                <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} fill="currentColor" className="w-3.5 h-3.5" />
-                  ))}
-                </div>
-                <span className="text-xs md:text-xs font-medium text-gray-700">
-                  Trusted by 2,000+ Pro Players
-                </span>
-              </div>
-
               {/* Huge Premium Headline */}
               <h1 className="text-lg sm:text-lg lg:text-xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6 font-heading">
                 Hand-crafting carrom boards<br />

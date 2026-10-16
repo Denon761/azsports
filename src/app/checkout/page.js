@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { clearCart } from '../store/cartSlice';
 import Link from 'next/link';
 import {
-  ArrowLeft, CheckCircle, Shield, Truck, RotateCcw,
+  ArrowLeft, CheckCircle, Truck,
   CreditCard, Lock, ShoppingBag, Package, Zap
 } from 'lucide-react';
 import { useCurrency } from '../context/CurrencyContext';
@@ -409,10 +409,6 @@ const CheckoutPage = () => {
                      <span>Subtotal ({totalItems} items)</span>
                      <span className="text-slate-900 font-bold">{formatCurrency(totalPrice)}</span>
                    </div>
-                   <div className="flex justify-between text-slate-500 text-xs font-medium">
-                     <span>Shipping Delivery</span>
-                     <span className="text-green-600 font-bold">FREE</span>
-                   </div>
                  </div>
 
                  {/* Grand Total */}
@@ -424,25 +420,6 @@ const CheckoutPage = () => {
                      </span>
                    </div>
                  </div>
-
-                {/* Unified Trust Badges */}
-                <div className="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 gap-3">
-                  {[
-                    { icon: Truck, title: "Free Pakistan Delivery", sub: "On all orders today" },
-                    { icon: Shield, title: "30-Day Warranty", sub: "Manufacturing defects" },
-                    { icon: RotateCcw, title: "7-Day Returns", sub: "Hassle-free policy" },
-                  ].map((badge, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-md border border-slate-100">
-                      <div className="bg-orange-50 p-2 rounded-md text-orange-500 shrink-0">
-                        <badge.icon className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold text-slate-900">{badge.title}</p>
-                        <p className="text-[10px] text-slate-500">{badge.sub}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
 
               </div>
 

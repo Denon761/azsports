@@ -24,6 +24,7 @@ const footerLinks = [
     items: [
       { label: "Official Rules", href: "/rules" },
       { label: "Board Maintenance", href: "/maintenance" },
+      { label: "Manufacturing Process", href: "/manufacturing-process" },
       { label: "About AZ Sports", href: "/about" },
       { label: "Founder's Legacy", href: "/founders-legacy" },
       { label: "Contact Us", href: "/contact" },

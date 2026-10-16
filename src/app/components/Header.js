@@ -25,6 +25,7 @@ const utilityLinks = [
   { name: 'Contact Us', href: '/contact' },
   { name: 'Rules of Carrom', href: '/rules' },
   { name: 'Board Maintenance', href: '/maintenance' },
+  { name: 'Manufacturing Process', href: '/manufacturing-process' },
   { name: 'Faqs', href: '/faq' },
   { name: 'Shipping Policy', href: '/shipping' },
   { name: 'Privacy Policy', href: '/privacy' },
