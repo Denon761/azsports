@@ -2,26 +2,13 @@
 
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart, addToCart } from '../store/cartSlice';
+import { clearCart } from '../store/cartSlice';
 import Link from 'next/link';
-import Image from 'next/image';
-import { 
-  ArrowLeft, CheckCircle, Shield, Truck, RotateCcw, 
-  CreditCard, Lock, ShoppingBag, Package, Zap, PlusCircle
+import {
+  ArrowLeft, CheckCircle, Shield, Truck, RotateCcw,
+  CreditCard, Lock, ShoppingBag, Package, Zap
 } from 'lucide-react';
-import standProductImage from '../assets/products/stand.png';
 import { useCurrency } from '../context/CurrencyContext';
-
-const standProduct = {
-  id: 'stand-01',
-  name: 'Foldable Metal Stand',
-  price: 6500,
-  prices: {
-    PK: [6500],
-    US: [Math.round(6500 * 0.0036)],
-  },
-  description: 'Premium foldable metal stand for easy storage and gameplay at the perfect height.',
-};
 
 const CheckoutPage = () => {
   const dispatch = useDispatch();
@@ -34,7 +21,6 @@ const CheckoutPage = () => {
   const [orderNumber, setOrderNumber] = useState('');
   const [placedTotal, setPlacedTotal] = useState(0);
   const [customerEmailSent, setCustomerEmailSent] = useState(true);
-  const [standAdded, setStandAdded] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -50,25 +36,6 @@ const CheckoutPage = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-
-  const handleAddStand = () => {
-    const localizedPrice = getLocalizedPrice(standProduct, 0);
-    dispatch(addToCart({ 
-      product: {
-        id: standProduct.id,
-        name: standProduct.name,
-        price: standProduct.price,
-        image: standProductImage,
-        description: standProduct.description,
-        prices: standProduct.prices,
-      }, 
-      quantity: 1,
-      price: localizedPrice,
-    }));
-    setStandAdded(true);
-  };
-
-  const hasStand = cartItems.some(item => item.id === 'stand-01');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -435,34 +402,6 @@ const CheckoutPage = () => {
                   ))}
                 </div>
 
-                {/* Stand Suggestion Card */}
-                {cartItems.length > 0 && !hasStand && !standAdded && (
-                  <div className="mt-4 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-4">
-                    <div className="flex gap-3 items-center">
-                      <div className="w-14 h-14 bg-white rounded-md overflow-hidden border border-amber-200 shrink-0">
-                        <Image
-                          src={standProductImage}
-                          alt={standProduct.name}
-                          width={56}
-                          height={56}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                         <p className="text-xs font-bold text-amber-600 uppercase tracking-wider">Complete Your Setup</p>
-                         <p className="text-xs font-bold text-slate-900 truncate">{standProduct.name}</p>
-                         <p className="text-xs text-slate-500">{formatCurrency(getLocalizedPrice(standProduct, 0))}</p>
-                      </div>
-                      <button
-                        onClick={handleAddStand}
-                        className="shrink-0 flex items-center gap-1 text-xs font-bold text-amber-600 hover:text-amber-700 transition-colors"
-                      >
-                        <PlusCircle className="w-4 h-4" />
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                )}
 
                  {/* Totals Breakdown */}
                  <div className="space-y-3 mb-6">

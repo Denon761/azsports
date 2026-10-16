@@ -1,34 +1,20 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, updateQuantity, addToCart } from '../store/cartSlice';
+import { removeFromCart, updateQuantity } from '../store/cartSlice';
 import Link from 'next/link';
-import { 
-  Trash2, Minus, Plus, ArrowLeft, ShoppingBag, 
-  Check, Package, Shield, Truck, PlusCircle
+import {
+  Trash2, Minus, Plus, ArrowLeft, ShoppingBag,
+  Check, Package, Shield, Truck
 } from 'lucide-react';
-import Image from 'next/image';
-import standProductImage from '../assets/products/stand.png';
 import { useCurrency } from '../context/CurrencyContext';
-
-const standProduct = {
-  id: 'stand-01',
-  name: 'Foldable Metal Stand',
-  price: 6500,
-  prices: {
-    PK: [6500],
-    US: [Math.round(6500 * 0.0036)], // ~$23
-  },
-  description: 'Premium foldable metal stand for easy storage and gameplay at the perfect height.',
-};
 
 const CartPage = () => {
   const dispatch = useDispatch();
-  const { formatCurrency, getLocalizedPrice } = useCurrency();
+  const { formatCurrency } = useCurrency();
   const cartItems = useSelector(state => state.cart.items);
   const totalPrice = useSelector(state => state.cart.totalPrice);
-  const [standAdded, setStandAdded] = useState(false);
 
   const handleRemove = (id, size) => {
     dispatch(removeFromCart({ id, size }));
@@ -37,25 +23,6 @@ const CartPage = () => {
   const handleQuantityChange = (id, size, newQuantity) => {
     dispatch(updateQuantity({ id, size, quantity: newQuantity }));
   };
-
-  const handleAddStand = () => {
-    const localizedPrice = getLocalizedPrice(standProduct, 0);
-    dispatch(addToCart({ 
-      product: {
-        id: standProduct.id,
-        name: standProduct.name,
-        price: standProduct.price,
-        image: standProductImage,
-        description: standProduct.description,
-        prices: standProduct.prices,
-      }, 
-      quantity: 1,
-      price: localizedPrice,
-    }));
-    setStandAdded(true);
-  };
-
-  const hasStand = cartItems.some(item => item.id === 'stand-01');
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans pb-24">
@@ -188,38 +155,6 @@ const CartPage = () => {
                     </div>
                   ))}
                 </div>
-
-                {/* Stand Suggestion Card */}
-                {cartItems.length > 0 && !hasStand && !standAdded && (
-                  <div className="mt-6 bg-gradient-to-r from-gray-50 to-gray-50 border border-gray-200 rounded-lg p-6">
-                    <div className="flex flex-col sm:flex-row gap-4 items-center">
-                      <div className="w-20 h-20 bg-white rounded-md overflow-hidden border border-gray-200 shrink-0">
-                        <Image
-                          src={standProductImage}
-                          alt={standProduct.name}
-                          width={80}
-                          height={80}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 text-center sm:text-left">
-                        <p className="text-xs font-bold text-black-600 uppercase tracking-wider mb-1">Complete Your Setup</p>
-                        <h3 className="text-sm font-bold text-slate-900">{standProduct.name}</h3>
-                        <p className="text-xs text-slate-500">{standProduct.description}</p>
-                      </div>
-                       <div className="text-center sm:text-right shrink-0">
-                         <p className="text-sm font-bold text-slate-900">{formatCurrency(getLocalizedPrice(standProduct, 0))}</p>
-                         <button
-                           onClick={handleAddStand}
-                           className="mt-2 flex items-center gap-2 text-xs font-bold text-gray-600 hover:text-gray-700 transition-colors"
-                         >
-                           <PlusCircle className="w-4 h-4" />
-                           Add to Cart
-                         </button>
-                       </div>
-                    </div>
-                  </div>
-                )}
 
               </div>
 

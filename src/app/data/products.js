@@ -14,29 +14,6 @@ import ImageRed from '../assets/products/red.jpeg';
 import ImageBlue from '../assets/products/blue.jpeg';
 import ImageWhite from '../assets/products/white.jpeg';
 import ImageBlack from '../assets/products/black.jpeg';
-import ImageStand from '../assets/products/stand.png';
-
-export const standProduct = {
-  id: 'stand-01',
-  slug: 'foldable-metal-stand',
-  name: 'Foldable Metal Stand',
-  price: 6500,
-  image: ImageStand,
-  description: 'Premium foldable metal stand for easy storage and gameplay at the perfect height.',
-  features: [
-    'Foldable design for easy storage',
-    'Adjustable height settings',
-    'Non-slip rubber feet',
-    'Sturdy steel construction',
-    'Quick assembly required'
-  ],
-  specs: {
-    material: 'Steel',
-    weight: '3.5kg',
-    height: '24-32 inches',
-    foldable: 'Yes'
-  }
-};
 
 export const products = [
   // Regular Series
@@ -668,7 +645,6 @@ export const products = [
       'Certificate of Authenticity'
     ]
   },
-  standProduct,
 ];
 
 export const getProductBySlug = (slug) => {
