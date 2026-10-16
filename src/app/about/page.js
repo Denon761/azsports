@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white min-h-screen font-sans">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-6">
-        <div>
+        <div className="text-center">
           <h1 className="text-lg font-black text-gray-900">About Us</h1>
           <p className="text-gray-600 text-xs mt-1">AZ Sports – Amjad Zahoor Sports</p>
         </div>

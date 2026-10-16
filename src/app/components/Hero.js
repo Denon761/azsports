@@ -32,31 +32,19 @@ const Hero = () => {
             {/* Mobile wrapper - centers content and ensures readability with bg overlay */}
             <div className="lg:hidden w-full mb-auto">
               {/* Huge Premium Headline */}
-              <h1 className="text-lg sm:text-lg font-bold text-white tracking-tight leading-[1.1] mb-4 font-heading drop-shadow-lg">
+              <h1 className="text-lg sm:text-lg font-bold text-white tracking-tight leading-[1.1] mb-0 font-heading drop-shadow-lg">
                 Hand-crafting carrom boards<br />
                 <span className="text-amber-300">| Since 1940.</span>
               </h1>
-
-              {/* Description */}
-              <p className="text-xs sm:text-sm text-white/90 max-w-xl leading-relaxed mb-6 drop-shadow-md">
-                Experience the glass-like glide, razor-sharp accuracy, and 
-                legendary rebound of championship-grade carrom boards.
-              </p>
             </div>
 
             {/* Desktop content - hidden on mobile */}
             <div className="hidden lg:block">
               {/* Huge Premium Headline */}
-              <h1 className="text-lg sm:text-lg lg:text-xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6 font-heading">
+              <h1 className="text-lg sm:text-lg lg:text-xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-0 font-heading">
                 Hand-crafting carrom boards<br />
                 | Since 1940.
               </h1>
-
-              {/* Description */}
-              <p className="text-xs sm:text-sm text-gray-600 max-w-xl leading-relaxed mb-8">
-                Experience the glass-like glide, razor-sharp accuracy, and 
-                legendary rebound of championship-grade carrom boards. Handcrafted in Pakistan since 1940.
-              </p>
             </div>
 
             {/* Quick Value Props - Desktop only */}
