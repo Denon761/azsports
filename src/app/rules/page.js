@@ -65,7 +65,7 @@ export default function RulesPage() {
           <section>
             <h2 className="text-sm font-black text-gray-900 mb-2">5. Queen Rules in Carrom</h2>
             <p>The red playing piece is known as the queen. Under standard competitive rules, the queen is worth three points, subject to the applicable scoring conditions.</p>
-            <p className="mt-3">A player may pocket the queen after pocketing at least one of their own carrom men. The queen must then be covered by pocketing one of the player's own carrom men in the same or the immediately subsequent stroke, as prescribed by the applicable rules.</p>
+            <p className="mt-3">A player may pocket the queen after pocketing at least one of their own carrom men. The queen must then be covered by pocketing one of the player&apos;s own carrom men in the same or the immediately subsequent stroke, as prescribed by the applicable rules.</p>
             <p className="mt-3">If the queen is not legally covered, it is returned to the board according to the rules.</p>
             <p className="mt-3">The queen cannot be treated as an ordinary carrom man. Its successful covering and the circumstances in which it is pocketed can affect the result and score of a board.</p>
           </section>
@@ -86,11 +86,11 @@ export default function RulesPage() {
 
           <section>
             <h2 className="text-sm font-black text-gray-900 mb-2">7. Carrom Scoring Rules</h2>
-            <p>Under the scoring system published in the Indian Carrom Federation's laws:</p>
+            <p>Under the scoring system published in the Indian Carrom Federation&apos;s laws:</p>
             <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>Each carrom man remaining on the board for the losing player contributes one point to the winner's score.</li>
+              <li>Each carrom man remaining on the board for the losing player contributes one point to the winner&apos;s score.</li>
               <li>The queen is worth three additional points when the winner is entitled to receive them under the rules.</li>
-              <li>The queen's additional points are subject to the prescribed score limits.</li>
+              <li>The queen&apos;s additional points are subject to the prescribed score limits.</li>
               <li>The game is played to the specified target or board limit under the applicable format.</li>
             </ul>
             <p className="mt-3">In the cited rules, a game consists of 25 points or eight boards, whichever occurs first. Competition organisers should confirm the current rules and format for their event.</p>
@@ -111,7 +111,7 @@ export default function RulesPage() {
               <li>Learn how rebounds and angles affect the striker.</li>
               <li>Control the force of each shot.</li>
               <li>Keep the playing surface clean and use permitted powder.</li>
-              <li>Plan shots to pocket your own pieces while limiting your opponent's opportunities.</li>
+              <li>Plan shots to pocket your own pieces while limiting your opponent&apos;s opportunities.</li>
               <li>Use a stable, level board with a smooth playing surface.</li>
             </ul>
             <p className="mt-3">Consistent practice helps develop better control, positioning and shot selection.</p>
@@ -159,7 +159,7 @@ export default function RulesPage() {
             <h2 className="text-sm font-black text-gray-900 mb-2">About AZ Sports – Amjad Zahoor Sports</h2>
             <p>AZ Sports – Amjad Zahoor Sports is a handmade wooden carrom board manufacturer based in Sialkot, Pakistan. The company has a manufacturing heritage dating back to 1940.</p>
             <p className="mt-3">Through its focus on carrom board craftsmanship, AZ Sports serves players, clubs, retailers and international buyers seeking handmade wooden boards.</p>
-            <p className="mt-3">Visit AZSports.pk to explore the company's products and manufacturing heritage.</p>
+            <p className="mt-3">Visit AZSports.pk to explore the company&apos;s products and manufacturing heritage.</p>
             <p className="mt-5 font-bold text-gray-900">AZ Sports – Amjad Zahoor Sports</p>
             <p className="text-gray-600">Handmade Carrom Boards | Sialkot, Pakistan | Established 1940</p>
           </section>
