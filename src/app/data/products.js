@@ -33,8 +33,8 @@ export const products = [
       US: [90, 115],
     },
     sizes: [
-      { size: '26', price: 9000, specs: { 'Playing Area': '23 × 23 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
-      { size: '32', price: 11500, specs: { 'Playing Area': '29 × 29 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
+      { size: '26', price: 9000, specs: { 'Overall Size': '27 × 27 inch', 'Playing Area': '23 × 23 inch', 'Border': '1½ × 1½ inch', 'Plywood': 'Single Ply', 'Wood': 'Sheesham' } },
+      { size: '32', price: 11500, specs: { 'Overall Size': '32 × 32 inch', 'Playing Area': '29 × 29 inch', 'Border': '1½ × 1½ inch', 'Plywood': 'Single Ply', 'Wood': 'Sheesham' } },
     ],
     features: [
       'Lightweight design - easy to carry',

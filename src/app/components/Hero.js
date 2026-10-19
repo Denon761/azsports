@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-[300px] lg:min-h-[750px] bg-gray-50 flex items-center overflow-hidden font-sans">
+    <section className="relative w-full min-h-[300px] lg:min-h-[750px] bg-gray-50 flex items-end lg:items-center overflow-hidden font-sans">
       
       {/* Mobile Banner Image - Full width background on mobile only */}
       <div className="lg:hidden absolute inset-0 w-full h-full">
@@ -27,14 +27,14 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           
           {/* LEFT COLUMN - TEXT & CTA */}
-          <div className="flex flex-col items-start text-left pt-10 lg:pt-0">
-            
+          <div className="flex flex-col items-start text-left pb-8 lg:pt-0 lg:pb-0">
+
             {/* Mobile wrapper - centers content and ensures readability with bg overlay */}
-            <div className="lg:hidden w-full mb-auto">
+            <div className="lg:hidden w-full">
               {/* Huge Premium Headline */}
               <h1 className="text-lg sm:text-lg font-bold text-white tracking-tight leading-[1.1] mb-0 font-heading drop-shadow-lg">
                 Hand-crafting carrom boards<br />
-                <span className="text-amber-300">| Since 1940.</span>
+                <span className="text-white">| Since 1940.</span>
               </h1>
             </div>
 

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { getProductBySlug, products } from '../../data/products';
 import { useDispatch } from 'react-redux';
 import { 
-  ShoppingBag, Star, Check, ArrowLeft, Truck, RotateCcw, Shield, 
+  ShoppingBag, Star, Check, ArrowLeft,
   Minus, Plus, Package
 } from 'lucide-react';
 import { addToCart } from '../../store/cartSlice';
@@ -181,6 +181,29 @@ export default function ProductDetail() {
                  </span>
                </div>
 
+              {/* Specifications - Show selected size specs, defaulting to the first size */}
+              {availableSizes.length > 0 && (() => {
+                const activeSize = selectedSize || availableSizes[0].size;
+                const sizeData = availableSizes.find(s => s.size === activeSize);
+                const specs = sizeData?.specs || {};
+                return (
+                  <div className="mb-8">
+                    <h2 className="text-xs font-black text-slate-900 mb-3 flex items-center gap-2">
+                      <Star className="w-4 h-4 text-amber-500" fill="currentColor" />
+                      Technical Specifications ({activeSize}&quot;)
+                    </h2>
+                    <div className="grid grid-cols-2 gap-3">
+                      {Object.entries(specs).map(([key, value]) => (
+                        <div key={key} className="p-3 bg-white border border-slate-200 rounded-lg">
+                          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{key}</p>
+                          <p className="text-xs font-bold text-slate-900">{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
+
               {/* Key Features List */}
               {product.features && product.features.length > 0 && (
                 <div className="mb-8">
@@ -231,11 +254,8 @@ export default function ProductDetail() {
               </div>
 
               {/* Trust Features */}
-              <div className="grid grid-cols-2 gap-3 mt-8">
+              <div className="grid grid-cols-1 gap-3 mt-8">
                 {[
-                  { icon: Truck, title: "Free Delivery", sub: "Orders over 10k" },
-                  { icon: RotateCcw, title: "7-Day Returns", sub: "Hassle-free" },
-                  { icon: Shield, title: "30-Day Warranty", sub: "Manufacturing defects" },
                   { icon: Package, title: "In Stock", sub: "Ready to ship" },
                 ].map((badge, i) => (
                   <div key={i} className="bg-white p-4 rounded-lg border border-slate-200 flex items-center gap-3">
@@ -253,32 +273,6 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Details Sections */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
-        
-        {/* Specifications - Show selected size specs */}
-              {selectedSize && (
-          <div className="bg-white border border-slate-200 rounded-lg p-8 md:p-10">
-            <h2 className="text-sm font-black text-slate-900 mb-8 flex items-center gap-3">
-              <Star className="w-6 h-6 text-amber-500" fill="currentColor" />
-              Technical Specifications ({selectedSize}&quot;)
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {(() => {
-                const sizeData = availableSizes.find(s => s.size === selectedSize);
-                const specs = sizeData?.specs || {};
-                return Object.entries(specs).map(([key, value]) => (
-                  <div key={key} className="p-5 bg-slate-50 border border-slate-100 rounded-lg">
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{key}</p>
-                    <p className="text-xs font-bold text-slate-900">{value}</p>
-                  </div>
-                ));
-              })()}
-            </div>
-          </div>
-        )}
       </section>
 
       {/* Related Products */}

@@ -89,7 +89,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="bg-white border border-gray-200 p-3 rounded-md hover:bg-gray-100 hover:border-amber-500/50 hover:text-amber-600 transition-all duration-300 hover:-translate-y-1 text-gray-600"
+                  className="bg-orange-50 border border-orange-200 text-orange-500 p-3 rounded-md hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-300 hover:-translate-y-1"
                 >
                   <Icon className="w-4 h-4" />
                 </a>

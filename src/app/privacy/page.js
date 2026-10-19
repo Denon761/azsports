@@ -1,5 +1,3 @@
-import { ContentRenderer, PageHero } from "../components/SharedLayout";
-
 export const metadata = {
   title: 'Privacy Policy | AZ Sports',
   description: 'How AZ Sports collects, uses, and protects visitor and business information.',
@@ -79,56 +77,43 @@ const privacyData = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-gray-50 min-h-screen font-sans">
-      {/* Hero Section */}
-      <section className="relative w-full py-20 lg:py-28 overflow-hidden">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none translate-x-1/4 translate-y-1/4"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-lg md:text-lg lg:text-xl font-black text-gray-900 mb-4 tracking-tight font-heading">
-            Privacy Policy
-          </h1>
-          <p className="text-gray-600 text-xs md:text-sm">
+    <div className="bg-white min-h-screen font-sans">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-6">
+        <div>
+          <h1 className="text-lg font-black text-gray-900">Privacy Policy</h1>
+          <p className="text-gray-600 text-xs mt-1">
             Learn how we collect, use, and safeguard your data during inquiries.
           </p>
         </div>
-      </section>
 
-      {/* Content */}
-      <section className="py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-10 space-y-8">
-            {privacyData.map((section, index) => (
-              <div key={index} className="space-y-4">
-                {section.title && (
-                  <h2 className="text-sm md:text-base font-black text-gray-900 border-b border-gray-200 pb-2 font-heading">
-                    {section.title}
-                  </h2>
-                )}
-                
-                {section.content && section.content.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="text-gray-600 text-xs md:text-xs leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
+        {privacyData.map((section, index) => (
+          <div key={index}>
+            {section.title && (
+              <h2 className="text-sm font-black text-gray-900 mb-2">
+                {section.title}
+              </h2>
+            )}
 
-                {section.list && section.list.length > 0 && (
-                  <ul className="list-disc pl-5 space-y-2 text-xs md:text-xs text-gray-600 mt-4">
-                    {section.list.map((item, lIdx) => (
-                      <li key={lIdx}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-                
-                {section.note && (
-                  <p className="text-xs text-gray-500 italic mt-2">{section.note}</p>
-                )}
-              </div>
+            {section.content && section.content.map((paragraph, pIdx) => (
+              <p key={pIdx} className="text-gray-600 text-xs leading-relaxed mt-2">
+                {paragraph}
+              </p>
             ))}
+
+            {section.list && section.list.length > 0 && (
+              <ul className="list-disc pl-5 text-gray-600 text-xs leading-relaxed space-y-1 mt-2">
+                {section.list.map((item, lIdx) => (
+                  <li key={lIdx}>{item}</li>
+                ))}
+              </ul>
+            )}
+
+            {section.note && (
+              <p className="text-xs text-gray-500 italic mt-2">{section.note}</p>
+            )}
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
     </div>
   );
 }

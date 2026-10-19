@@ -9,10 +9,10 @@ export default function RulesPage() {
       <header className="border-b border-gray-200">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
           <h1 className="text-lg font-black text-gray-900 text-center">Official Rules</h1>
-          <p className="text-gray-600 leading-relaxed mt-4">
+          <p className="text-gray-600 text-xs leading-relaxed mt-4">
             Carrom is a popular indoor board game that combines skill, precision, strategy and concentration. Whether you are a beginner learning how to play or an experienced player preparing for a competitive match, understanding the rules of carrom helps you play fairly and confidently.
           </p>
-          <p className="text-gray-600 leading-relaxed mt-4">
+          <p className="text-gray-600 text-xs leading-relaxed mt-4">
             This guide explains the basic rules of carrom, including board setup, striker placement, queen covering, fouls, scoring and winning conditions. For official tournament play, always consult the latest regulations issued by the relevant carrom governing body.
           </p>
         </div>
