@@ -20,12 +20,12 @@ export const products = [
   {
     id: 1,
     slug: 'rs-01',
-    name: 'RS-1',
+    name: 'RS-01',
     tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: 'RS-1',
+    seriesNumber: 'RS-01',
     image: Image001,
-    description: 'Perfect for beginners and casual players. Lightweight design with smooth matte finish.',
+    description: 'The AZ Sports® RS-01 Regular Series Carrom Board is designed for home use, schools, recreational clubs, beginners, and casual players. Available in two sizes, it combines traditional craftsmanship with carefully prepared materials for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
@@ -33,34 +33,62 @@ export const products = [
       US: [90, 115],
     },
     sizes: [
-      { size: '26', price: 9000, specs: { 'Overall Size': '27 × 27 inch', 'Playing Area': '23 × 23 inch', 'Border': '1½ × 1½ inch', 'Plywood': 'Single Ply', 'Wood': 'Sheesham' } },
-      { size: '32', price: 11500, specs: { 'Overall Size': '32 × 32 inch', 'Playing Area': '29 × 29 inch', 'Border': '1½ × 1½ inch', 'Plywood': 'Single Ply', 'Wood': 'Sheesham' } },
-    ],
-    features: [
-      'Lightweight design - easy to carry',
-      'Rounded corners for safety',
-      'Includes complete coin set',
-      'Smooth matte playing surface',
-      'Beginner-friendly rebound',
-      '30-day warranty included'
+      { size: '26', price: 9000 },
+      { size: '32', price: 11500 },
     ],
     included: [
-      '1 RS-1 Board',
+      '1 RS-01 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '1 Striker',
       'Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting.'
+      },
+      {
+        title: 'Hand-Applied Artistic Design',
+        body: 'The playing-surface design is applied by hand by a skilled worker rather than through screen printing, giving the board a distinctive artistic finish.'
+      },
+      {
+        title: 'Shellac-Based Polish',
+        body: 'AZ Sports uses a shellac-based polish developed through its manufacturing experience and research and development efforts. The finishing process focuses on the playing surface and smooth striker movement when the board is properly maintained.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'RS-01' },
+      { label: 'Series', value: 'Regular Series' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26 and 32 × 32 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23 and 29 × 29 inches' },
+      { label: 'Plywood Construction', value: 'Single-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: 'Approx. 1½ × 1½ inches' },
+      { label: 'Playing-Surface Design', value: 'Hand-applied artistic design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
     id: 2,
     slug: 'rs-02',
-    name: 'RS-2',
+    name: 'RS-02',
     tag: 'Regular Series',
     type: 'Regular Series',
-    seriesNumber: 'RS-2',
+    seriesNumber: 'RS-02',
     image: Image002,
-    description: 'Designed for intermediate players who want to take their game to the next level.',
+    description: 'The AZ Sports® RS-02 Regular Series Carrom Board is designed for home use, schools, recreational clubs, beginners, and casual players. Available in two sizes, it combines traditional craftsmanship with carefully prepared materials for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
@@ -68,24 +96,52 @@ export const products = [
       US: [90, 115],
     },
     sizes: [
-      { size: '26', price: 9000, specs: { 'Playing Area': '23 × 23 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
-      { size: '32', price: 11500, specs: { 'Playing Area': '29 × 29 inch', 'Border': '1½ × 1½ inch', 'Plywood': '3 mm', 'Wood': 'Sheesham' } },
-    ],
-    features: [
-      'Water-resistant construction',
-      'Reinforced backing for durability',
-      'Includes premium striker',
-      'High rebound for competitive play',
-      'Polished satin finish',
-      '30-day warranty included'
+      { size: '26', price: 9000 },
+      { size: '32', price: 11500 },
     ],
     included: [
-      '1 RS-2 Board',
+      '1 RS-02 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover',
       'Carrying Strap'
+    ],
+    detailSections: [
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting.'
+      },
+      {
+        title: 'Hand-Applied Artistic Design',
+        body: 'The playing-surface design is applied by hand by a skilled worker rather than through screen printing, giving the board a distinctive artistic finish.'
+      },
+      {
+        title: 'Shellac-Based Polish',
+        body: 'AZ Sports uses a shellac-based polish developed through its manufacturing experience and research and development efforts. The finishing process focuses on the playing surface and smooth striker movement when the board is properly maintained.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'RS-02' },
+      { label: 'Series', value: 'Regular Series' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26 and 32 × 32 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23 and 29 × 29 inches' },
+      { label: 'Plywood Construction', value: 'Single-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: 'Approx. 1½ × 1½ inches' },
+      { label: 'Playing-Surface Design', value: 'Hand-applied artistic design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   // Country Edition
@@ -97,26 +153,17 @@ export const products = [
     type: 'Country Edition',
     country: 'USA',
     image: ImageUSA,
-    description: 'Special USA edition board featuring iconic American design with premium quality construction.',
+    description: 'The AZ Sports® USA Edition Carrom Board features an American-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'USA themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with patriotic accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 USA Edition Board',
@@ -124,6 +171,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic USA-Inspired Design',
+        body: 'The USA Edition features an American-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The USA Edition combines its American-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'USA Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'USA Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -134,26 +218,17 @@ export const products = [
     type: 'Country Edition',
     country: 'Canada',
     image: ImageCanada,
-    description: 'Special Canada edition board featuring iconic maple leaf design with premium quality.',
+    description: 'The AZ Sports® Canada Edition Carrom Board features a Canada-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'Canada themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with maple leaf accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 Canada Edition Board',
@@ -161,6 +236,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic Canada-Inspired Design',
+        body: 'The Canada Edition features a Canada-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The Canada Edition combines its Canada-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Canada Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Canada Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -171,26 +283,17 @@ export const products = [
     type: 'Country Edition',
     country: 'Pakistan',
     image: ImagePK,
-    description: 'Special Pakistan edition board featuring iconic crescent and star design with premium quality.',
+    description: 'The AZ Sports® Pakistan Edition Carrom Board features a Pakistan-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'Pakistan themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with patriotic accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 Pakistan Edition Board',
@@ -198,6 +301,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic Pakistan-Inspired Design',
+        body: 'The Pakistan Edition features a Pakistan-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The Pakistan Edition combines its Pakistan-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Pakistan Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Pakistan Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -208,26 +348,17 @@ export const products = [
     type: 'Country Edition',
     country: 'Afghanistan',
     image: ImageAfgan,
-    description: 'Special Afghanistan edition board featuring iconic national design with premium quality.',
+    description: 'The AZ Sports® Afghanistan Edition Carrom Board features an Afghanistan-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'Afghanistan themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with patriotic accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 Afghanistan Edition Board',
@@ -235,6 +366,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic Afghanistan-Inspired Design',
+        body: 'The Afghanistan Edition features an Afghanistan-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The Afghanistan Edition combines its Afghanistan-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Afghanistan Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Afghanistan Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -245,26 +413,17 @@ export const products = [
     type: 'Country Edition',
     country: 'Nepal',
     image: ImageNipal,
-    description: 'Special Nepal edition board featuring iconic Himalayan design with premium quality.',
+    description: 'The AZ Sports® Nepal Edition Carrom Board features a Nepal-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'Nepal themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with patriotic accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 Nepal Edition Board',
@@ -272,6 +431,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic Nepal-Inspired Design',
+        body: 'The Nepal Edition features a Nepal-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The Nepal Edition combines its Nepal-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Nepal Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Nepal Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -282,26 +478,17 @@ export const products = [
     type: 'Country Edition',
     country: 'Sri Lanka',
     image: ImageSirilanka,
-    description: 'Special Sri Lanka edition board featuring iconic lion design with premium quality.',
+    description: 'The AZ Sports® Sri Lanka Edition Carrom Board features a Sri Lanka-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'Sri Lanka themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with patriotic accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 Sri Lanka Edition Board',
@@ -309,6 +496,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic Sri Lanka-Inspired Design',
+        body: 'The Sri Lanka Edition features a Sri Lanka-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The Sri Lanka Edition combines its Sri Lanka-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Sri Lanka Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Sri Lanka Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -319,26 +543,17 @@ export const products = [
     type: 'Country Edition',
     country: 'Bangladesh',
     image: ImageBangladesh,
-    description: 'Special Bangladesh edition board featuring iconic design with premium quality.',
+    description: 'The AZ Sports® Bangladesh Edition Carrom Board features a Bangladesh-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'Bangladesh themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with patriotic accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 Bangladesh Edition Board',
@@ -346,6 +561,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic Bangladesh-Inspired Design',
+        body: 'The Bangladesh Edition features a Bangladesh-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The Bangladesh Edition combines its Bangladesh-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Bangladesh Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Bangladesh Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -356,26 +608,17 @@ export const products = [
     type: 'Country Edition',
     country: 'Maldives',
     image: ImageMaldive,
-    description: 'Special Maldives edition board featuring iconic island design with premium quality.',
+    description: 'The AZ Sports® Maldives Edition Carrom Board features a Maldives-inspired design that brings a distinctive patriotic look to traditional carrom. Designed for home use, schools, recreational clubs, beginners, and casual players, it combines a country-themed appearance with practical functionality for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [17990, 22500, 28500, 35900],
-      US: [180, 225, 285, 359],
+      PK: [17990, 22500, 28500],
+      US: [180, 225, 285],
     },
     sizes: [
-      { size: '24"', price: 17990, specs: { size: '24" x 24"', ply: '8mm Premium', frame: '1.5" Hardwood', weight: '7kg', boardThickness: '12mm' } },
-      { size: '32"', price: 22500, specs: { size: '32" x 32"', ply: '10mm Premium', frame: '2" Hardwood', weight: '11kg', boardThickness: '16mm' } },
-      { size: '36"', price: 28500, specs: { size: '35" x 35"', ply: '10mm Premium', frame: '2" Hardwood', weight: '13kg', boardThickness: '18mm' } },
-      { size: '42"', price: 35900, specs: { size: '42" x 42"', ply: '12mm Premium', frame: '2.5" Hardwood', weight: '17kg', boardThickness: '20mm' } },
-    ],
-    features: [
-      'Maldives themed premium design',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Durable finish with patriotic accents',
-      '30-day warranty included'
+      { size: '26"', price: 17990 },
+      { size: '32"', price: 22500 },
+      { size: '41"', price: 28500 },
     ],
     included: [
       '1 Maldives Edition Board',
@@ -383,6 +626,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Iconic Maldives-Inspired Design',
+        body: 'The Maldives Edition features a Maldives-inspired design with patriotic accents. Its distinctive appearance makes it an attractive choice for carrom enthusiasts looking for a unique board design.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The board features a hardwood frame that provides structural support and complements its USA-inspired design. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Distinctive Design and Finishing',
+        body: 'The Maldives Edition combines its Maldives-inspired appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality for carrom enthusiasts. Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Maldives Edition' },
+      { label: 'Series', value: 'Country Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Maldives Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   // Special Edition - Colors
@@ -394,26 +674,17 @@ export const products = [
     type: 'Special Edition',
     color: 'Red',
     image: ImageRed,
-    description: 'Vibrant red special edition board with premium finish and bold design statement.',
+    description: 'The AZ Sports® Red Special Edition Carrom Board features a vibrant red finish and a distinctive design for home use, schools, recreational clubs, beginners, and casual players. Available in three sizes, it combines traditional craftsmanship with an eye-catching appearance for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [15990, 19990, 24990, 31990],
-      US: [160, 200, 250, 320],
+      PK: [15990, 19990, 24990],
+      US: [160, 200, 250],
     },
     sizes: [
-      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
-      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
-    ],
-    features: [
-      'Bold red premium finish',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Metallic shine finish',
-      '30-day warranty included'
+      { size: '26"', price: 15990 },
+      { size: '32"', price: 19990 },
+      { size: '41"', price: 24990 },
     ],
     included: [
       '1 Red Special Edition Board',
@@ -421,6 +692,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Bold Red Special Edition Finish',
+        body: 'The Red Special Edition features a vibrant red finish that gives the board a distinctive appearance. Its bold design makes it an attractive choice for carrom enthusiasts.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Artistic Design and Finishing',
+        body: 'The Red Special Edition combines its distinctive red appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Red Special Edition' },
+      { label: 'Series', value: 'Special Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Red Special Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -431,26 +739,17 @@ export const products = [
     type: 'Special Edition',
     color: 'Blue',
     image: ImageBlue,
-    description: 'Elegant blue special edition board with premium finish and sophisticated design.',
+    description: 'The AZ Sports® Blue Special Edition Carrom Board features a vibrant blue finish and a distinctive design for home use, schools, recreational clubs, beginners, and casual players. Available in three sizes, it combines traditional craftsmanship with an eye-catching appearance for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [15990, 19990, 24990, 31990],
-      US: [160, 200, 250, 320],
+      PK: [15990, 19990, 24990],
+      US: [160, 200, 250],
     },
     sizes: [
-      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
-      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
-    ],
-    features: [
-      'Elegant blue premium finish',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Metallic shine finish',
-      '30-day warranty included'
+      { size: '26"', price: 15990 },
+      { size: '32"', price: 19990 },
+      { size: '41"', price: 24990 },
     ],
     included: [
       '1 Blue Special Edition Board',
@@ -458,6 +757,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Bold Blue Special Edition Finish',
+        body: 'The Blue Special Edition features a vibrant blue finish that gives the board a distinctive appearance. Its bold design makes it an attractive choice for carrom enthusiasts.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Artistic Design and Finishing',
+        body: 'The Blue Special Edition combines its distinctive blue appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Blue Special Edition' },
+      { label: 'Series', value: 'Special Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Blue Special Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -468,26 +804,17 @@ export const products = [
     type: 'Special Edition',
     color: 'White',
     image: ImageWhite,
-    description: 'Clean white special edition board with premium finish and minimalist elegance.',
+    description: 'The AZ Sports® White Special Edition Carrom Board features a vibrant white finish and a distinctive design for home use, schools, recreational clubs, beginners, and casual players. Available in three sizes, it combines traditional craftsmanship with an eye-catching appearance for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [15990, 19990, 24990, 31990],
-      US: [160, 200, 250, 320],
+      PK: [15990, 19990, 24990],
+      US: [160, 200, 250],
     },
     sizes: [
-      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
-      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
-    ],
-    features: [
-      'Clean white premium finish',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Pearlescent shine finish',
-      '30-day warranty included'
+      { size: '26"', price: 15990 },
+      { size: '32"', price: 19990 },
+      { size: '41"', price: 24990 },
     ],
     included: [
       '1 White Special Edition Board',
@@ -495,6 +822,43 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Bold White Special Edition Finish',
+        body: 'The White Special Edition features a vibrant white finish that gives the board a distinctive appearance. Its bold design makes it an attractive choice for carrom enthusiasts.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Artistic Design and Finishing',
+        body: 'The White Special Edition combines its distinctive white appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'White Special Edition' },
+      { label: 'Series', value: 'Special Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'White Special Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
@@ -505,26 +869,17 @@ export const products = [
     type: 'Special Edition',
     color: 'Black',
     image: ImageBlack,
-    description: 'Sleek black special edition board with premium matte finish and modern design.',
+    description: 'The AZ Sports® Black Special Edition Carrom Board features a vibrant black finish and a distinctive design for home use, schools, recreational clubs, beginners, and casual players. Available in three sizes, it combines traditional craftsmanship with an eye-catching appearance for everyday carrom play.',
     category: 'boards',
     inStock: true,
     prices: {
-      PK: [15990, 19990, 24990, 31990],
-      US: [160, 200, 250, 320],
+      PK: [15990, 19990, 24990],
+      US: [160, 200, 250],
     },
     sizes: [
-      { size: '24"', price: 15990, specs: { size: '24" x 24"', ply: '6mm Water-Resistant', frame: '1.5" Hardwood', weight: '6kg', boardThickness: '10mm' } },
-      { size: '32"', price: 19990, specs: { size: '32" x 32"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '10kg', boardThickness: '14mm' } },
-      { size: '36"', price: 24990, specs: { size: '35" x 35"', ply: '8mm Water-Resistant', frame: '2" Hardwood', weight: '12kg', boardThickness: '16mm' } },
-      { size: '42"', price: 31990, specs: { size: '42" x 42"', ply: '10mm Water-Resistant', frame: '2.5" Hardwood', weight: '16kg', boardThickness: '18mm' } },
-    ],
-    features: [
-      'Sleek black matte finish',
-      'High-quality wood construction',
-      'Professional playing surface',
-      'Includes complete coin set',
-      'Premium matte coating',
-      '30-day warranty included'
+      { size: '26"', price: 15990 },
+      { size: '32"', price: 19990 },
+      { size: '41"', price: 24990 },
     ],
     included: [
       '1 Black Special Edition Board',
@@ -532,17 +887,54 @@ export const products = [
       '1 Queen (Red)',
       '1 Pro Striker',
       'Premium Board Cover'
+    ],
+    detailSections: [
+      {
+        title: 'Bold Black Special Edition Finish',
+        body: 'The Black Special Edition features a vibrant black finish that gives the board a distinctive appearance. Its bold design makes it an attractive choice for carrom enthusiasts.'
+      },
+      {
+        title: 'Carrom-Specific Plywood Preparation',
+        body: 'AZ Sports prepares its single-ply plywood specifically for carrom board manufacturing. This preparation is intended to support durability and maintain the playing surface with proper care and storage.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 1½ × 1½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting. The 41 × 41-inch model features an approximately 3½ × 3½-inch frame.'
+      },
+      {
+        title: 'Artistic Design and Finishing',
+        body: 'The Black Special Edition combines its distinctive black appearance with a carefully finished playing surface, bringing together visual appeal and practical functionality.'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 26 × 26 inches', 'Playing Surface: 23 × 23 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 32 × 32 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches', 'Frame Dimensions: Approximately 3½ × 3½ inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'Black Special Edition' },
+      { label: 'Series', value: 'Special Edition' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '26 × 26, 32 × 32 and 41 × 41 inches' },
+      { label: 'Playing Surface Sizes', value: '23 × 23, 29 × 29 and 35 × 35 inches' },
+      { label: 'Plywood Construction', value: 'Single-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: ['Approx. 1½ × 1½ inches,', 'Approx. 3½ × 3½ inches (41-inch model)'] },
+      { label: 'Playing-Surface Design', value: 'Black Special Edition design' },
+      { label: 'Recommended Use', value: 'Home, schools, recreational clubs, beginners and casual players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
     id: 17,
     slug: 'ps-01',
-    name: 'PS-1',
+    name: 'PS-01',
     tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PS-1',
+    seriesNumber: 'PS-01',
     image: Image001,
-    description: 'Official tournament-grade board designed for competitive play. Features superior cushion and precise pocket placement.',
+    description: 'The AZ Sports® PS-01 Professional Series Carrom Board is designed for competitive play, tournaments, carrom clubs, and experienced players. Available in three sizes, it combines double-ply plywood construction, a Sheesham wood frame, and a superior cushion designed for precise rebounds.',
     category: 'boards',
     inStock: true,
     prices: {
@@ -550,35 +942,68 @@ export const products = [
       US: [200, 260, 330],
     },
     sizes: [
-      { size: '34', price: 19990, specs: { 'Playing Area': '29 × 29 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-      { size: '41', price: 25990, specs: { 'Playing Area': '35 × 35 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-      { size: '46', price: 32990, specs: { 'Playing Area': '41 × 41 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-    ],
-    features: [
-      'Official tournament specifications',
-      'Premium Sheesham wood frame',
-      'Superior cushion for precise rebounds',
-      'Professional playing surface',
-      'FIA-approved design',
-      '30-day warranty included'
+      { size: '35', price: 19990 },
+      { size: '41', price: 25990 },
+      { size: '46', price: 32990 },
     ],
     included: [
-      '1 PS-1 Board',
+      '1 PS-01 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Pro Strikers',
       'Premium Carrying Case'
+    ],
+    detailSections: [
+      {
+        title: 'Double-Ply Plywood Construction',
+        body: 'The PS-01 features a double-ply plywood playing surface designed for professional carrom play. This construction supports the board\'s playing surface and is intended for players who value control, precision, and consistency.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 3½ × 3½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting. This substantial wooden frame provides structural support for the board.'
+      },
+      {
+        title: 'Superior Cushion and Precise Rebounds',
+        body: 'The Professional Series features a superior cushion designed to support precise rebounds during play. The board\'s construction is intended for players seeking consistent playing performance.'
+      },
+      {
+        title: 'Shellac-Based Polish',
+        body: 'AZ Sports uses a shellac-based polish developed through its manufacturing experience and research and development efforts. The finishing process focuses on the playing surface and smooth striker movement when the board is properly maintained.'
+      },
+      {
+        title: 'Tournament-Oriented Design',
+        body: 'The AZ Sports® PS-01 is designed for competitive carrom play, with a professional playing surface and tournament-oriented construction as per International Carrom Federation (ICF).'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 35 × 35 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 46 × 46 inches', 'Playing Surface: 40 × 40 inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'PS-01' },
+      { label: 'Series', value: 'Professional Series' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '35 × 35, 41 × 41 and 46 × 46 inches' },
+      { label: 'Playing Surface Sizes', value: '29 × 29, 35 × 35 and 40 × 40 inches' },
+      { label: 'Plywood Construction', value: 'Double-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: 'Approx. 3½ × 3½ inches' },
+      { label: 'Playing-Surface Design', value: 'Hand-applied artistic design' },
+      { label: 'Recommended Use', value: 'Competitive play, tournaments, clubs and experienced players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
     id: 18,
     slug: 'ps-02',
-    name: 'PS-2',
+    name: 'PS-02',
     tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PS-2',
+    seriesNumber: 'PS-02',
     image: Image002,
-    description: 'The ultimate championship board for professional tournaments. Features hand-carved details and tournament-grade cushion.',
+    description: 'The AZ Sports® PS-02 Professional Series Carrom Board is designed for competitive play, tournaments, carrom clubs, and experienced players. Available in three sizes, it combines double-ply plywood construction, a Sheesham wood frame, and a superior cushion designed for precise rebounds.',
     category: 'boards',
     inStock: true,
     prices: {
@@ -586,36 +1011,69 @@ export const products = [
       US: [200, 260, 330],
     },
     sizes: [
-      { size: '34', price: 19990, specs: { 'Playing Area': '29 × 29 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-      { size: '41', price: 25990, specs: { 'Playing Area': '35 × 35 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-      { size: '46', price: 32990, specs: { 'Playing Area': '41 × 41 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-    ],
-    features: [
-      'Hand-carved traditional patterns',
-      'Tournament-grade cushion system',
-      'Premium Sheesham wood construction',
-      'Anti-warp technology',
-      'Professional coin set included',
-      '30-day warranty included'
+      { size: '35', price: 19990 },
+      { size: '41', price: 25990 },
+      { size: '46', price: 32990 },
     ],
     included: [
-      '1 PS-2 Board',
+      '1 PS-02 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Championship Strikers',
       'Velvet Lined Carrying Case',
       'Professional Score Sheet'
+    ],
+    detailSections: [
+      {
+        title: 'Double-Ply Plywood Construction',
+        body: 'The PS-02 features a double-ply plywood playing surface designed for professional carrom play. This construction supports the board\'s playing surface and is intended for players who value control, precision, and consistency.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 3½ × 3½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting. This substantial wooden frame provides structural support for the board.'
+      },
+      {
+        title: 'Superior Cushion and Precise Rebounds',
+        body: 'The Professional Series features a superior cushion designed to support precise rebounds during play. The board\'s construction is intended for players seeking consistent playing performance.'
+      },
+      {
+        title: 'Shellac-Based Polish',
+        body: 'AZ Sports uses a shellac-based polish developed through its manufacturing experience and research and development efforts. The finishing process focuses on the playing surface and smooth striker movement when the board is properly maintained.'
+      },
+      {
+        title: 'Tournament-Oriented Design',
+        body: 'The AZ Sports® PS-02 is designed for competitive carrom play, with a professional playing surface and tournament-oriented construction as per International Carrom Federation (ICF).'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 35 × 35 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 46 × 46 inches', 'Playing Surface: 40 × 40 inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'PS-02' },
+      { label: 'Series', value: 'Professional Series' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '35 × 35, 41 × 41 and 46 × 46 inches' },
+      { label: 'Playing Surface Sizes', value: '29 × 29, 35 × 35 and 40 × 40 inches' },
+      { label: 'Plywood Construction', value: 'Double-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: 'Approx. 3½ × 3½ inches' },
+      { label: 'Playing-Surface Design', value: 'Hand-applied artistic design' },
+      { label: 'Recommended Use', value: 'Competitive play, tournaments, clubs and experienced players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
   {
     id: 19,
     slug: 'ps-03',
-    name: 'PS-3',
+    name: 'PS-03',
     tag: 'Professional Series',
     type: 'Professional Series',
-    seriesNumber: 'PS-3',
+    seriesNumber: 'PS-03',
     image: Image003,
-    description: 'Master craftsmanship meets modern engineering. The PS-3 is built for serious players who demand the best.',
+    description: 'The AZ Sports® PS-03 Professional Series Carrom Board is designed for competitive play, tournaments, carrom clubs, and experienced players. Available in three sizes, it combines double-ply plywood construction, a Sheesham wood frame, and a superior cushion designed for precise rebounds.',
     category: 'boards',
     inStock: true,
     prices: {
@@ -623,26 +1081,59 @@ export const products = [
       US: [200, 260, 330],
     },
     sizes: [
-      { size: '34', price: 19990, specs: { 'Playing Area': '29 × 29 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-      { size: '41', price: 25990, specs: { 'Playing Area': '35 × 35 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-      { size: '46', price: 32990, specs: { 'Playing Area': '41 × 41 inch', 'Border': '3½ × 3½ inch', 'Plywood': '6 mm', 'Wood': 'Sheesham' } },
-    ],
-    features: [
-      'Master craftsmanship',
-      'Tournament-approved specifications',
-      'Multi-layer cushion system',
-      'Hand-polished playing surface',
-      'Precision pocket alignment',
-      '30-day warranty included'
+      { size: '35', price: 19990 },
+      { size: '41', price: 25990 },
+      { size: '46', price: 32990 },
     ],
     included: [
-      '1 PS-3 Board',
+      '1 PS-03 Board',
       '19 Carrom Men (Black & White)',
       '1 Queen (Red)',
       '2 Master Series Strikers',
       'Deluxe Carrying Case',
       'Premium Cleaning Kit',
       'Certificate of Authenticity'
+    ],
+    detailSections: [
+      {
+        title: 'Double-Ply Plywood Construction',
+        body: 'The PS-03 features a double-ply plywood playing surface designed for professional carrom play. This construction supports the board\'s playing surface and is intended for players who value control, precision, and consistency.'
+      },
+      {
+        title: 'Seasoned Indian Rosewood Frame',
+        body: 'The frame is made from seasoned Indian Rosewood, with approximate dimensions of 3½ × 3½ inches. Proper seasoning helps improve dimensional stability and reduce the risk of warping or twisting. This substantial wooden frame provides structural support for the board.'
+      },
+      {
+        title: 'Superior Cushion and Precise Rebounds',
+        body: 'The Professional Series features a superior cushion designed to support precise rebounds during play. The board\'s construction is intended for players seeking consistent playing performance.'
+      },
+      {
+        title: 'Shellac-Based Polish',
+        body: 'AZ Sports uses a shellac-based polish developed through its manufacturing experience and research and development efforts. The finishing process focuses on the playing surface and smooth striker movement when the board is properly maintained.'
+      },
+      {
+        title: 'Tournament-Oriented Design',
+        body: 'The AZ Sports® PS-03 is designed for competitive carrom play, with a professional playing surface and tournament-oriented construction as per International Carrom Federation (ICF).'
+      }
+    ],
+    availableSizesList: [
+      { label: 'Size 1', items: ['Overall Size: 35 × 35 inches', 'Playing Surface: 29 × 29 inches'] },
+      { label: 'Size 2', items: ['Overall Size: 41 × 41 inches', 'Playing Surface: 35 × 35 inches'] },
+      { label: 'Size 3', items: ['Overall Size: 46 × 46 inches', 'Playing Surface: 40 × 40 inches'] },
+    ],
+    specTable: [
+      { label: 'Brand', value: 'AZ Sports®' },
+      { label: 'Model', value: 'PS-03' },
+      { label: 'Series', value: 'Professional Series' },
+      { label: 'Product Type', value: 'Carrom Board' },
+      { label: 'Overall Board Sizes', value: '35 × 35, 41 × 41 and 46 × 46 inches' },
+      { label: 'Playing Surface Sizes', value: '29 × 29, 35 × 35 and 40 × 40 inches' },
+      { label: 'Plywood Construction', value: 'Double-Ply Plywood' },
+      { label: 'Frame Material', value: 'Seasoned Indian Rosewood (Sheesham)' },
+      { label: 'Frame Dimensions', value: 'Approx. 3½ × 3½ inches' },
+      { label: 'Playing-Surface Design', value: 'Hand-applied artistic design' },
+      { label: 'Recommended Use', value: 'Competitive play, tournaments, clubs and experienced players' },
+      { label: 'Country of Origin', value: 'Pakistan' },
     ]
   },
 ];

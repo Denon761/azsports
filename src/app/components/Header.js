@@ -26,8 +26,10 @@ const utilityLinks = [
   { name: 'Rules of Carrom', href: '/rules' },
   { name: 'Board Maintenance', href: '/maintenance' },
   { name: 'Manufacturing Process', href: '/manufacturing-process' },
+  { name: 'Export & Bulk Orders', href: '/bulk-orders' },
   { name: 'Faqs', href: '/faq' },
   { name: 'Shipping Policy', href: '/shipping' },
+  { name: 'Return & Refund Policy', href: '/returns' },
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms & Conditions', href: '/terms' },
   { name: 'Cookies', href: '/cookies' },
@@ -65,10 +67,10 @@ const Header = () => {
 
           {/* Center Brand Logo */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 group">
-            <div className="relative h-12 w-32 md:h-16 md:w-32">
-              <Image 
-                src={logo} 
-                alt="AZ Sports" 
+            <div className="relative h-12 w-32">
+              <Image
+                src={logo}
+                alt="AZ Sports"
                 fill
                 className="object-contain"
               />

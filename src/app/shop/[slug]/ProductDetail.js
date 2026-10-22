@@ -186,6 +186,7 @@ export default function ProductDetail() {
                 const activeSize = selectedSize || availableSizes[0].size;
                 const sizeData = availableSizes.find(s => s.size === activeSize);
                 const specs = sizeData?.specs || {};
+                if (Object.keys(specs).length === 0) return null;
                 return (
                   <div className="mb-8">
                     <h2 className="text-xs font-black text-slate-900 mb-3 flex items-center gap-2">
@@ -274,6 +275,65 @@ export default function ProductDetail() {
           </div>
         </div>
       </section>
+
+      {/* Full Product Details & Specifications */}
+      {((product.detailSections && product.detailSections.length > 0) || (product.availableSizesList && product.availableSizesList.length > 0) || (product.specTable && product.specTable.length > 0)) && (
+        <section className="py-12 bg-white border-t border-slate-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+
+            {product.detailSections && product.detailSections.length > 0 && (
+              <div className="space-y-6">
+                {product.detailSections.map((sec, idx) => (
+                  <div key={idx}>
+                    <h2 className="text-sm font-black text-slate-900 mb-2">{sec.title}</h2>
+                    <p className="text-xs text-slate-600 leading-relaxed">{sec.body}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {product.availableSizesList && product.availableSizesList.length > 0 && (
+              <div>
+                <h2 className="text-sm font-black text-slate-900 mb-4">Available Sizes</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {product.availableSizesList.map((sizeGroup, idx) => (
+                    <div key={idx} className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+                      <p className="text-xs font-black text-slate-900 mb-2">{sizeGroup.label}</p>
+                      <ul className="space-y-1">
+                        {sizeGroup.items.map((item, itemIdx) => (
+                          <li key={itemIdx} className="text-xs text-slate-600">{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {product.specTable && product.specTable.length > 0 && (
+              <div>
+                <h2 className="text-sm font-black text-slate-900 mb-4">Product Specifications</h2>
+                <div className="border border-slate-200 rounded-lg overflow-hidden divide-y divide-slate-200">
+                  {product.specTable.map((row, idx) => (
+                    <div key={idx} className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-4 px-4 py-3 odd:bg-slate-50">
+                      <p className="text-xs font-bold text-slate-900">{row.label}</p>
+                      <p className="text-xs text-slate-600">
+                        {Array.isArray(row.value) ? row.value.map((line, lineIdx) => (
+                          <React.Fragment key={lineIdx}>
+                            {line}
+                            {lineIdx < row.value.length - 1 && <br />}
+                          </React.Fragment>
+                        )) : row.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+        </section>
+      )}
 
       {/* Related Products */}
       <section className="py-16 bg-slate-100">
